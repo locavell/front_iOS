@@ -16,7 +16,7 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
-        .foregroundColor(.blue)
+        .foregroundColor(.blue) //의정에디의정
     }
 }
 
