@@ -19,9 +19,12 @@
 		1FEC2C962C47D3AE00FB6E4A /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC2C952C47D3AE00FB6E4A /* MyPlaceView.swift */; };
 		1FEC2C992C47D41300FB6E4A /* WishListFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC2C982C47D41300FB6E4A /* WishListFood.swift */; };
 		1FEC2C9C2C47E62F00FB6E4A /* InterestPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC2C9B2C47E62F00FB6E4A /* InterestPlaceView.swift */; };
+		1FFE72FC2C4918C4004B5EC3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE72FB2C4918C4004B5EC3 /* MapView.swift */; };
+		F08636C924C3CEA250A94374 /* Pods_locavel_cookie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6A20F42806803DE59747AE /* Pods_locavel_cookie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C09FC2E8D5EFDE19254D427 /* Pods-locavel_cookie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locavel_cookie.debug.xcconfig"; path = "Target Support Files/Pods-locavel_cookie/Pods-locavel_cookie.debug.xcconfig"; sourceTree = "<group>"; };
 		1F57DB2D2C46513600294EE5 /* locavel_cookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locavel_cookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F57DB302C46513600294EE5 /* locavel_cookieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locavel_cookieApp.swift; sourceTree = "<group>"; };
 		1F57DB342C46513800294EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +38,10 @@
 		1FEC2C952C47D3AE00FB6E4A /* MyPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceView.swift; sourceTree = "<group>"; };
 		1FEC2C982C47D41300FB6E4A /* WishListFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListFood.swift; sourceTree = "<group>"; };
 		1FEC2C9B2C47E62F00FB6E4A /* InterestPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPlaceView.swift; sourceTree = "<group>"; };
+		1FFE72FA2C4916EF004B5EC3 /* locavel-cookie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "locavel-cookie-Info.plist"; sourceTree = "<group>"; };
+		1FFE72FB2C4918C4004B5EC3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4A6A20F42806803DE59747AE /* Pods_locavel_cookie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_locavel_cookie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF9EC0A49A22C9BC7ADAD5F8 /* Pods-locavel_cookie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locavel_cookie.release.xcconfig"; path = "Target Support Files/Pods-locavel_cookie/Pods-locavel_cookie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08636C924C3CEA250A94374 /* Pods_locavel_cookie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +59,11 @@
 		1F57DB242C46513600294EE5 = {
 			isa = PBXGroup;
 			children = (
+				1FFE72FA2C4916EF004B5EC3 /* locavel-cookie-Info.plist */,
 				1F57DB2F2C46513600294EE5 /* locavel */,
 				1F57DB2E2C46513600294EE5 /* Products */,
+				C6F75B734C74275452CB217C /* Pods */,
+				53F70400285A45BB8C90988E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +106,7 @@
 		1FCB15032C47ACBB00D24D65 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				1FEC2C932C47CABD00FB6E4A /* ContentView.swift */,
 				1FCB15072C47AD0800D24D65 /* Home */,
 				1FCB15062C47ACF000D24D65 /* WishList */,
 				1FCB15052C47ACE700D24D65 /* MyPage */,
@@ -132,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				1FCB15082C47B15200D24D65 /* HomeView.swift */,
-				1FEC2C932C47CABD00FB6E4A /* ContentView.swift */,
+				1FFE72FB2C4918C4004B5EC3 /* MapView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -155,6 +167,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		53F70400285A45BB8C90988E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A6A20F42806803DE59747AE /* Pods_locavel_cookie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6F75B734C74275452CB217C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C09FC2E8D5EFDE19254D427 /* Pods-locavel_cookie.debug.xcconfig */,
+				DF9EC0A49A22C9BC7ADAD5F8 /* Pods-locavel_cookie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F57DB3B2C46513800294EE5 /* Build configuration list for PBXNativeTarget "locavel_cookie" */;
 			buildPhases = (
+				042B9574DBB3C9289B554B34 /* [CP] Check Pods Manifest.lock */,
 				1F57DB292C46513600294EE5 /* Sources */,
 				1F57DB2A2C46513600294EE5 /* Frameworks */,
 				1F57DB2B2C46513600294EE5 /* Resources */,
+				E4C128B95EFA7B04F6CA4864 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +251,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		042B9574DBB3C9289B554B34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-locavel_cookie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4C128B95EFA7B04F6CA4864 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-locavel_cookie/Pods-locavel_cookie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-locavel_cookie/Pods-locavel_cookie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-locavel_cookie/Pods-locavel_cookie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F57DB292C46513600294EE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -228,6 +301,7 @@
 				1FEC2C922C47CA3A00FB6E4A /* LogInView.swift in Sources */,
 				1FCB15092C47B15200D24D65 /* HomeView.swift in Sources */,
 				1FEC2C942C47CABD00FB6E4A /* ContentView.swift in Sources */,
+				1FFE72FC2C4918C4004B5EC3 /* MapView.swift in Sources */,
 				1F57DB312C46513600294EE5 /* locavel_cookieApp.swift in Sources */,
 				1FEC2C9C2C47E62F00FB6E4A /* InterestPlaceView.swift in Sources */,
 				1FEC2C962C47D3AE00FB6E4A /* MyPlaceView.swift in Sources */,
@@ -278,7 +352,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -341,7 +415,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -362,6 +436,7 @@
 		};
 		1F57DB3C2C46513800294EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C09FC2E8D5EFDE19254D427 /* Pods-locavel_cookie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -369,6 +444,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "locavel-cookie-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "항상 위치를 접근할 필요가 있습니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "앱을 사용하는 동안 위치를 접근할 필요가 있습니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -390,6 +468,7 @@
 		};
 		1F57DB3D2C46513800294EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF9EC0A49A22C9BC7ADAD5F8 /* Pods-locavel_cookie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -397,6 +476,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "locavel-cookie-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "항상 위치를 접근할 필요가 있습니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "앱을 사용하는 동안 위치를 접근할 필요가 있습니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
