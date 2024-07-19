@@ -1,13 +1,34 @@
+import Foundation
 import SwiftUI
-import MapKit
+import UIKit
+import NMapsMap
+import Combine
+
 
 struct HomeView: View {
-    var body: some View {
-        NavigationView {
-            Text("home")
-                .navigationTitle("홈")
-        }
-    }
+  var body: some View {
+      ZStack {
+          MapView()
+      }
+  }
+}
+
+
+struct MapView: UIViewRepresentable {
+  @ObservedObject var viewModel = MapSceneViewModel()
+  func makeUIView(context: Context) -> NMFNaverMapView {
+    let view = NMFNaverMapView()
+    view.showZoomControls = false
+    view.mapView.positionMode = .direction
+    view.mapView.zoomLevel = 17
+    return view
+  }
+
+  func updateUIView(_ uiView: NMFNaverMapView, context: Context) {}
+}
+
+class MapSceneViewModel: ObservableObject {
+
 }
 
 #Preview {

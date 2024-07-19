@@ -10,6 +10,8 @@ import SwiftUI
 struct Item: Identifiable {
     let id: Int
     let title: String
-    let description: String
+    let type: String
+    let hours: String
+    let rating: String
 }
 

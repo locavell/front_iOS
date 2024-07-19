@@ -11,24 +11,31 @@ struct ItemView: View {
     let item: Item
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 2.5) {
             Image("example")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 150)
                 .cornerRadius(10)
             Text(item.title)
                 .font(.headline)
-            Text(item.description)
+            Text("\(item.type)")
+                .font(.subheadline)
+            Text("\(item.hours)")
+                .font(.subheadline)
+            Text("\(item.rating)")
                 .font(.subheadline)
         }
-        .frame(width: 180, height: 180)
+        .frame(width: 180, height: 230)
+        .padding()
     }
 }
 
 struct ItemScrollView: View {
     let data: [Item] = [
-        Item(id: 1, title: "Item 1", description: "Description 1"),
-        Item(id: 2, title: "Item 2", description: "Description 2"),
-        Item(id: 3, title: "Item 3", description: "Description 3")
+        Item(id: 1, title: "Item 1", type: "식당", hours: "9:00 AM - 10:00 PM", rating: "4.5"),
+        Item(id: 2, title: "Item 2", type: "카페", hours: "8:00 AM - 8:00 PM", rating: "4.0"),
+        Item(id: 3, title: "Item 3", type: "서점", hours: "10:00 AM - 9:00 PM", rating: "4.8")
     ]
     
     var body: some View {
@@ -46,7 +53,7 @@ struct ItemScrollView: View {
 struct WishListView: View {
     var body: some View {
         NavigationView {
-            VStack{
+            VStack (spacing: 0){
                 HStack {
                     
                 }

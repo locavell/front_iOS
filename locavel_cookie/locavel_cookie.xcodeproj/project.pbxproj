@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F2E4B692C4931740037EB0A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E4B682C4931740037EB0A /* SearchView.swift */; };
 		1F57DB312C46513600294EE5 /* locavel_cookieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F57DB302C46513600294EE5 /* locavel_cookieApp.swift */; };
 		1F57DB352C46513800294EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F57DB342C46513800294EE5 /* Assets.xcassets */; };
 		1F57DB382C46513800294EE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F57DB372C46513800294EE5 /* Preview Assets.xcassets */; };
 		1F8E4FB72C47C15200A1E7DF /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8E4FB62C47C15200A1E7DF /* ColorManager.swift */; };
-		1FCB15092C47B15200D24D65 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB15082C47B15200D24D65 /* HomeView.swift */; };
 		1FEC2C8E2C47C87E00FB6E4A /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC2C8D2C47C87E00FB6E4A /* MyPageView.swift */; };
 		1FEC2C902C47C88D00FB6E4A /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC2C8F2C47C88D00FB6E4A /* WishListView.swift */; };
 		1FEC2C922C47CA3A00FB6E4A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC2C912C47CA3A00FB6E4A /* LogInView.swift */; };
@@ -19,18 +19,18 @@
 		1FEC2C962C47D3AE00FB6E4A /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC2C952C47D3AE00FB6E4A /* MyPlaceView.swift */; };
 		1FEC2C992C47D41300FB6E4A /* WishListFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC2C982C47D41300FB6E4A /* WishListFood.swift */; };
 		1FEC2C9C2C47E62F00FB6E4A /* InterestPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC2C9B2C47E62F00FB6E4A /* InterestPlaceView.swift */; };
-		1FFE72FC2C4918C4004B5EC3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE72FB2C4918C4004B5EC3 /* MapView.swift */; };
+		1FFE72FC2C4918C4004B5EC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE72FB2C4918C4004B5EC3 /* HomeView.swift */; };
 		F08636C924C3CEA250A94374 /* Pods_locavel_cookie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6A20F42806803DE59747AE /* Pods_locavel_cookie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C09FC2E8D5EFDE19254D427 /* Pods-locavel_cookie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locavel_cookie.debug.xcconfig"; path = "Target Support Files/Pods-locavel_cookie/Pods-locavel_cookie.debug.xcconfig"; sourceTree = "<group>"; };
+		1F2E4B682C4931740037EB0A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		1F57DB2D2C46513600294EE5 /* locavel_cookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locavel_cookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F57DB302C46513600294EE5 /* locavel_cookieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locavel_cookieApp.swift; sourceTree = "<group>"; };
 		1F57DB342C46513800294EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F57DB372C46513800294EE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F8E4FB62C47C15200A1E7DF /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
-		1FCB15082C47B15200D24D65 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1FEC2C8D2C47C87E00FB6E4A /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		1FEC2C8F2C47C88D00FB6E4A /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		1FEC2C912C47CA3A00FB6E4A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -39,7 +39,7 @@
 		1FEC2C982C47D41300FB6E4A /* WishListFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListFood.swift; sourceTree = "<group>"; };
 		1FEC2C9B2C47E62F00FB6E4A /* InterestPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPlaceView.swift; sourceTree = "<group>"; };
 		1FFE72FA2C4916EF004B5EC3 /* locavel-cookie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "locavel-cookie-Info.plist"; sourceTree = "<group>"; };
-		1FFE72FB2C4918C4004B5EC3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		1FFE72FB2C4918C4004B5EC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4A6A20F42806803DE59747AE /* Pods_locavel_cookie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_locavel_cookie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9EC0A49A22C9BC7ADAD5F8 /* Pods-locavel_cookie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-locavel_cookie.release.xcconfig"; path = "Target Support Files/Pods-locavel_cookie/Pods-locavel_cookie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,8 +143,8 @@
 		1FCB15072C47AD0800D24D65 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1FCB15082C47B15200D24D65 /* HomeView.swift */,
-				1FFE72FB2C4918C4004B5EC3 /* MapView.swift */,
+				1FFE72FB2C4918C4004B5EC3 /* HomeView.swift */,
+				1F2E4B682C4931740037EB0A /* SearchView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -299,9 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FEC2C922C47CA3A00FB6E4A /* LogInView.swift in Sources */,
-				1FCB15092C47B15200D24D65 /* HomeView.swift in Sources */,
 				1FEC2C942C47CABD00FB6E4A /* ContentView.swift in Sources */,
-				1FFE72FC2C4918C4004B5EC3 /* MapView.swift in Sources */,
+				1FFE72FC2C4918C4004B5EC3 /* HomeView.swift in Sources */,
 				1F57DB312C46513600294EE5 /* locavel_cookieApp.swift in Sources */,
 				1FEC2C9C2C47E62F00FB6E4A /* InterestPlaceView.swift in Sources */,
 				1FEC2C962C47D3AE00FB6E4A /* MyPlaceView.swift in Sources */,
@@ -309,6 +308,7 @@
 				1FEC2C8E2C47C87E00FB6E4A /* MyPageView.swift in Sources */,
 				1FEC2C902C47C88D00FB6E4A /* WishListView.swift in Sources */,
 				1FEC2C992C47D41300FB6E4A /* WishListFood.swift in Sources */,
+				1F2E4B692C4931740037EB0A /* SearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
