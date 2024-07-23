@@ -23,6 +23,9 @@
 		3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF02C4AAB25002B9378 /* WishListFood.swift */; };
 		3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF22C4AAB40002B9378 /* MyPageView.swift */; };
 		3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF42C4AAB5C002B9378 /* LogInView.swift */; };
+		475CF81C4DE7AA1121FA5278 /* Pods_Locavel_LocavelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E0C007A09D5BAD0A4E5979 /* Pods_Locavel_LocavelUITests.framework */; };
+		7D2F8694CBFD8AA76A69892A /* Pods_Locavel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF808EE2AAF1DD8E8A6A7ECE /* Pods_Locavel.framework */; };
+		D9EE5ED3DB3A2EFBC5D73870 /* Pods_LocavelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84962AB0EA997963AED02044 /* Pods_LocavelTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042E9A9D05A62E40909CB5E4 /* Pods-LocavelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocavelTests.release.xcconfig"; path = "Target Support Files/Pods-LocavelTests/Pods-LocavelTests.release.xcconfig"; sourceTree = "<group>"; };
+		16E0C007A09D5BAD0A4E5979 /* Pods_Locavel_LocavelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locavel_LocavelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3056DAAD2C4AA789002B9378 /* Locavel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locavel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3056DAB02C4AA789002B9378 /* LocavelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocavelApp.swift; sourceTree = "<group>"; };
 		3056DAB22C4AA789002B9378 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +67,14 @@
 		3056DAF02C4AAB25002B9378 /* WishListFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListFood.swift; sourceTree = "<group>"; };
 		3056DAF22C4AAB40002B9378 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		3056DAF42C4AAB5C002B9378 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		30A1C2A92C4D43D300EB10EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3A798270E9AEDF14BD5D308B /* Pods-Locavel-LocavelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locavel-LocavelUITests.release.xcconfig"; path = "Target Support Files/Pods-Locavel-LocavelUITests/Pods-Locavel-LocavelUITests.release.xcconfig"; sourceTree = "<group>"; };
+		84962AB0EA997963AED02044 /* Pods_LocavelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocavelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1448BA28DF5ECEB3DD85E0 /* Pods-Locavel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locavel.release.xcconfig"; path = "Target Support Files/Pods-Locavel/Pods-Locavel.release.xcconfig"; sourceTree = "<group>"; };
+		9C86F39A4FCE84B365DD5E03 /* Pods-Locavel-LocavelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locavel-LocavelUITests.debug.xcconfig"; path = "Target Support Files/Pods-Locavel-LocavelUITests/Pods-Locavel-LocavelUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6552250B1C0355A3D9269A3 /* Pods-Locavel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locavel.debug.xcconfig"; path = "Target Support Files/Pods-Locavel/Pods-Locavel.debug.xcconfig"; sourceTree = "<group>"; };
+		CF808EE2AAF1DD8E8A6A7ECE /* Pods_Locavel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locavel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A2C9509B85048BAD0BE948 /* Pods-LocavelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocavelTests.debug.xcconfig"; path = "Target Support Files/Pods-LocavelTests/Pods-LocavelTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2F8694CBFD8AA76A69892A /* Pods_Locavel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9EE5ED3DB3A2EFBC5D73870 /* Pods_LocavelTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475CF81C4DE7AA1121FA5278 /* Pods_Locavel_LocavelUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +112,8 @@
 				3056DAC02C4AA78A002B9378 /* LocavelTests */,
 				3056DACA2C4AA78A002B9378 /* LocavelUITests */,
 				3056DAAE2C4AA789002B9378 /* Products */,
+				DC3D515366B164F61317CBF4 /* Pods */,
+				D4E786BD6DAE1138A76031F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +130,7 @@
 		3056DAAF2C4AA789002B9378 /* Locavel */ = {
 			isa = PBXGroup;
 			children = (
+				30A1C2A92C4D43D300EB10EC /* Info.plist */,
 				3056DAB02C4AA789002B9378 /* LocavelApp.swift */,
 				3056DADA2C4AA7FD002B9378 /* Content */,
 				3056DADB2C4AA80F002B9378 /* Resources */,
@@ -218,6 +237,29 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		D4E786BD6DAE1138A76031F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF808EE2AAF1DD8E8A6A7ECE /* Pods_Locavel.framework */,
+				16E0C007A09D5BAD0A4E5979 /* Pods_Locavel_LocavelUITests.framework */,
+				84962AB0EA997963AED02044 /* Pods_LocavelTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC3D515366B164F61317CBF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6552250B1C0355A3D9269A3 /* Pods-Locavel.debug.xcconfig */,
+				9C1448BA28DF5ECEB3DD85E0 /* Pods-Locavel.release.xcconfig */,
+				9C86F39A4FCE84B365DD5E03 /* Pods-Locavel-LocavelUITests.debug.xcconfig */,
+				3A798270E9AEDF14BD5D308B /* Pods-Locavel-LocavelUITests.release.xcconfig */,
+				D3A2C9509B85048BAD0BE948 /* Pods-LocavelTests.debug.xcconfig */,
+				042E9A9D05A62E40909CB5E4 /* Pods-LocavelTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3056DAD12C4AA78A002B9378 /* Build configuration list for PBXNativeTarget "Locavel" */;
 			buildPhases = (
+				69D77947C916546911A8B950 /* [CP] Check Pods Manifest.lock */,
 				3056DAA92C4AA789002B9378 /* Sources */,
 				3056DAAA2C4AA789002B9378 /* Frameworks */,
 				3056DAAB2C4AA789002B9378 /* Resources */,
+				A8E856E38EEC4F8DE44A3D9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +286,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3056DAD42C4AA78A002B9378 /* Build configuration list for PBXNativeTarget "LocavelTests" */;
 			buildPhases = (
+				1958F6179556861FE3C27768 /* [CP] Check Pods Manifest.lock */,
 				3056DAB92C4AA78A002B9378 /* Sources */,
 				3056DABA2C4AA78A002B9378 /* Frameworks */,
 				3056DABB2C4AA78A002B9378 /* Resources */,
@@ -260,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3056DAD72C4AA78A002B9378 /* Build configuration list for PBXNativeTarget "LocavelUITests" */;
 			buildPhases = (
+				1FEE1C2FC1F181875E07CD21 /* [CP] Check Pods Manifest.lock */,
 				3056DAC32C4AA78A002B9378 /* Sources */,
 				3056DAC42C4AA78A002B9378 /* Frameworks */,
 				3056DAC52C4AA78A002B9378 /* Resources */,
+				86462D358F1D26A19416F74F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +389,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1958F6179556861FE3C27768 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocavelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FEE1C2FC1F181875E07CD21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Locavel-LocavelUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69D77947C916546911A8B950 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Locavel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86462D358F1D26A19416F74F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Locavel-LocavelUITests/Pods-Locavel-LocavelUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Locavel-LocavelUITests/Pods-Locavel-LocavelUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Locavel-LocavelUITests/Pods-Locavel-LocavelUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8E856E38EEC4F8DE44A3D9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Locavel/Pods-Locavel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Locavel/Pods-Locavel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Locavel/Pods-Locavel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3056DAA92C4AA789002B9378 /* Sources */ = {
@@ -432,7 +582,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -447,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -495,7 +645,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -504,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -516,6 +666,7 @@
 		};
 		3056DAD22C4AA78A002B9378 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6552250B1C0355A3D9269A3 /* Pods-Locavel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -524,11 +675,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Locavel/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Locavel/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "해당 앱은 플레이스 정보 및 사용자의 현위치 정보를 사용하기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "해당 앱은 플레이스 정보 및 사용자의 현위치 정보를 사용하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,6 +700,7 @@
 		};
 		3056DAD32C4AA78A002B9378 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C1448BA28DF5ECEB3DD85E0 /* Pods-Locavel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -552,11 +709,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Locavel/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Locavel/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "해당 앱은 플레이스 정보 및 사용자의 현위치 정보를 사용하기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "해당 앱은 플레이스 정보 및 사용자의 현위치 정보를 사용하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,6 +734,7 @@
 		};
 		3056DAD52C4AA78A002B9378 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A2C9509B85048BAD0BE948 /* Pods-LocavelTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -591,6 +754,7 @@
 		};
 		3056DAD62C4AA78A002B9378 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042E9A9D05A62E40909CB5E4 /* Pods-LocavelTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +774,7 @@
 		};
 		3056DAD82C4AA78A002B9378 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C86F39A4FCE84B365DD5E03 /* Pods-Locavel-LocavelUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -627,6 +792,7 @@
 		};
 		3056DAD92C4AA78A002B9378 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A798270E9AEDF14BD5D308B /* Pods-Locavel-LocavelUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

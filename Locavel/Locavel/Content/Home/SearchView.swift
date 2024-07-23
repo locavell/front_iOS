@@ -21,10 +21,10 @@ struct SearchBarView: View {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(
                     searchText.isEmpty ?
-                    Color.secondary : Color.blue)
+                    Color.black : Color.blue)
             TextField("어디로 가시나요?", text: $searchText)
                 .autocorrectionDisabled(true)
-                .foregroundColor(Color.primary)
+                .foregroundColor(Color.black)
                 .overlay(
                     Image(systemName: "xmark.circle.fill")
                         .padding()
@@ -39,12 +39,6 @@ struct SearchBarView: View {
                 )
         }
         .font(.headline)
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 25)
-                .fill(Color(.secondarySystemBackground))
-
-        )
         .padding()
     }
 }
