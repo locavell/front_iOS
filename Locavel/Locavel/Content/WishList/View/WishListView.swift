@@ -1,96 +1,63 @@
 //
 //  WishListView.swift
-//  Locavel
+//  testbaki
 //
-//  Created by 김의정 on 7/19/24.
+//  Created by 박희민 on 7/18/24.
 //
 
 import SwiftUI
 
-struct ItemView: View {
-    let item: Item
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 2.5) {
-            Image("example")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150)
-                .cornerRadius(10)
-            Text(item.title)
-                .font(.headline)
-            Text("\(item.type)")
-                .font(.subheadline)
-            Text("\(item.hours)")
-                .font(.subheadline)
-            Text("\(item.rating)")
-                .font(.subheadline)
-        }
-        .frame(width: 180, height: 230)
-        .padding()
-    }
-}
-
-struct ItemScrollView: View {
-    let data: [Item] = [
-        Item(id: 1, title: "Item 1", type: "식당", hours: "9:00 AM - 10:00 PM", rating: "4.5"),
-        Item(id: 2, title: "Item 2", type: "카페", hours: "8:00 AM - 8:00 PM", rating: "4.0"),
-        Item(id: 3, title: "Item 3", type: "서점", hours: "10:00 AM - 9:00 PM", rating: "4.8")
-    ]
-    
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 20) {
-                ForEach(data) { item in
-                    ItemView(item: item)
-                }
-            }
-            .padding()
-        }
-    }
+enum tapInfo: String, CaseIterable {
+    case food = "푸드"
+    case spot = "스팟"
+    case activity = "액티비티"
 }
 
 struct WishListView: View {
+    
+    @State private var selectedPicker: tapInfo = .food
+    @Namespace private var animation
+    
     var body: some View {
         NavigationView {
-            VStack (spacing: 0){
-                HStack {
+            VStack {
+                animate()
+                InfoView(tests: selectedPicker)
+            }
+            .navigationBarTitle(Text("위시리스트"), displayMode: .large)
+        }
+    }
+    
+    @ViewBuilder
+    private func animate() -> some View {
+        HStack {
+            ForEach(tapInfo.allCases, id: \.self) { item in
+                VStack {
+                    Text(item.rawValue)
+                        .font(.title3)
+                        .frame(maxWidth: .infinity/3, minHeight: 50)
+                        .foregroundColor(selectedPicker == item ? ColorManager.AccentColor : .gray)
+
+                    if selectedPicker == item {
+                        Capsule()
+                            .accentColor(ColorManager.AccentColor)
+                            .frame(height: 3)
+                            .matchedGeometryEffect(id: "info", in: animation)
+                    }
                     
                 }
-                // MARK : 내 지역
-                HStack {
-                    Text("내 지역")
-                        .font(.title2)
-                        .padding(.leading)
-                    Spacer()
-                    NavigationLink(destination: MyPlaceView()) {
-                        Text("전체 보기")
-                            .underline()
+                .onTapGesture {
+                    withAnimation(.easeInOut) {
+                        self.selectedPicker = item
                     }
-                    .padding(.trailing)
                 }
-                ItemScrollView()
-                
-                // MARK : 관심 지역
-                HStack {
-                    Text("관심 지역")
-                        .font(.title2)
-                        .padding(.leading)
-                    Spacer()
-                    NavigationLink(destination: InterestPlaceView()) {
-                        Text("전체 보기")
-                            .underline()
-                    }
-                    .padding(.trailing)
-                }
-                ItemScrollView()
-                
-                .navigationTitle("위시리스트")
             }
         }
     }
 }
 
-#Preview {
-    WishListView()
+struct WishListView_Previews: PreviewProvider {
+    static var previews: some View {
+        WishListView()
+    }
 }
