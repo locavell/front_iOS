@@ -4,8 +4,206 @@
 //
 //  Created by 김의정 on 7/19/24.
 //
+//
+//import SwiftUI
+//import NMapsMap
+//import CoreLocation
+//import MapKit
+//
+//struct HomeView: View {
+//    @State private var searchText: String = ""
+//    
+//    var body: some View {
+//        VStack(alignment: .trailing, spacing: 0) {
+//          SearchBarView(searchText: $searchText)
+//            NaverMapView().edgesIgnoringSafeArea(.all)
+//      }
+//  }
+//}
+//
+//struct NaverMapView: View {
+//    @StateObject private var locationManager = LocationManager()
+//    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
+//    @State private var selectedPlace: MKMapItem?
+//
+//    var body: some View {
+//        ZStack {
+//            Map(position: $position, selection: $selectedPlace) {
+//                UserAnnotation()
+//                if let userLocation = locationManager.userLocation {
+//                    Marker("Current Location", coordinate: userLocation.coordinate)
+//                }
+//            }
+//            .mapControls {
+//                MapUserLocationButton()
+//            }
+//            .edgesIgnoringSafeArea(.all)
+//            
+//            VStack {
+//                Spacer()
+//                Button(action: {
+//                    if let userLocation = locationManager.userLocation {
+//                        withAnimation {
+//                            position = .region(MKCoordinateRegion(
+//                                center: userLocation.coordinate,
+//                                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+//                            ))
+//                        }
+//                    }
+//                }) {
+//                    Text("현재 위치로 이동")
+//                        .padding()
+//                        .background(Color.blue)
+//                        .foregroundColor(.white)
+//                        .cornerRadius(10)
+//                }
+//                .padding(.bottom, 20)
+//            }
+//        }
+//        .onAppear {
+//            locationManager.requestLocation()
+//        }
+//    }
+//}
+//
+//class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+//    private let locationManager = CLLocationManager()
+//    @Published var userLocation: CLLocation?
+//    
+//    override init() {
+//        super.init()
+//        locationManager.delegate = self
+//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//    }
+//    
+//    func requestLocation() {
+//        locationManager.requestWhenInUseAuthorization()
+//        locationManager.startUpdatingLocation()
+//    }
+//    
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        guard let location = locations.last else { return }
+//        userLocation = location
+//    }
+//    
+//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+//        print("Error: \(error.localizedDescription)")
+//    }
+//}
+//
+//#Preview {
+//    HomeView()
+//}
 
-import Foundation
+
+//import SwiftUI
+//import NMapsMap
+//import CoreLocation
+//import Foundation
+//
+//
+//struct HomeView: View {
+//    @State private var searchText: String = ""
+//    @StateObject private var locationManager = LocationManager()
+//    @State private var mapView = NMFMapView() // Keep a reference to the map view
+//    
+//    var body: some View {
+//        VStack {
+//            SearchBarView(searchText: $searchText)
+//            ZStack {
+//                NaverMapView(currentLocation: $locationManager.currentLocation, mapView: $mapView)
+//                VStack {
+//                    Spacer()
+//                    
+//                    HStack {
+//                        Button(action: {}) {
+//                            Image(systemName: "plus")
+//                                .padding()
+//                                .background(Color.white)
+//                                .cornerRadius(25)
+//                                .shadow(radius: 5)
+//                        }
+//                        Spacer()
+//                        Button(action: {}) {
+//                            Text("목록")
+//                                .padding()
+//                                .background(Color.red)
+//                                .foregroundColor(.white)
+//                                .cornerRadius(25)
+//                                .shadow(radius: 5)
+//                        }
+//                        .padding(.leading, 10)
+//                        Spacer()
+//                        Button(action: {
+//                            locationManager.requestLocation()
+//                            if let location = locationManager.currentLocation {
+//                                mapView.moveCamera(NMFCameraUpdate(scrollTo: NMGLatLng(lat: location.latitude, lng: location.longitude)))
+//                            }
+//                        }) {
+//                            Image(systemName: "location.fill")
+//                                .padding()
+//                                .background(Color.white)
+//                                .cornerRadius(25)
+//                                .shadow(radius: 5)
+//                        }
+//                        .padding(.leading, 10)
+//                    }
+//                    .padding()
+//                }
+//            }
+//            Spacer()
+//        }
+//    }
+//}
+//
+//class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+//    private let locationManager = CLLocationManager()
+//    @Published var currentLocation: CLLocationCoordinate2D?
+//    
+//    override init() {
+//        super.init()
+//        self.locationManager.delegate = self
+//        self.locationManager.requestWhenInUseAuthorization()
+//        self.locationManager.startUpdatingLocation()
+//    }
+//    
+//    func requestLocation() {
+//        self.locationManager.requestLocation()
+//    }
+//    
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        guard let location = locations.first else { return }
+//        self.currentLocation = location.coordinate
+//    }
+//    
+//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+//        print("Failed to get user location: \(error.localizedDescription)")
+//    }
+//}
+//
+//struct NaverMapView: UIViewRepresentable {
+//    @Binding var currentLocation: CLLocationCoordinate2D?
+//    @Binding var mapView: NMFMapView // Pass the map view reference
+//    
+//    func makeUIView(context: Context) -> NMFMapView {
+//        return mapView
+//    }
+//    
+//    func updateUIView(_ uiView: NMFMapView, context: Context) {
+//        if let location = currentLocation {
+//            let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: location.latitude, lng: location.longitude))
+//            uiView.moveCamera(cameraUpdate)
+//            
+//        }
+//    }
+//}
+//
+//
+//#Preview {
+//    HomeView()
+//}
+
+
 import SwiftUI
 import UIKit
 import NMapsMap
@@ -16,76 +214,65 @@ struct HomeView: View {
     
     var body: some View {
         VStack(alignment: .trailing, spacing: 0) {
-          SearchBarView(searchText: $searchText)
-          MapView()
-      }
-  }
-}
-
-
-//// 방법 1
-//struct MapView: UIViewRepresentable {
-//  @ObservedObject var viewModel = MapSceneViewModel()
-//  func makeUIView(context: Context) -> NMFNaverMapView {
-//    let view = NMFNaverMapView()
-//    view.showZoomControls = false
-//    view.mapView.positionMode = .direction
-//    view.mapView.zoomLevel = 15
-//    return view
-//  }
-//
-//  func updateUIView(_ uiView: NMFNaverMapView, context: Context) {}
-//}
-//
-//class MapSceneViewModel: ObservableObject {
-//
-//}
-
-
-//import SwiftUI
-//import NMapsMap
-//
-//struct NaverMapView: UIViewControllerRepresentable {
-//    func makeUIViewController(context: Context) -> UIViewController {
-//        let viewController = UIViewController()
-//        let mapView = NMFMapView(frame: viewController.view.frame)
-//        viewController.view.addSubview(mapView)
-//        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        return viewController
-//    }
-//
-//    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-//        // Update the view controller if needed
-//    }
-//}
-//
-//struct HomeView: View {
-//    var body: some View {
-//        NaverMapView()
-//            .edgesIgnoringSafeArea(.all)
-//    }
-//}
-
-// 방법2
-struct MapView: View {
-    
-    // Coordinator 클래스
-    @StateObject var coordinator: Coordinator = Coordinator.shared
-    
-    var body: some View {
-        VStack {
-            NaverMap()
-                .ignoresSafeArea(.all, edges: .top)
-        }
-        .onAppear {
-            Coordinator.shared.checkIfLocationServiceIsEnabled()
+            SearchBarView(searchText: $searchText)
+            MapView()
         }
     }
 }
 
+struct MapView: View {
+    @StateObject var coordinator: Coordinator = Coordinator.shared
+    
+    var body: some View {
+        ZStack {
+            VStack {
+                NaverMap()
+                    .ignoresSafeArea(.all, edges: .top)
+            }
+            .onAppear {
+                Coordinator.shared.checkIfLocationServiceIsEnabled()
+            }
+            VStack {
+                Spacer()
+                
+                HStack {
+                    Button(action: {}) {
+                        Image(systemName: "plus")
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(25)
+                            .shadow(radius: 5)
+                    }
+                    Spacer()
+                    Button(action: {}) {
+                        Text("목록")
+                            .padding()
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(25)
+                            .shadow(radius: 5)
+                    }
+                    .padding(.leading, 10)
+                    Spacer()
+                    Button(action: {
+                        Coordinator.shared.fetchUserLocation()
+                    }) {
+                        Image(systemName: "location.fill")
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(25)
+                            .shadow(radius: 5)
+                    }
+                    .padding(.leading, 10)
+                }
+                .padding()
+            }
+        }
+        Spacer()
+    }
+}
 
 struct NaverMap: UIViewRepresentable {
-    
     func makeCoordinator() -> Coordinator {
         Coordinator.shared
     }
@@ -95,7 +282,6 @@ struct NaverMap: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: NMFNaverMapView, context: Context) {}
-    
 }
 
 final class Coordinator: NSObject, ObservableObject, NMFMapViewCameraDelegate, NMFMapViewTouchDelegate, CLLocationManagerDelegate {
@@ -103,68 +289,47 @@ final class Coordinator: NSObject, ObservableObject, NMFMapViewCameraDelegate, N
     
     let view = NMFNaverMapView(frame: .zero)
     
-    // Coordinator 클래스 안의 코드
-    
     override init() {
         super.init()
         
-        view.mapView.positionMode = .direction
+        view.mapView.positionMode = .compass
         view.mapView.isNightModeEnabled = true
         
-        view.mapView.zoomLevel = 15
-        view.mapView.minZoomLevel = 10 // 최소 줌 레벨
-        view.mapView.maxZoomLevel = 17 // 최대 줌 레벨
+        view.mapView.zoomLevel = 16
+        view.mapView.minZoomLevel = 9
+        view.mapView.maxZoomLevel = 18
         
-        view.showLocationButton = true
-        view.showZoomControls = true // 줌 확대, 축소 버튼 활성화
-        view.showCompass = false
-        view.showScaleBar = false
+        view.showLocationButton = false // 기본 제공 위치 버튼 숨기기
+        view.showZoomControls = true
+        view.showCompass = true
+        view.showScaleBar = true
         
         view.mapView.addCameraDelegate(delegate: self)
         view.mapView.touchDelegate = self
     }
     
-    // Coordinator 클래스 안의 코드
-    func mapView(_ mapView: NMFMapView, cameraWillChangeByReason reason: Int, animated: Bool) {
-        // 카메라 이동이 시작되기 전 호출되는 함수
-    }
-    
-    func mapView(_ mapView: NMFMapView, cameraIsChangingByReason reason: Int) {
-        // 카메라의 위치가 변경되면 호출되는 함수
-    }
-    
-    // Coordinator 클래스 안의 코드
-    // 클래스 상단에 변수 설정을 해줘야 한다.
     @Published var coord: (Double, Double) = (0.0, 0.0)
     @Published var userLocation: (Double, Double) = (0.0, 0.0)
     
     var locationManager: CLLocationManager?
     
-    // MARK: - 위치 정보 동의 확인
     func checkLocationAuthorization() {
         guard let locationManager = locationManager else { return }
         
         switch locationManager.authorizationStatus {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
-        case .restricted:
+        case .restricted, .denied:
             print("위치 정보 접근이 제한되었습니다.")
-        case .denied:
-            print("위치 정보 접근을 거절했습니다. 설정에 가서 변경하세요.")
         case .authorizedAlways, .authorizedWhenInUse:
-            print("Success")
-            
-            coord = (Double(locationManager.location?.coordinate.latitude ?? 0.0), Double(locationManager.location?.coordinate.longitude ?? 0.0))
-            userLocation = (Double(locationManager.location?.coordinate.latitude ?? 0.0), Double(locationManager.location?.coordinate.longitude ?? 0.0))
-            
+            coord = (locationManager.location?.coordinate.latitude ?? 0.0, locationManager.location?.coordinate.longitude ?? 0.0)
+            userLocation = (locationManager.location?.coordinate.latitude ?? 0.0, locationManager.location?.coordinate.longitude ?? 0.0)
             fetchUserLocation()
-            
         @unknown default:
             break
         }
     }
     
-    // Coordinator 클래스 안의 코드
     func checkIfLocationServiceIsEnabled() {
         DispatchQueue.global().async {
             if CLLocationManager.locationServicesEnabled() {
@@ -179,14 +344,13 @@ final class Coordinator: NSObject, ObservableObject, NMFMapViewCameraDelegate, N
         }
     }
     
-    // Coordinator 클래스 안의 코드
     func fetchUserLocation() {
         if let locationManager = locationManager {
             let lat = locationManager.location?.coordinate.latitude
             let lng = locationManager.location?.coordinate.longitude
             let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: lat ?? 0.0, lng: lng ?? 0.0), zoomTo: 15)
-            cameraUpdate.animation = .easeIn
-            cameraUpdate.animationDuration = 1
+//            cameraUpdate.animation = .easeIn
+//            cameraUpdate.animationDuration = 1
             
             let locationOverlay = view.mapView.locationOverlay
             locationOverlay.location = NMGLatLng(lat: lat ?? 0.0, lng: lng ?? 0.0)
@@ -201,101 +365,10 @@ final class Coordinator: NSObject, ObservableObject, NMFMapViewCameraDelegate, N
         }
     }
     
-    // Coordinator 클래스 안의 코드
     func getNaverMapView() -> NMFNaverMapView {
         view
     }
 }
-
-
-
-
-//// 방법 3
-//import SwiftUI
-//import NMapsMap
-//import CoreLocation
-//
-//
-//struct NaverMapView: UIViewRepresentable {
-//    class Coordinator: NSObject, NMFMapViewCameraDelegate {
-//        var parent: NaverMapView
-//
-//        init(parent: NaverMapView) {
-//            self.parent = parent
-//        }
-//
-//        func mapView(_ mapView: NMFMapView, cameraWillChangeByReason reason: Int, animated: Bool) {
-//            // 카메라 변경 시 동작
-//        }
-//    }
-//
-//    func makeCoordinator() -> Coordinator {
-//        Coordinator(parent: self)
-//    }
-//
-//    func makeUIView(context: Context) -> NMFNaverMapView {
-//        let mapView = NMFNaverMapView()
-//        mapView.mapView.addCameraDelegate(delegate: context.coordinator)
-//        return mapView
-//    }
-//
-//    func updateUIView(_ uiView: NMFNaverMapView, context: Context) {
-//        // 뷰 업데이트 시 동작
-//    }
-//}
-//
-//class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-//    private let locationManager = CLLocationManager()
-//    @Published var location: CLLocation?
-//
-//    override init() {
-//        super.init()
-//        self.locationManager.delegate = self
-//        self.locationManager.requestWhenInUseAuthorization()
-//        self.locationManager.startUpdatingLocation()
-//    }
-//
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        self.location = locations.last
-//    }
-//}
-//
-//struct MapView: View {
-//    @StateObject private var locationManager = LocationManager()
-//
-//    var body: some View {
-//        ZStack {
-//            NaverMapView()
-//                .edgesIgnoringSafeArea(.all)
-//                .onAppear {
-//                    if let location = locationManager.location {
-//                        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude))
-//                        cameraUpdate.animation = .fly
-//                        NMFMapView().moveCamera(cameraUpdate)
-//                    }
-//                }
-//            if let location = locationManager.location {
-//                Text("현재 위치: \(location.coordinate.latitude), \(location.coordinate.longitude)")
-//                    .padding()
-//                    .background(Color.white)
-//                    .cornerRadius(8)
-//                    .shadow(radius: 4)
-//                    .padding()
-//            }
-//        }
-//    }
-//}
-//
-//struct HomeView: View {
-//    @State private var searchText: String = ""
-//
-//    var body: some View {
-//        VStack(alignment: .trailing, spacing: 0) {
-//          SearchBarView(searchText: $searchText)
-//          MapView()
-//      }
-//  }
-//}
 
 #Preview {
     HomeView()

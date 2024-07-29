@@ -50,15 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
 		1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-=======
 		042E9A9D05A62E40909CB5E4 /* Pods-LocavelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocavelTests.release.xcconfig"; path = "Target Support Files/Pods-LocavelTests/Pods-LocavelTests.release.xcconfig"; sourceTree = "<group>"; };
 		16E0C007A09D5BAD0A4E5979 /* Pods_Locavel_LocavelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locavel_LocavelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
->>>>>>> origin/eddy/map
 		3056DAAD2C4AA789002B9378 /* Locavel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locavel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3056DAB02C4AA789002B9378 /* LocavelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocavelApp.swift; sourceTree = "<group>"; };
 		3056DAB22C4AA789002B9378 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
