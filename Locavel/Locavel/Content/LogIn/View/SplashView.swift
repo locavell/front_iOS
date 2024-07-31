@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct SplashView: View {
+    
     var body: some View {
-        Text("Locavel")
+        ZStack {
+            Color.white
+                .opacity(0.3)
+                .ignoresSafeArea()
+            Image("Logo")
+                .resizable()
+                .frame(width: 183, height: 37)
+        }
     }
 }
 
