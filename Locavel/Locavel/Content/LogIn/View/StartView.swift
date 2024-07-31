@@ -1,18 +1,18 @@
 //
-//  LogInView.swift
+//  StartView.swift
 //  Locavel
 //
-//  Created by 김의정 on 7/19/24.
+//  Created by 김경서 on 7/31/24.
 //
 
 import SwiftUI
 
-struct LogInView: View {
+struct StartView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    LogInView()
+    StartView()
 }
