@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */; };
 		1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */; };
+		1A850DCC2C57E07500D02E0A /* SpotRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */; };
 		1AC7DBCD2C4CCE86007896A4 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */; };
 		1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */; };
 		1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */; };
@@ -56,6 +57,7 @@
 		16E0C007A09D5BAD0A4E5979 /* Pods_Locavel_LocavelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locavel_LocavelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMyRegionView.swift; sourceTree = "<group>"; };
 		1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotInterestingView.swift; sourceTree = "<group>"; };
+		1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotRestaurant.swift; sourceTree = "<group>"; };
 		1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */,
 				1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */,
 				1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */,
+				1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */,
 				1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */,
 				1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */,
 				1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */,
@@ -526,6 +529,7 @@
 				3056DAED2C4AAAD8002B9378 /* MyPlaceView.swift in Sources */,
 				1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */,
 				3056DAE72C4AAA7A002B9378 /* HomeView.swift in Sources */,
+				1A850DCC2C57E07500D02E0A /* SpotRestaurant.swift in Sources */,
 				3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */,
 				3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */,
 				1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */,
