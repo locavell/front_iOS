@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 @main
 struct LocavelApp: App {
     var body: some Scene {
