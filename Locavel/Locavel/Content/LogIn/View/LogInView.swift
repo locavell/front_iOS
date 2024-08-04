@@ -1,6 +1,10 @@
 import SwiftUI
+import NaverThirdPartyLogin
 
 struct LogInView: View {
+    
+    @StateObject var naverAuth = NaverAuth()
+    
     var body: some View {
         VStack {
             Image("Logo")
@@ -23,7 +27,9 @@ struct LogInView: View {
             }
             .frame(width: 281, height: 51)
             
-            Button(action: {}) {
+            Button(action: {
+                naverAuth.handleNaverLogin()
+            }) {
                 HStack(spacing: 10) {
                     Image("naver")
                         .resizable()
