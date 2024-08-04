@@ -16,6 +16,7 @@
 			dependencies = (
 			);
 			name = "naveridlogin-sdk-ios";
+			productName = "naveridlogin-sdk-ios";
 		};
 		72E614C823EA09AB1AAE80D5CD8A4C58 /* NMapsGeometry */ = {
 			isa = PBXAggregateTarget;
@@ -26,6 +27,7 @@
 			dependencies = (
 			);
 			name = NMapsGeometry;
+			productName = NMapsGeometry;
 		};
 		8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */ = {
 			isa = PBXAggregateTarget;
@@ -37,16 +39,13 @@
 				0F42F1C3A1A2E12582757CAA1B54FC6D /* PBXTargetDependency */,
 			);
 			name = NMapsMap;
+			productName = NMapsMap;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		33E34F246FC6CF44835EEC480BB2E8DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		368F3326B871407331D0BC47DB5F102E /* Pods-Locavel-LocavelUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E95DED325827FEE956BDE0155BBCCA /* Pods-Locavel-LocavelUITests-dummy.m */; };
 		431791AB99A1D259502B27CD55D449D5 /* Pods-Locavel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC0E72F73EFC4C7C05317829AD457A2 /* Pods-Locavel-dummy.m */; };
-		4BFE348C7464D31B71480EB03531F863 /* Pods-LocavelTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7DBAD761A990CD4B19AB3ACDF506A9 /* Pods-LocavelTests-dummy.m */; };
-		5CF7A8AA14F5590952289485E69EBEA4 /* Pods-Locavel-LocavelUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C372BACA8F865BBD47A20A49AB74D371 /* Pods-Locavel-LocavelUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAC65C101FCD6E226A873D3DBA672B5E /* Pods-LocavelTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD8661B53F14B7A6749DD3713E899CF /* Pods-LocavelTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B68427181C265230EC42A003F97DD931 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		C225F41353B284B60D1E35CF091A021D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		C276C0DD8BF5711FF46A29EAEE7E63A6 /* Pods-Locavel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 231BC584B76FE4C3BD0CFF8555F6A051 /* Pods-Locavel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -112,49 +111,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		040579027C4A6B8891BF7C15E9E05307 /* Pods-Locavel-LocavelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Locavel-LocavelUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2255458B3B8C51A474BBC2A25762860E /* Pods-Locavel-LocavelUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Locavel-LocavelUITests-Info.plist"; sourceTree = "<group>"; };
 		231BC584B76FE4C3BD0CFF8555F6A051 /* Pods-Locavel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Locavel-umbrella.h"; sourceTree = "<group>"; };
 		25BE71B1F1D8BF00261C93FBB0774982 /* NMapsMap-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NMapsMap-xcframeworks.sh"; sourceTree = "<group>"; };
-		26763037C2206FF30C91F428D894BD08 /* Pods-LocavelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocavelTests.release.xcconfig"; sourceTree = "<group>"; };
 		2788A15439AF92325DE0C3ADEADE97D1 /* Pods-Locavel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Locavel.modulemap"; sourceTree = "<group>"; };
 		2A2A1D2FA170871E66B552F85139E0D9 /* Pods-Locavel-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Locavel-frameworks.sh"; sourceTree = "<group>"; };
-		2DCC86117F5FA9E7287D5F05D010D5C8 /* Pods-Locavel-LocavelUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Locavel-LocavelUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		355FE9CB0BCC1798A4B5EB0C4A73E589 /* Pods-Locavel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Locavel-Info.plist"; sourceTree = "<group>"; };
-		410CEBADF89F8F60D926F1BC7185620A /* Pods-LocavelTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LocavelTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		41334AB88F6167F706BBFA717D8BA9B3 /* Pods-Locavel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Locavel"; path = Pods_Locavel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		420D0C60F0D83F017CFABEBA2C064331 /* NMapsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.debug.xcconfig; sourceTree = "<group>"; };
-		43329C02F82130F7090B58FD3E119722 /* Pods-LocavelTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocavelTests-Info.plist"; sourceTree = "<group>"; };
-		4573C475753AB6FF300A2D8FEC7DA5D3 /* Pods-LocavelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LocavelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4BC1E581913DA6404EF60D8125A3F2B0 /* Pods-Locavel-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Locavel-acknowledgements.markdown"; sourceTree = "<group>"; };
 		52D80DC61DBC4718A034F25B36FA024D /* NMapsGeometry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.release.xcconfig; sourceTree = "<group>"; };
 		571583C66D47F0947D22495529860757 /* Pods-Locavel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Locavel.debug.xcconfig"; sourceTree = "<group>"; };
-		5EF9EE05881C16AC029C4A145D1CCC40 /* Pods-Locavel-LocavelUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Locavel-LocavelUITests-frameworks.sh"; sourceTree = "<group>"; };
 		67F14D9F2B6B591418407036CB0B2997 /* Pods-Locavel-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Locavel-acknowledgements.plist"; sourceTree = "<group>"; };
 		69B064B06FA4E139D10C22F75DDD7972 /* Pods-Locavel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Locavel.release.xcconfig"; sourceTree = "<group>"; };
 		6B7ACFE4DD3B32FEF70B34B14FDD0D2D /* naveridlogin-sdk-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "naveridlogin-sdk-ios.release.xcconfig"; sourceTree = "<group>"; };
-		71B9737C88F70851461063FAB7FA85FA /* Pods-Locavel-LocavelUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Locavel-LocavelUITests.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7D7DBAD761A990CD4B19AB3ACDF506A9 /* Pods-LocavelTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LocavelTests-dummy.m"; sourceTree = "<group>"; };
-		8AF3BA0F352AA747C74642033620B605 /* Pods-Locavel-LocavelUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Locavel-LocavelUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		93BDE20C94786077A442F53B52930F96 /* NMapsMap.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = NMapsMap.xcframework; path = framework/NMapsMap.xcframework; sourceTree = "<group>"; };
-		9C781F99FF2686A15C9D4CBBDC96FD61 /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
-		9CD8661B53F14B7A6749DD3713E899CF /* Pods-LocavelTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LocavelTests-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FC25A93436A461FAE1B26EDAD2299BD /* Pods-Locavel-LocavelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Locavel-LocavelUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A8795B2517AA34151FE12191F7A4D515 /* Pods-LocavelTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LocavelTests.modulemap"; sourceTree = "<group>"; };
+		93BDE20C94786077A442F53B52930F96 /* NMapsMap.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = NMapsMap.xcframework; path = framework/NMapsMap.xcframework; sourceTree = "<group>"; };
+		9C781F99FF2686A15C9D4CBBDC96FD61 /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = NaverThirdPartyLogin.xcframework; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C14CBBB166FD731B5502127496207509 /* naveridlogin-sdk-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "naveridlogin-sdk-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		C2BF69224145F5408992BC6DC8CBC802 /* NMapsGeometry.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = NMapsGeometry.xcframework; path = framework/NMapsGeometry.xcframework; sourceTree = "<group>"; };
-		C372BACA8F865BBD47A20A49AB74D371 /* Pods-Locavel-LocavelUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Locavel-LocavelUITests-umbrella.h"; sourceTree = "<group>"; };
+		C2BF69224145F5408992BC6DC8CBC802 /* NMapsGeometry.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = NMapsGeometry.xcframework; path = framework/NMapsGeometry.xcframework; sourceTree = "<group>"; };
 		CC9B2500811CD12E879B5178C0001AB3 /* NMapsGeometry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.debug.xcconfig; sourceTree = "<group>"; };
 		D85D4188330C0DD508E8C9CD98984839 /* NMapsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.release.xcconfig; sourceTree = "<group>"; };
-		DA52668C0F3292F9AEEEB1F5C5748763 /* Pods-LocavelTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LocavelTests"; path = Pods_LocavelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA52668C0F3292F9AEEEB1F5C5748763 /* Pods_LocavelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocavelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0E72F73EFC4C7C05317829AD457A2 /* Pods-Locavel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Locavel-dummy.m"; sourceTree = "<group>"; };
 		E72C981902935E4F55E1719D98AF7524 /* NMapsGeometry-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NMapsGeometry-xcframeworks.sh"; sourceTree = "<group>"; };
-		F2E95DED325827FEE956BDE0155BBCCA /* Pods-Locavel-LocavelUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Locavel-LocavelUITests-dummy.m"; sourceTree = "<group>"; };
 		F88E07AF6C6B387C6DC91432DF418D3E /* naveridlogin-sdk-ios-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "naveridlogin-sdk-ios-xcframeworks.sh"; sourceTree = "<group>"; };
-		F8FFEAA680A94DAB93F62BB96DDDD792 /* Pods-LocavelTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LocavelTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		FB72E69EF8F2A36DB3541BC57D4F0F05 /* Pods-Locavel-LocavelUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Locavel-LocavelUITests"; path = Pods_Locavel_LocavelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB72E69EF8F2A36DB3541BC57D4F0F05 /* Pods_Locavel_LocavelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locavel_LocavelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,8 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				33FD1FE0D2B3460775D2091725C50852 /* Pods-Locavel */,
-				7334EA1205DFE7D9BD19EBDBDA1ED36E /* Pods-Locavel-LocavelUITests */,
-				2844833D45B50AA2875AC3AAC3487884 /* Pods-LocavelTests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -201,7 +181,6 @@
 				447765612DBED7C8AF72109794667975 /* Frameworks */,
 				8F1D6A2DDDE98CF04C88376868219C29 /* Support Files */,
 			);
-			name = NMapsMap;
 			path = NMapsMap;
 			sourceTree = "<group>";
 		};
@@ -216,29 +195,12 @@
 			path = "../Target Support Files/naveridlogin-sdk-ios";
 			sourceTree = "<group>";
 		};
-		2844833D45B50AA2875AC3AAC3487884 /* Pods-LocavelTests */ = {
-			isa = PBXGroup;
-			children = (
-				A8795B2517AA34151FE12191F7A4D515 /* Pods-LocavelTests.modulemap */,
-				410CEBADF89F8F60D926F1BC7185620A /* Pods-LocavelTests-acknowledgements.markdown */,
-				F8FFEAA680A94DAB93F62BB96DDDD792 /* Pods-LocavelTests-acknowledgements.plist */,
-				7D7DBAD761A990CD4B19AB3ACDF506A9 /* Pods-LocavelTests-dummy.m */,
-				43329C02F82130F7090B58FD3E119722 /* Pods-LocavelTests-Info.plist */,
-				9CD8661B53F14B7A6749DD3713E899CF /* Pods-LocavelTests-umbrella.h */,
-				4573C475753AB6FF300A2D8FEC7DA5D3 /* Pods-LocavelTests.debug.xcconfig */,
-				26763037C2206FF30C91F428D894BD08 /* Pods-LocavelTests.release.xcconfig */,
-			);
-			name = "Pods-LocavelTests";
-			path = "Target Support Files/Pods-LocavelTests";
-			sourceTree = "<group>";
-		};
 		2BF8730661485F45709823778F8363CC /* naveridlogin-sdk-ios */ = {
 			isa = PBXGroup;
 			children = (
 				6C5AF1A587EEBFFE0DC77683A6475718 /* Frameworks */,
 				0AA0D1639D3AD82B0433842A3F30B7CB /* Support Files */,
 			);
-			name = "naveridlogin-sdk-ios";
 			path = "naveridlogin-sdk-ios";
 			sourceTree = "<group>";
 		};
@@ -271,8 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				41334AB88F6167F706BBFA717D8BA9B3 /* Pods-Locavel */,
-				FB72E69EF8F2A36DB3541BC57D4F0F05 /* Pods-Locavel-LocavelUITests */,
-				DA52668C0F3292F9AEEEB1F5C5748763 /* Pods-LocavelTests */,
+				FB72E69EF8F2A36DB3541BC57D4F0F05 /* Pods_Locavel_LocavelUITests.framework */,
+				DA52668C0F3292F9AEEEB1F5C5748763 /* Pods_LocavelTests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,23 +253,6 @@
 				9C781F99FF2686A15C9D4CBBDC96FD61 /* NaverThirdPartyLogin.xcframework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7334EA1205DFE7D9BD19EBDBDA1ED36E /* Pods-Locavel-LocavelUITests */ = {
-			isa = PBXGroup;
-			children = (
-				71B9737C88F70851461063FAB7FA85FA /* Pods-Locavel-LocavelUITests.modulemap */,
-				2DCC86117F5FA9E7287D5F05D010D5C8 /* Pods-Locavel-LocavelUITests-acknowledgements.markdown */,
-				8AF3BA0F352AA747C74642033620B605 /* Pods-Locavel-LocavelUITests-acknowledgements.plist */,
-				F2E95DED325827FEE956BDE0155BBCCA /* Pods-Locavel-LocavelUITests-dummy.m */,
-				5EF9EE05881C16AC029C4A145D1CCC40 /* Pods-Locavel-LocavelUITests-frameworks.sh */,
-				2255458B3B8C51A474BBC2A25762860E /* Pods-Locavel-LocavelUITests-Info.plist */,
-				C372BACA8F865BBD47A20A49AB74D371 /* Pods-Locavel-LocavelUITests-umbrella.h */,
-				040579027C4A6B8891BF7C15E9E05307 /* Pods-Locavel-LocavelUITests.debug.xcconfig */,
-				9FC25A93436A461FAE1B26EDAD2299BD /* Pods-Locavel-LocavelUITests.release.xcconfig */,
-			);
-			name = "Pods-Locavel-LocavelUITests";
-			path = "Target Support Files/Pods-Locavel-LocavelUITests";
 			sourceTree = "<group>";
 		};
 		8E62504738D5088FC3F5CBAE3A6C2E35 /* Support Files */ = {
@@ -338,7 +283,6 @@
 				DC40D8B333CF818E3C0B221A9CF9C37D /* Frameworks */,
 				8E62504738D5088FC3F5CBAE3A6C2E35 /* Support Files */,
 			);
-			name = NMapsGeometry;
 			path = NMapsGeometry;
 			sourceTree = "<group>";
 		};
@@ -386,7 +330,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CF7A8AA14F5590952289485E69EBEA4 /* Pods-Locavel-LocavelUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +337,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAC65C101FCD6E226A873D3DBA672B5E /* Pods-LocavelTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +369,7 @@
 			);
 			name = "Pods-Locavel-LocavelUITests";
 			productName = Pods_Locavel_LocavelUITests;
-			productReference = FB72E69EF8F2A36DB3541BC57D4F0F05 /* Pods-Locavel-LocavelUITests */;
+			productReference = FB72E69EF8F2A36DB3541BC57D4F0F05 /* Pods_Locavel_LocavelUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5714C5E2191A0A9A67B8C5273844BF4E /* Pods-Locavel */ = {
@@ -467,7 +409,7 @@
 			);
 			name = "Pods-LocavelTests";
 			productName = Pods_LocavelTests;
-			productReference = DA52668C0F3292F9AEEEB1F5C5748763 /* Pods-LocavelTests */;
+			productReference = DA52668C0F3292F9AEEEB1F5C5748763 /* Pods_LocavelTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -585,7 +527,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368F3326B871407331D0BC47DB5F102E /* Pods-Locavel-LocavelUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +534,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BFE348C7464D31B71480EB03531F863 /* Pods-LocavelTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,7 +601,6 @@
 /* Begin XCBuildConfiguration section */
 		09D19BB82738E3F58C73DC6A525E40B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4573C475753AB6FF300A2D8FEC7DA5D3 /* Pods-LocavelTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -732,7 +671,6 @@
 		};
 		3168D977F11E4AC254FACDECCFF74D8B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26763037C2206FF30C91F428D894BD08 /* Pods-LocavelTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -890,7 +828,6 @@
 		};
 		76589E2E3D7E05E77E83FC16F06D9F85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FC25A93436A461FAE1B26EDAD2299BD /* Pods-Locavel-LocavelUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -928,7 +865,6 @@
 		};
 		8660E8EE4E3EA0F2C293F35CDB6EDDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 040579027C4A6B8891BF7C15E9E05307 /* Pods-Locavel-LocavelUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
