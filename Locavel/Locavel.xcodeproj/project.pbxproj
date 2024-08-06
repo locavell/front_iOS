@@ -14,6 +14,10 @@
 		1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */; };
 		1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */; };
 		1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */; };
+		304EADFF2C5F6CB800A2600A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EADFE2C5F6CB800A2600A /* Coordinator.swift */; };
+		304EAE012C5F6D5700A2600A /* NaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE002C5F6D5700A2600A /* NaverMap.swift */; };
+		304EAE032C5FF1BF00A2600A /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE022C5FF1BF00A2600A /* CustomMapView.swift */; };
+		304EAE052C60DE9B00A2600A /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE042C60DE9B00A2600A /* GeocodingService.swift */; };
 		1F2BEA332C5A13F7004D9974 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BEA322C5A13F7004D9974 /* StartView.swift */; };
 		1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD66C92C5A114D002EC096 /* SplashView.swift */; };
 		3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAB02C4AA789002B9378 /* LocavelApp.swift */; };
@@ -42,6 +46,10 @@
 		1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
 		1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		304EADFE2C5F6CB800A2600A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		304EAE002C5F6D5700A2600A /* NaverMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMap.swift; sourceTree = "<group>"; };
+		304EAE022C5FF1BF00A2600A /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
+		304EAE042C60DE9B00A2600A /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
 		1F2BEA322C5A13F7004D9974 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		1FFD66C92C5A114D002EC096 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3056DAAD2C4AA789002B9378 /* Locavel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locavel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		304EADFD2C5F6C8B00A2600A /* NaverMap */ = {
+			isa = PBXGroup;
+			children = (
+				304EADFE2C5F6CB800A2600A /* Coordinator.swift */,
+				304EAE002C5F6D5700A2600A /* NaverMap.swift */,
+				304EAE022C5FF1BF00A2600A /* CustomMapView.swift */,
+				304EAE042C60DE9B00A2600A /* GeocodingService.swift */,
+			);
+			path = NaverMap;
 		1F2BEA342C5A1406004D9974 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +176,7 @@
 		3056DAE02C4AA9D6002B9378 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				304EADFD2C5F6C8B00A2600A /* NaverMap */,
 				3056DAE62C4AAA7A002B9378 /* HomeView.swift */,
 				3056DAE42C4AAA5C002B9378 /* SearchView.swift */,
 			);
@@ -353,13 +371,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304EADFF2C5F6CB800A2600A /* Coordinator.swift in Sources */,
 				1F2BEA332C5A13F7004D9974 /* StartView.swift in Sources */,
 				1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */,
 				3056DAEF2C4AAAF0002B9378 /* InterestPlaceView.swift in Sources */,
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
 				3056DAE52C4AAA5C002B9378 /* SearchView.swift in Sources */,
 				3056DADF2C4AA993002B9378 /* ColorManager.swift in Sources */,
+				304EAE052C60DE9B00A2600A /* GeocodingService.swift in Sources */,
 				1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */,
+				304EAE032C5FF1BF00A2600A /* CustomMapView.swift in Sources */,
 				3056DAB32C4AA789002B9378 /* ContentView.swift in Sources */,
 				1AC7DBCD2C4CCE86007896A4 /* InfoView.swift in Sources */,
 				3056DAED2C4AAAD8002B9378 /* MyPlaceView.swift in Sources */,
@@ -372,6 +393,7 @@
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
 				3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */,
 				3056DAEB2C4AAAC7002B9378 /* WishListView.swift in Sources */,
+				304EAE012C5F6D5700A2600A /* NaverMap.swift in Sources */,
 				3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
