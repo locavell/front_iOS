@@ -15,7 +15,6 @@ extension UIApplication {
 
 struct SearchBarView: View {
     @Binding var searchText: String
-    private let geocodingService = GeocodingService()
     
     var body: some View {
         HStack {
@@ -38,30 +37,11 @@ struct SearchBarView: View {
                         }
                     , alignment: .trailing
                 )
-                .onSubmit {
-                    searchAddress()
-                }
         }
         .font(.headline)
         .padding()
     }
-    
-    func searchAddress() {
-        geocodingService.geocode(address: searchText) { result in
-            switch result {
-            case .success(let coordinates):
-                print("Coordinates: \(coordinates)")
-                DispatchQueue.main.async {
-                    Coordinator.shared.setMarker(lat: coordinates.0, lng: coordinates.1, name: searchText)
-                    Coordinator.shared.moveCamera(lat: coordinates.0, lng: coordinates.1)
-                }
-            case .failure(let error):
-                print("Failed to geocode address: \(error.localizedDescription)")
-            }
-        }
-    }
 }
-
 
 struct SearchBarView_Previews: PreviewProvider {
     @State static var searchText = ""

@@ -18,10 +18,10 @@ struct LogInView: View {
                     .font(.headline)
                     .padding()
                     .foregroundColor(.white)
-                    .frame(width: 281, height: 51)
-                    .background(RoundedRectangle(cornerRadius: 10))
+                    .frame(width: 281, height: 51) // 버튼의 크기 설정
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.blue)) // 버튼의 배경 설정
             }
-            .frame(width: 281, height: 51)
+            .frame(width: 281, height: 51) // 버튼의 크기 설정
             
             Button(action: {}) {
                 HStack(spacing: 10) {
@@ -33,11 +33,11 @@ struct LogInView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                 }
-                .padding()
-                .frame(width: 281, height: 51)
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color.green))
+                .padding() // 내부 여백 설정
+                .frame(width: 281, height: 51) // 버튼의 크기 설정
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color.green)) // 버튼의 배경 설정
             }
-            .frame(width: 281, height: 51)
+            .frame(width: 281, height: 51) // 버튼의 크기 설정
             
             Button(action: {}) {
                 HStack(spacing: 10) {
@@ -49,11 +49,11 @@ struct LogInView: View {
                         .font(.headline)
                         .foregroundColor(.black)
                 }
-                .padding()
-                .frame(width: 281, height: 51)
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color.yellow))
+                .padding() // 내부 여백 설정
+                .frame(width: 281, height: 51) // 버튼의 크기 설정
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color.yellow)) // 버튼의 배경 설정
             }
-            .frame(width: 281, height: 51)
+            .frame(width: 281, height: 51) // 버튼의 크기 설정
         }
         .padding()
     }
