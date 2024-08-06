@@ -6,6 +6,7 @@ target 'Locavel' do
   use_frameworks!
 
   pod 'NMapsMap'
+  pod 'naveridlogin-sdk-ios'
 
   # Pods for Locavel
 
