@@ -15,6 +15,11 @@ struct ContentView : View {
                     Image(systemName: "house.fill")
                     Text("홈")
                 }
+            SurroundView()
+                .tabItem {
+                    Image(systemName: "location.north.circle")
+                    Text("홈")
+                }
             WishListView()
                 .tabItem {
                     Image(systemName: "heart.fill")
