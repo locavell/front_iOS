@@ -1,13 +1,13 @@
 //
-//  SpotRestaurant.swift
+//  Restaurant.swift
 //  Locavel
 //
-//  Created by 박희민 on 7/29/24.
+//  Created by 박희민 on 8/8/24.
 //
 
-import Foundation
+import SwiftUI
 
-struct SpotRestaurant: Identifiable {
+struct Restaurant: Identifiable {
     let id = UUID()
     let image: String
     let name: String
