@@ -139,4 +139,3 @@ class Coordinator: NSObject, ObservableObject, NMFMapViewCameraDelegate, NMFMapV
         view.mapView.moveCamera(cameraUpdate)
     }
 }
-

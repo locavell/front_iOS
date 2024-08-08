@@ -14,12 +14,11 @@
 		1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */; };
 		1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */; };
 		1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */; };
-		304EADFF2C5F6CB800A2600A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EADFE2C5F6CB800A2600A /* Coordinator.swift */; };
-		304EAE012C5F6D5700A2600A /* NaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE002C5F6D5700A2600A /* NaverMap.swift */; };
-		304EAE032C5FF1BF00A2600A /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE022C5FF1BF00A2600A /* CustomMapView.swift */; };
-		304EAE052C60DE9B00A2600A /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE042C60DE9B00A2600A /* GeocodingService.swift */; };
 		1F2BEA332C5A13F7004D9974 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BEA322C5A13F7004D9974 /* StartView.swift */; };
 		1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD66C92C5A114D002EC096 /* SplashView.swift */; };
+		304EAE082C6383C900A2600A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE072C6383C900A2600A /* Coordinator.swift */; };
+		304EAE0A2C6383ED00A2600A /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE092C6383ED00A2600A /* GeocodingService.swift */; };
+		304EAE0C2C63840A00A2600A /* NaverMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE0B2C63840A00A2600A /* NaverMap.swift */; };
 		3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAB02C4AA789002B9378 /* LocavelApp.swift */; };
 		3056DAB32C4AA789002B9378 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAB22C4AA789002B9378 /* ContentView.swift */; };
 		3056DAB52C4AA78A002B9378 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3056DAB42C4AA78A002B9378 /* Assets.xcassets */; };
@@ -33,8 +32,27 @@
 		3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF02C4AAB25002B9378 /* WishListFood.swift */; };
 		3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF22C4AAB40002B9378 /* MyPageView.swift */; };
 		3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF42C4AAB5C002B9378 /* LogInView.swift */; };
+		475CF81C4DE7AA1121FA5278 /* Pods_Locavel_LocavelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E0C007A09D5BAD0A4E5979 /* Pods_Locavel_LocavelUITests.framework */; };
 		7D2F8694CBFD8AA76A69892A /* Pods_Locavel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF808EE2AAF1DD8E8A6A7ECE /* Pods_Locavel.framework */; };
+		D9EE5ED3DB3A2EFBC5D73870 /* Pods_LocavelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84962AB0EA997963AED02044 /* Pods_LocavelTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3056DABE2C4AA78A002B9378 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3056DAA52C4AA789002B9378 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3056DAAC2C4AA789002B9378;
+			remoteInfo = Locavel;
+		};
+		3056DAC82C4AA78A002B9378 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3056DAA52C4AA789002B9378 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3056DAAC2C4AA789002B9378;
+			remoteInfo = Locavel;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		042E9A9D05A62E40909CB5E4 /* Pods-LocavelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocavelTests.release.xcconfig"; path = "Target Support Files/Pods-LocavelTests/Pods-LocavelTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,17 +64,18 @@
 		1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
 		1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		304EADFE2C5F6CB800A2600A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		304EAE002C5F6D5700A2600A /* NaverMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMap.swift; sourceTree = "<group>"; };
-		304EAE022C5FF1BF00A2600A /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
-		304EAE042C60DE9B00A2600A /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
 		1F2BEA322C5A13F7004D9974 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		1FFD66C92C5A114D002EC096 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		304EAE072C6383C900A2600A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		304EAE092C6383ED00A2600A /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
+		304EAE0B2C63840A00A2600A /* NaverMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMap.swift; sourceTree = "<group>"; };
 		3056DAAD2C4AA789002B9378 /* Locavel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locavel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3056DAB02C4AA789002B9378 /* LocavelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocavelApp.swift; sourceTree = "<group>"; };
 		3056DAB22C4AA789002B9378 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3056DAB42C4AA78A002B9378 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3056DAB72C4AA78A002B9378 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3056DABD2C4AA78A002B9378 /* LocavelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocavelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3056DAC72C4AA78A002B9378 /* LocavelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocavelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3056DADE2C4AA993002B9378 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		3056DAE42C4AAA5C002B9378 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		3056DAE62C4AAA7A002B9378 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -85,18 +104,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3056DABA2C4AA78A002B9378 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9EE5ED3DB3A2EFBC5D73870 /* Pods_LocavelTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3056DAC42C4AA78A002B9378 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				475CF81C4DE7AA1121FA5278 /* Pods_Locavel_LocavelUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		304EADFD2C5F6C8B00A2600A /* NaverMap */ = {
-			isa = PBXGroup;
-			children = (
-				304EADFE2C5F6CB800A2600A /* Coordinator.swift */,
-				304EAE002C5F6D5700A2600A /* NaverMap.swift */,
-				304EAE022C5FF1BF00A2600A /* CustomMapView.swift */,
-				304EAE042C60DE9B00A2600A /* GeocodingService.swift */,
-			);
-			path = NaverMap;
 		1F2BEA342C5A1406004D9974 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +140,16 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		304EAE062C63834E00A2600A /* NaverMap */ = {
+			isa = PBXGroup;
+			children = (
+				304EAE072C6383C900A2600A /* Coordinator.swift */,
+				304EAE092C6383ED00A2600A /* GeocodingService.swift */,
+				304EAE0B2C63840A00A2600A /* NaverMap.swift */,
+			);
+			path = NaverMap;
+			sourceTree = "<group>";
+		};
 		3056DAA42C4AA789002B9378 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				3056DAAD2C4AA789002B9378 /* Locavel.app */,
+				3056DABD2C4AA78A002B9378 /* LocavelTests.xctest */,
+				3056DAC72C4AA78A002B9378 /* LocavelUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,7 +214,7 @@
 		3056DAE02C4AA9D6002B9378 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				304EADFD2C5F6C8B00A2600A /* NaverMap */,
+				304EAE062C63834E00A2600A /* NaverMap */,
 				3056DAE62C4AAA7A002B9378 /* HomeView.swift */,
 				3056DAE42C4AAA5C002B9378 /* SearchView.swift */,
 			);
@@ -279,6 +317,45 @@
 			productReference = 3056DAAD2C4AA789002B9378 /* Locavel.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3056DABC2C4AA78A002B9378 /* LocavelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3056DAD42C4AA78A002B9378 /* Build configuration list for PBXNativeTarget "LocavelTests" */;
+			buildPhases = (
+				1958F6179556861FE3C27768 /* [CP] Check Pods Manifest.lock */,
+				3056DAB92C4AA78A002B9378 /* Sources */,
+				3056DABA2C4AA78A002B9378 /* Frameworks */,
+				3056DABB2C4AA78A002B9378 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3056DABF2C4AA78A002B9378 /* PBXTargetDependency */,
+			);
+			name = LocavelTests;
+			productName = LocavelTests;
+			productReference = 3056DABD2C4AA78A002B9378 /* LocavelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3056DAC62C4AA78A002B9378 /* LocavelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3056DAD72C4AA78A002B9378 /* Build configuration list for PBXNativeTarget "LocavelUITests" */;
+			buildPhases = (
+				1FEE1C2FC1F181875E07CD21 /* [CP] Check Pods Manifest.lock */,
+				3056DAC32C4AA78A002B9378 /* Sources */,
+				3056DAC42C4AA78A002B9378 /* Frameworks */,
+				3056DAC52C4AA78A002B9378 /* Resources */,
+				86462D358F1D26A19416F74F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3056DAC92C4AA78A002B9378 /* PBXTargetDependency */,
+			);
+			name = LocavelUITests;
+			productName = LocavelUITests;
+			productReference = 3056DAC72C4AA78A002B9378 /* LocavelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -291,6 +368,14 @@
 				TargetAttributes = {
 					3056DAAC2C4AA789002B9378 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					3056DABC2C4AA78A002B9378 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3056DAAC2C4AA789002B9378;
+					};
+					3056DAC62C4AA78A002B9378 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3056DAAC2C4AA789002B9378;
 					};
 				};
 			};
@@ -308,6 +393,8 @@
 			projectRoot = "";
 			targets = (
 				3056DAAC2C4AA789002B9378 /* Locavel */,
+				3056DABC2C4AA78A002B9378 /* LocavelTests */,
+				3056DAC62C4AA78A002B9378 /* LocavelUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -322,9 +409,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3056DABB2C4AA78A002B9378 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3056DAC52C4AA78A002B9378 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1958F6179556861FE3C27768 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocavelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FEE1C2FC1F181875E07CD21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Locavel-LocavelUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		69D77947C916546911A8B950 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,6 +490,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86462D358F1D26A19416F74F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Locavel-LocavelUITests/Pods-Locavel-LocavelUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Locavel-LocavelUITests/Pods-Locavel-LocavelUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Locavel-LocavelUITests/Pods-Locavel-LocavelUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A8E856E38EEC4F8DE44A3D9D /* [CP] Embed Pods Frameworks */ = {
@@ -371,16 +533,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				304EADFF2C5F6CB800A2600A /* Coordinator.swift in Sources */,
 				1F2BEA332C5A13F7004D9974 /* StartView.swift in Sources */,
 				1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */,
 				3056DAEF2C4AAAF0002B9378 /* InterestPlaceView.swift in Sources */,
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
 				3056DAE52C4AAA5C002B9378 /* SearchView.swift in Sources */,
+				304EAE0A2C6383ED00A2600A /* GeocodingService.swift in Sources */,
 				3056DADF2C4AA993002B9378 /* ColorManager.swift in Sources */,
-				304EAE052C60DE9B00A2600A /* GeocodingService.swift in Sources */,
 				1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */,
-				304EAE032C5FF1BF00A2600A /* CustomMapView.swift in Sources */,
 				3056DAB32C4AA789002B9378 /* ContentView.swift in Sources */,
 				1AC7DBCD2C4CCE86007896A4 /* InfoView.swift in Sources */,
 				3056DAED2C4AAAD8002B9378 /* MyPlaceView.swift in Sources */,
@@ -390,15 +550,43 @@
 				3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */,
 				3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */,
 				1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */,
+				304EAE0C2C63840A00A2600A /* NaverMap.swift in Sources */,
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
 				3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */,
 				3056DAEB2C4AAAC7002B9378 /* WishListView.swift in Sources */,
-				304EAE012C5F6D5700A2600A /* NaverMap.swift in Sources */,
 				3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */,
+				304EAE082C6383C900A2600A /* Coordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3056DAB92C4AA78A002B9378 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3056DAC32C4AA78A002B9378 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3056DABF2C4AA78A002B9378 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3056DAAC2C4AA789002B9378 /* Locavel */;
+			targetProxy = 3056DABE2C4AA78A002B9378 /* PBXContainerItemProxy */;
+		};
+		3056DAC92C4AA78A002B9378 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3056DAAC2C4AA789002B9378 /* Locavel */;
+			targetProxy = 3056DAC82C4AA78A002B9378 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3056DACF2C4AA78A002B9378 /* Debug */ = {
@@ -588,6 +776,82 @@
 			};
 			name = Release;
 		};
+		3056DAD52C4AA78A002B9378 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A2C9509B85048BAD0BE948 /* Pods-LocavelTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Locavel.LocavelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Locavel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Locavel";
+			};
+			name = Debug;
+		};
+		3056DAD62C4AA78A002B9378 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042E9A9D05A62E40909CB5E4 /* Pods-LocavelTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Locavel.LocavelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Locavel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Locavel";
+			};
+			name = Release;
+		};
+		3056DAD82C4AA78A002B9378 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C86F39A4FCE84B365DD5E03 /* Pods-Locavel-LocavelUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Locavel.LocavelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Locavel;
+			};
+			name = Debug;
+		};
+		3056DAD92C4AA78A002B9378 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A798270E9AEDF14BD5D308B /* Pods-Locavel-LocavelUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Locavel.LocavelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Locavel;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -605,6 +869,24 @@
 			buildConfigurations = (
 				3056DAD22C4AA78A002B9378 /* Debug */,
 				3056DAD32C4AA78A002B9378 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3056DAD42C4AA78A002B9378 /* Build configuration list for PBXNativeTarget "LocavelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3056DAD52C4AA78A002B9378 /* Debug */,
+				3056DAD62C4AA78A002B9378 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3056DAD72C4AA78A002B9378 /* Build configuration list for PBXNativeTarget "LocavelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3056DAD82C4AA78A002B9378 /* Debug */,
+				3056DAD92C4AA78A002B9378 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
