@@ -19,7 +19,7 @@ struct LogInView: View {
                     .padding()
                     .foregroundColor(.white)
                     .frame(width: 281, height: 51) // 버튼의 크기 설정
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.blue)) // 버튼의 배경 설정
+                    .background(RoundedRectangle(cornerRadius: 10)) // 버튼의 배경 설정
             }
             .frame(width: 281, height: 51) // 버튼의 크기 설정
             
