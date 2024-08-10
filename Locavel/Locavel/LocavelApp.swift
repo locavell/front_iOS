@@ -12,7 +12,7 @@ import SwiftUI
 struct LocavelApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
                 .accentColor(ColorManager.AccentColor)
         }
     }

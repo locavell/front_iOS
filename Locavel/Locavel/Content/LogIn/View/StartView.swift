@@ -23,17 +23,22 @@ struct StartView: View {
                     }
                 }
         } else {
-            Button(action: {}, label: {
-                Text("시작하기")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)                    .padding()
-                    .foregroundColor(.white)
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 281, height: 51)
-                    )
-            })
-
+            NavigationView {
+                   Button(action: {}, label: {
+                       NavigationLink(destination: LogInView()) {
+                           Text("시작하기")
+                               .font(.headline)
+                               .frame(maxWidth: .infinity)
+                               .padding()
+                               .foregroundColor(.white)
+                               .background(
+                                   RoundedRectangle(cornerRadius: 10)
+                                       .frame(width: 281, height: 51)
+                               )
+                       }
+                   })
+                   .navigationBarHidden(true)
+               }
         }
     }
 }
