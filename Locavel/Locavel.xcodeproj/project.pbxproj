@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A03C6B62C64A7B300CAEC41 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B52C64A7B300CAEC41 /* Restaurant.swift */; };
-		1A03C6B82C64A7E200CAEC41 /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B72C64A7E200CAEC41 /* RestaurantViewModel.swift */; };
+		1A03C6B62C64A7B300CAEC41 /* FoodRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B52C64A7B300CAEC41 /* FoodRestaurant.swift */; };
+		1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B72C64A7E200CAEC41 /* FoodViewModel.swift */; };
 		1A03C6BA2C64AB6600CAEC41 /* SpotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */; };
 		1A03C6BC2C64ADEF00CAEC41 /* FoodMyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */; };
 		1A03C6BE2C64B08D00CAEC41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6BD2C64B08D00CAEC41 /* HomeView.swift */; };
 		1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */; };
 		1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */; };
 		1A850DCC2C57E07500D02E0A /* SpotRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */; };
+		1AAE4D452C6DE8A900D29666 /* WishListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE4D442C6DE8A900D29666 /* WishListAPI.swift */; };
+		1AAE4D472C6DE9B600D29666 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE4D462C6DE9B600D29666 /* TokenManager.swift */; };
+		1AB3E39A2C6881ED009F7817 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E3992C6881ED009F7817 /* CombineMoya */; };
+		1AB3E39C2C6881ED009F7817 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E39B2C6881ED009F7817 /* Moya */; };
+		1AB3E39E2C6881ED009F7817 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E39D2C6881ED009F7817 /* ReactiveMoya */; };
+		1AB3E3A02C6881ED009F7817 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E39F2C6881ED009F7817 /* RxMoya */; };
+		1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3E3A22C688674009F7817 /* LocavelAPI.swift */; };
 		1AC7DBCD2C4CCE86007896A4 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */; };
 		1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */; };
 		1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */; };
@@ -62,14 +69,17 @@
 /* Begin PBXFileReference section */
 		042E9A9D05A62E40909CB5E4 /* Pods-LocavelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocavelTests.release.xcconfig"; path = "Target Support Files/Pods-LocavelTests/Pods-LocavelTests.release.xcconfig"; sourceTree = "<group>"; };
 		16E0C007A09D5BAD0A4E5979 /* Pods_Locavel_LocavelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locavel_LocavelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A03C6B52C64A7B300CAEC41 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		1A03C6B72C64A7E200CAEC41 /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
+		1A03C6B52C64A7B300CAEC41 /* FoodRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRestaurant.swift; sourceTree = "<group>"; };
+		1A03C6B72C64A7E200CAEC41 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
 		1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewModel.swift; sourceTree = "<group>"; };
 		1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMyRegionView.swift; sourceTree = "<group>"; };
 		1A03C6BD2C64B08D00CAEC41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMyRegionView.swift; sourceTree = "<group>"; };
 		1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotInterestingView.swift; sourceTree = "<group>"; };
 		1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotRestaurant.swift; sourceTree = "<group>"; };
+		1AAE4D442C6DE8A900D29666 /* WishListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListAPI.swift; sourceTree = "<group>"; };
+		1AAE4D462C6DE9B600D29666 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		1AB3E3A22C688674009F7817 /* LocavelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocavelAPI.swift; path = Locavel/Content/LocavelAPI.swift; sourceTree = SOURCE_ROOT; };
 		1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
@@ -110,7 +120,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB3E3A02C6881ED009F7817 /* RxMoya in Frameworks */,
+				1AB3E39A2C6881ED009F7817 /* CombineMoya in Frameworks */,
+				1AB3E39E2C6881ED009F7817 /* ReactiveMoya in Frameworks */,
 				7D2F8694CBFD8AA76A69892A /* Pods_Locavel.framework in Frameworks */,
+				1AB3E39C2C6881ED009F7817 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +153,25 @@
 				1A03C6BD2C64B08D00CAEC41 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		1AB3E3972C687A56009F7817 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1A03C6B72C64A7E200CAEC41 /* FoodViewModel.swift */,
+				1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1AB3E3A12C688654009F7817 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1AB3E3A22C688674009F7817 /* LocavelAPI.swift */,
+				1AAE4D442C6DE8A900D29666 /* WishListAPI.swift */,
+				1AAE4D462C6DE9B600D29666 /* TokenManager.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		1F2BEA342C5A1406004D9974 /* View */ = {
@@ -191,6 +224,7 @@
 		3056DAAF2C4AA789002B9378 /* Locavel */ = {
 			isa = PBXGroup;
 			children = (
+				1AB3E3A12C688654009F7817 /* API */,
 				30A1C2A92C4D43D300EB10EC /* Info.plist */,
 				3056DAB02C4AA789002B9378 /* LocavelApp.swift */,
 				3056DADA2C4AA7FD002B9378 /* Content */,
@@ -269,15 +303,12 @@
 		3056DAE82C4AAAA7002B9378 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1AB3E3972C687A56009F7817 /* ViewModel */,
 				3056DAEA2C4AAAC7002B9378 /* WishListView.swift */,
 				1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */,
 				1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */,
 				1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */,
-				1A03C6B72C64A7E200CAEC41 /* RestaurantViewModel.swift */,
-				1A03C6B52C64A7B300CAEC41 /* Restaurant.swift */,
 				1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */,
-				1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */,
-				1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */,
 				1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */,
 				1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */,
 				1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */,
@@ -290,6 +321,8 @@
 		3056DAE92C4AAAAE002B9378 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */,
+				1A03C6B52C64A7B300CAEC41 /* FoodRestaurant.swift */,
 				3056DAF02C4AAB25002B9378 /* WishListFood.swift */,
 			);
 			path = Data;
@@ -336,6 +369,12 @@
 			dependencies = (
 			);
 			name = Locavel;
+			packageProductDependencies = (
+				1AB3E3992C6881ED009F7817 /* CombineMoya */,
+				1AB3E39B2C6881ED009F7817 /* Moya */,
+				1AB3E39D2C6881ED009F7817 /* ReactiveMoya */,
+				1AB3E39F2C6881ED009F7817 /* RxMoya */,
+			);
 			productName = Locavel;
 			productReference = 3056DAAD2C4AA789002B9378 /* Locavel.app */;
 			productType = "com.apple.product-type.application";
@@ -411,6 +450,9 @@
 				Base,
 			);
 			mainGroup = 3056DAA42C4AA789002B9378;
+			packageReferences = (
+				1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 3056DAAE2C4AA789002B9378 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -563,10 +605,12 @@
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
 				3056DAE52C4AAA5C002B9378 /* SearchView.swift in Sources */,
 				304EAE0A2C6383ED00A2600A /* GeocodingService.swift in Sources */,
+				1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */,
 				3056DADF2C4AA993002B9378 /* ColorManager.swift in Sources */,
 				1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */,
 				3056DAB32C4AA789002B9378 /* ContentView.swift in Sources */,
 				1AC7DBCD2C4CCE86007896A4 /* InfoView.swift in Sources */,
+				1AAE4D472C6DE9B600D29666 /* TokenManager.swift in Sources */,
 				1A03C6BA2C64AB6600CAEC41 /* SpotViewModel.swift in Sources */,
 				3056DAED2C4AAAD8002B9378 /* MyPlaceView.swift in Sources */,
 				1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */,
@@ -576,11 +620,12 @@
 				1A03C6BC2C64ADEF00CAEC41 /* FoodMyRegionView.swift in Sources */,
 				3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */,
 				1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */,
-				1A03C6B82C64A7E200CAEC41 /* RestaurantViewModel.swift in Sources */,
+				1AAE4D452C6DE8A900D29666 /* WishListAPI.swift in Sources */,
+				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
 				304EAE0C2C63840A00A2600A /* NaverMap.swift in Sources */,
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
 				3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */,
-				1A03C6B62C64A7B300CAEC41 /* Restaurant.swift in Sources */,
+				1A03C6B62C64A7B300CAEC41 /* FoodRestaurant.swift in Sources */,
 				3056DAEB2C4AAAC7002B9378 /* WishListView.swift in Sources */,
 				3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */,
 				304EAE082C6383C900A2600A /* Coordinator.swift in Sources */,
@@ -920,6 +965,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1AB3E3992C6881ED009F7817 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		1AB3E39B2C6881ED009F7817 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		1AB3E39D2C6881ED009F7817 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		1AB3E39F2C6881ED009F7817 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3056DAA52C4AA789002B9378 /* Project object */;
 }
