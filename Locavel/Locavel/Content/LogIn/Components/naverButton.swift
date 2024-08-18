@@ -10,7 +10,7 @@ import NaverThirdPartyLogin
 
 struct naverButton: View {
     @StateObject var naverAuth = NaverAuth()
-    
+
     var body: some View {
         Button(action: {
             naverAuth.handleNaverLogin()
@@ -34,3 +34,4 @@ struct naverButton: View {
         }
     }
 }
+
