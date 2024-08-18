@@ -1,19 +1,11 @@
-//
-//  FoodView.swift
-//  testbaki
-//
-//  Created by 박희민 on 7/18/24.
-//
 import SwiftUI
 
 struct FoodView: View {
-    @StateObject private var viewModel = RestaurantViewModel()
+    @StateObject private var viewModel = FoodViewModel()
 
     var body: some View {
         ScrollView {
             VStack {
-                Spacer()
-
                 HStack {
                     Text("내 지역")
                         .font(.title2)
@@ -46,7 +38,13 @@ struct FoodView: View {
                                             Spacer()
                                             VStack {
                                                 Button(action: {
-                                                    viewModel.toggleFavorite(for: restaurant)
+                                                    viewModel.addWishlist(placeId: restaurant.id.uuidString) { success in
+                                                        if success {
+                                                            print("위시리스트에 추가되었습니다.")
+                                                        } else {
+                                                            print("추가 실패.")
+                                                        }
+                                                    }
                                                 }) {
                                                     Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
                                                         .foregroundColor(.red)
@@ -85,12 +83,24 @@ struct FoodView: View {
 
                 Spacer()
 
-                Text("관심 지역")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .padding(.leading, 15)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                HStack {
+                    Text("관심 지역")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding(.leading, 15)
+                        .frame(maxWidth: .infinity, alignment: .leading)
 
+                    NavigationLink(destination: SpotInterestingView()) {
+                        Text("전체보기")
+                            .font(.footnote)
+                            .underline()
+                            .foregroundColor(.gray)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .padding()
+                            .padding(.leading)
+                    }
+                }
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(viewModel.favoriteRestaurants) { restaurant in
@@ -134,4 +144,3 @@ struct FoodView: View {
 #Preview {
     FoodView()
 }
-

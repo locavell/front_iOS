@@ -1,24 +1,20 @@
 PODS:
-  - naveridlogin-sdk-ios (4.2.1)
   - NMapsGeometry (1.0.2)
   - NMapsMap (3.19.0):
     - NMapsGeometry
 
 DEPENDENCIES:
-  - naveridlogin-sdk-ios
   - NMapsMap
 
 SPEC REPOS:
   trunk:
-    - naveridlogin-sdk-ios
     - NMapsGeometry
     - NMapsMap
 
 SPEC CHECKSUMS:
-  naveridlogin-sdk-ios: d5f9d92905a7e964976ebfdd665bee5fb75845c5
   NMapsGeometry: 4e02554fa9880ef02ed96b075dc84355d6352479
   NMapsMap: 99c10429d93340780b6f88d3fc7c0a3850b43664
 
-PODFILE CHECKSUM: a6fdbbe0f5f4edea8c9fbc3b4adeb6b4d42f166c
+PODFILE CHECKSUM: 9be55471edd326a42b593213f4974563ac0829cc
 
 COCOAPODS: 1.15.2

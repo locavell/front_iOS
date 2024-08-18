@@ -7,19 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A03C6B62C64A7B300CAEC41 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B52C64A7B300CAEC41 /* Restaurant.swift */; };
-		1A03C6B82C64A7E200CAEC41 /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B72C64A7E200CAEC41 /* RestaurantViewModel.swift */; };
+		1A03C6B62C64A7B300CAEC41 /* FoodRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B52C64A7B300CAEC41 /* FoodRestaurant.swift */; };
+		1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B72C64A7E200CAEC41 /* FoodViewModel.swift */; };
 		1A03C6BA2C64AB6600CAEC41 /* SpotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */; };
 		1A03C6BC2C64ADEF00CAEC41 /* FoodMyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */; };
 		1A03C6BE2C64B08D00CAEC41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6BD2C64B08D00CAEC41 /* HomeView.swift */; };
 		1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */; };
 		1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */; };
 		1A850DCC2C57E07500D02E0A /* SpotRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */; };
+		1AAE4D452C6DE8A900D29666 /* WishListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE4D442C6DE8A900D29666 /* WishListAPI.swift */; };
+		1AAE4D472C6DE9B600D29666 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE4D462C6DE9B600D29666 /* TokenManager.swift */; };
+		1AB3E39A2C6881ED009F7817 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E3992C6881ED009F7817 /* CombineMoya */; };
+		1AB3E39C2C6881ED009F7817 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E39B2C6881ED009F7817 /* Moya */; };
+		1AB3E39E2C6881ED009F7817 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E39D2C6881ED009F7817 /* ReactiveMoya */; };
+		1AB3E3A02C6881ED009F7817 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E39F2C6881ED009F7817 /* RxMoya */; };
+		1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3E3A22C688674009F7817 /* LocavelAPI.swift */; };
 		1AC7DBCD2C4CCE86007896A4 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */; };
 		1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */; };
 		1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */; };
 		1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */; };
 		1F2BEA332C5A13F7004D9974 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BEA322C5A13F7004D9974 /* StartView.swift */; };
+		1F2CC7B52C71BD29009E836D /* NaverAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CC7B42C71BD29009E836D /* NaverAuth.swift */; };
+		1F35DF4B2C71B3C800D1EF30 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF4A2C71B3C800D1EF30 /* KakaoSDKAuth */; };
+		1F35DF4D2C71B3C800D1EF30 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF4C2C71B3C800D1EF30 /* KakaoSDKCommon */; };
+		1F35DF4F2C71B3C800D1EF30 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF4E2C71B3C800D1EF30 /* KakaoSDKUser */; };
+		1F35DF522C71B4EC00D1EF30 /* kakaoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */; };
+		1F35DF542C71B51200D1EF30 /* naverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DF532C71B51200D1EF30 /* naverButton.swift */; };
+		1F35DF572C71B53D00D1EF30 /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF562C71B53D00D1EF30 /* NaverThirdPartyLogin */; };
+		1FF7F8C52C7247CC00868D06 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7F8C42C7247CC00868D06 /* SignUpView.swift */; };
+		1FF7F8C72C724B5100868D06 /* LogInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7F8C62C724B5100868D06 /* LogInAPI.swift */; };
 		1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD66C92C5A114D002EC096 /* SplashView.swift */; };
 		3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAB02C4AA789002B9378 /* LocavelApp.swift */; };
 		3056DAB32C4AA789002B9378 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAB22C4AA789002B9378 /* ContentView.swift */; };
@@ -69,19 +85,27 @@
 /* Begin PBXFileReference section */
 		042E9A9D05A62E40909CB5E4 /* Pods-LocavelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocavelTests.release.xcconfig"; path = "Target Support Files/Pods-LocavelTests/Pods-LocavelTests.release.xcconfig"; sourceTree = "<group>"; };
 		16E0C007A09D5BAD0A4E5979 /* Pods_Locavel_LocavelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locavel_LocavelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A03C6B52C64A7B300CAEC41 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		1A03C6B72C64A7E200CAEC41 /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
+		1A03C6B52C64A7B300CAEC41 /* FoodRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRestaurant.swift; sourceTree = "<group>"; };
+		1A03C6B72C64A7E200CAEC41 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
 		1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewModel.swift; sourceTree = "<group>"; };
 		1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMyRegionView.swift; sourceTree = "<group>"; };
 		1A03C6BD2C64B08D00CAEC41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMyRegionView.swift; sourceTree = "<group>"; };
 		1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotInterestingView.swift; sourceTree = "<group>"; };
 		1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotRestaurant.swift; sourceTree = "<group>"; };
+		1AAE4D442C6DE8A900D29666 /* WishListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListAPI.swift; sourceTree = "<group>"; };
+		1AAE4D462C6DE9B600D29666 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		1AB3E3A22C688674009F7817 /* LocavelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocavelAPI.swift; path = Locavel/Content/LocavelAPI.swift; sourceTree = SOURCE_ROOT; };
 		1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
 		1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		1F2BEA322C5A13F7004D9974 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		1F2CC7B42C71BD29009E836D /* NaverAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NaverAuth.swift; path = Locavel/Content/LogIn/Components/NaverAuth.swift; sourceTree = SOURCE_ROOT; };
+		1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoButton.swift; sourceTree = "<group>"; };
+		1F35DF532C71B51200D1EF30 /* naverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverButton.swift; sourceTree = "<group>"; };
+		1FF7F8C42C7247CC00868D06 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1FF7F8C62C724B5100868D06 /* LogInAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAPI.swift; sourceTree = "<group>"; };
 		1FFD66C92C5A114D002EC096 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3056DAAD2C4AA789002B9378 /* Locavel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locavel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3056DAB02C4AA789002B9378 /* LocavelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocavelApp.swift; sourceTree = "<group>"; };
@@ -124,7 +148,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB3E3A02C6881ED009F7817 /* RxMoya in Frameworks */,
+				1F35DF4D2C71B3C800D1EF30 /* KakaoSDKCommon in Frameworks */,
+				1AB3E39A2C6881ED009F7817 /* CombineMoya in Frameworks */,
+				1AB3E39E2C6881ED009F7817 /* ReactiveMoya in Frameworks */,
+				1F35DF4F2C71B3C800D1EF30 /* KakaoSDKUser in Frameworks */,
 				7D2F8694CBFD8AA76A69892A /* Pods_Locavel.framework in Frameworks */,
+				1AB3E39C2C6881ED009F7817 /* Moya in Frameworks */,
+				1F35DF572C71B53D00D1EF30 /* NaverThirdPartyLogin in Frameworks */,
+				1F35DF4B2C71B3C800D1EF30 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +188,26 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		1AB3E3972C687A56009F7817 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1A03C6B72C64A7E200CAEC41 /* FoodViewModel.swift */,
+				1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1AB3E3A12C688654009F7817 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1AB3E3A22C688674009F7817 /* LocavelAPI.swift */,
+				1AAE4D442C6DE8A900D29666 /* WishListAPI.swift */,
+				1AAE4D462C6DE9B600D29666 /* TokenManager.swift */,
+				1FF7F8C62C724B5100868D06 /* LogInAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		1F2BEA342C5A1406004D9974 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,8 +221,36 @@
 		1F2BEA352C5A140C004D9974 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1F2CC7B42C71BD29009E836D /* NaverAuth.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		1F35DF502C71B4B500D1EF30 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */,
+				1F35DF532C71B51200D1EF30 /* naverButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1FF7F8C32C7247A500868D06 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1FF7F8C42C7247CC00868D06 /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		304EAE062C63834E00A2600A /* NaverMap */ = {
+			isa = PBXGroup;
+			children = (
+				304EAE072C6383C900A2600A /* Coordinator.swift */,
+				304EAE092C6383ED00A2600A /* GeocodingService.swift */,
+				304EAE0B2C63840A00A2600A /* NaverMap.swift */,
+			);
+			path = NaverMap;
 			sourceTree = "<group>";
 		};
 		3056DAA42C4AA789002B9378 = {
@@ -197,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				30A1C2A92C4D43D300EB10EC /* Info.plist */,
+				1AB3E3A12C688654009F7817 /* API */,
 				3056DAB02C4AA789002B9378 /* LocavelApp.swift */,
 				3056DADA2C4AA7FD002B9378 /* Content */,
 				3056DADB2C4AA80F002B9378 /* Resources */,
@@ -221,6 +302,7 @@
 				3056DAE02C4AA9D6002B9378 /* Surround */,
 				3056DAE12C4AA9DF002B9378 /* WishList */,
 				3056DAE22C4AA9E7002B9378 /* MyPage */,
+				1FF7F8C32C7247A500868D06 /* SignUp */,
 				3056DAE32C4AA9F0002B9378 /* LogIn */,
 			);
 			path = Content;
@@ -266,6 +348,7 @@
 		3056DAE32C4AA9F0002B9378 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				1F35DF502C71B4B500D1EF30 /* Components */,
 				1F2BEA352C5A140C004D9974 /* Data */,
 				1F2BEA342C5A1406004D9974 /* View */,
 			);
@@ -275,15 +358,12 @@
 		3056DAE82C4AAAA7002B9378 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1AB3E3972C687A56009F7817 /* ViewModel */,
 				3056DAEA2C4AAAC7002B9378 /* WishListView.swift */,
 				1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */,
 				1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */,
 				1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */,
-				1A03C6B72C64A7E200CAEC41 /* RestaurantViewModel.swift */,
-				1A03C6B52C64A7B300CAEC41 /* Restaurant.swift */,
 				1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */,
-				1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */,
-				1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */,
 				1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */,
 				1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */,
 				1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */,
@@ -296,6 +376,8 @@
 		3056DAE92C4AAAAE002B9378 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */,
+				1A03C6B52C64A7B300CAEC41 /* FoodRestaurant.swift */,
 				3056DAF02C4AAB25002B9378 /* WishListFood.swift */,
 			);
 			path = Data;
@@ -389,6 +471,16 @@
 			dependencies = (
 			);
 			name = Locavel;
+			packageProductDependencies = (
+				1AB3E3992C6881ED009F7817 /* CombineMoya */,
+				1AB3E39B2C6881ED009F7817 /* Moya */,
+				1AB3E39D2C6881ED009F7817 /* ReactiveMoya */,
+				1AB3E39F2C6881ED009F7817 /* RxMoya */,
+				1F35DF4A2C71B3C800D1EF30 /* KakaoSDKAuth */,
+				1F35DF4C2C71B3C800D1EF30 /* KakaoSDKCommon */,
+				1F35DF4E2C71B3C800D1EF30 /* KakaoSDKUser */,
+				1F35DF562C71B53D00D1EF30 /* NaverThirdPartyLogin */,
+			);
 			productName = Locavel;
 			productReference = 3056DAAD2C4AA789002B9378 /* Locavel.app */;
 			productType = "com.apple.product-type.application";
@@ -464,6 +556,11 @@
 				Base,
 			);
 			mainGroup = 3056DAA42C4AA789002B9378;
+			packageReferences = (
+				1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */,
+				1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				1F35DF552C71B53D00D1EF30 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */,
+			);
 			productRefGroup = 3056DAAE2C4AA789002B9378 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -616,6 +713,8 @@
 				3056DAEF2C4AAAF0002B9378 /* InterestPlaceView.swift in Sources */,
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
 				3056DAE52C4AAA5C002B9378 /* SearchView.swift in Sources */,
+				304EAE0A2C6383ED00A2600A /* GeocodingService.swift in Sources */,
+				1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */,
 				3056DADF2C4AA993002B9378 /* ColorManager.swift in Sources */,
 				1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */,
 				3056DAB32C4AA789002B9378 /* ContentView.swift in Sources */,
@@ -623,8 +722,12 @@
 				30BCE9BC2C6F1FF4006782B8 /* RatingView.swift in Sources */,
 				30BCE9B62C6B8C15006782B8 /* IdentifiableMapItem.swift in Sources */,
 				1AC7DBCD2C4CCE86007896A4 /* InfoView.swift in Sources */,
+				1AAE4D472C6DE9B600D29666 /* TokenManager.swift in Sources */,
+				1F35DF542C71B51200D1EF30 /* naverButton.swift in Sources */,
+				1F2CC7B52C71BD29009E836D /* NaverAuth.swift in Sources */,
 				1A03C6BA2C64AB6600CAEC41 /* SpotViewModel.swift in Sources */,
 				3056DAED2C4AAAD8002B9378 /* MyPlaceView.swift in Sources */,
+				1F35DF522C71B4EC00D1EF30 /* kakaoButton.swift in Sources */,
 				1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */,
 				3056DAE72C4AAA7A002B9378 /* SurroundView.swift in Sources */,
 				30BCE9C02C71F8D7006782B8 /* RegisterReviewView.swift in Sources */,
@@ -636,11 +739,16 @@
 				30BCE9BE2C6F254E006782B8 /* CategorySelectionView.swift in Sources */,
 				30BCE9B22C6A4663006782B8 /* MapView.swift in Sources */,
 				3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */,
+				1FF7F8C72C724B5100868D06 /* LogInAPI.swift in Sources */,
 				1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */,
 				1A03C6B82C64A7E200CAEC41 /* RestaurantViewModel.swift in Sources */,
+				1AAE4D452C6DE8A900D29666 /* WishListAPI.swift in Sources */,
+				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
+				304EAE0C2C63840A00A2600A /* NaverMap.swift in Sources */,
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
 				3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */,
-				1A03C6B62C64A7B300CAEC41 /* Restaurant.swift in Sources */,
+				1A03C6B62C64A7B300CAEC41 /* FoodRestaurant.swift in Sources */,
+				1FF7F8C52C7247CC00868D06 /* SignUpView.swift in Sources */,
 				3056DAEB2C4AAAC7002B9378 /* WishListView.swift in Sources */,
 				3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */,
 				30BCE9B42C6A4675006782B8 /* LocationManager.swift in Sources */,
@@ -980,6 +1088,76 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1F35DF552C71B53D00D1EF30 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/naver/naveridlogin-sdk-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1AB3E3992C6881ED009F7817 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		1AB3E39B2C6881ED009F7817 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		1AB3E39D2C6881ED009F7817 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		1AB3E39F2C6881ED009F7817 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		1F35DF4A2C71B3C800D1EF30 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		1F35DF4C2C71B3C800D1EF30 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		1F35DF4E2C71B3C800D1EF30 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		1F35DF562C71B53D00D1EF30 /* NaverThirdPartyLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F35DF552C71B53D00D1EF30 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */;
+			productName = NaverThirdPartyLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3056DAA52C4AA789002B9378 /* Project object */;
 }
