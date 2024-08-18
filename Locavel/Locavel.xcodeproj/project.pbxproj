@@ -27,6 +27,12 @@
 		1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */; };
 		1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */; };
 		1F2BEA332C5A13F7004D9974 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BEA322C5A13F7004D9974 /* StartView.swift */; };
+		1F35DF4B2C71B3C800D1EF30 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF4A2C71B3C800D1EF30 /* KakaoSDKAuth */; };
+		1F35DF4D2C71B3C800D1EF30 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF4C2C71B3C800D1EF30 /* KakaoSDKCommon */; };
+		1F35DF4F2C71B3C800D1EF30 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF4E2C71B3C800D1EF30 /* KakaoSDKUser */; };
+		1F35DF522C71B4EC00D1EF30 /* kakaoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */; };
+		1F35DF542C71B51200D1EF30 /* naverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DF532C71B51200D1EF30 /* naverButton.swift */; };
+		1F35DF572C71B53D00D1EF30 /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF562C71B53D00D1EF30 /* NaverThirdPartyLogin */; };
 		1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD66C92C5A114D002EC096 /* SplashView.swift */; };
 		304EAE082C6383C900A2600A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE072C6383C900A2600A /* Coordinator.swift */; };
 		304EAE0A2C6383ED00A2600A /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304EAE092C6383ED00A2600A /* GeocodingService.swift */; };
@@ -85,6 +91,8 @@
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
 		1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		1F2BEA322C5A13F7004D9974 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoButton.swift; sourceTree = "<group>"; };
+		1F35DF532C71B51200D1EF30 /* naverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverButton.swift; sourceTree = "<group>"; };
 		1FFD66C92C5A114D002EC096 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		304EAE072C6383C900A2600A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		304EAE092C6383ED00A2600A /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
@@ -121,10 +129,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AB3E3A02C6881ED009F7817 /* RxMoya in Frameworks */,
+				1F35DF4D2C71B3C800D1EF30 /* KakaoSDKCommon in Frameworks */,
 				1AB3E39A2C6881ED009F7817 /* CombineMoya in Frameworks */,
 				1AB3E39E2C6881ED009F7817 /* ReactiveMoya in Frameworks */,
+				1F35DF4F2C71B3C800D1EF30 /* KakaoSDKUser in Frameworks */,
 				7D2F8694CBFD8AA76A69892A /* Pods_Locavel.framework in Frameworks */,
 				1AB3E39C2C6881ED009F7817 /* Moya in Frameworks */,
+				1F35DF572C71B53D00D1EF30 /* NaverThirdPartyLogin in Frameworks */,
+				1F35DF4B2C71B3C800D1EF30 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +201,15 @@
 			children = (
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		1F35DF502C71B4B500D1EF30 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */,
+				1F35DF532C71B51200D1EF30 /* naverButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		304EAE062C63834E00A2600A /* NaverMap */ = {
@@ -294,6 +315,7 @@
 		3056DAE32C4AA9F0002B9378 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				1F35DF502C71B4B500D1EF30 /* Components */,
 				1F2BEA352C5A140C004D9974 /* Data */,
 				1F2BEA342C5A1406004D9974 /* View */,
 			);
@@ -374,6 +396,10 @@
 				1AB3E39B2C6881ED009F7817 /* Moya */,
 				1AB3E39D2C6881ED009F7817 /* ReactiveMoya */,
 				1AB3E39F2C6881ED009F7817 /* RxMoya */,
+				1F35DF4A2C71B3C800D1EF30 /* KakaoSDKAuth */,
+				1F35DF4C2C71B3C800D1EF30 /* KakaoSDKCommon */,
+				1F35DF4E2C71B3C800D1EF30 /* KakaoSDKUser */,
+				1F35DF562C71B53D00D1EF30 /* NaverThirdPartyLogin */,
 			);
 			productName = Locavel;
 			productReference = 3056DAAD2C4AA789002B9378 /* Locavel.app */;
@@ -452,6 +478,8 @@
 			mainGroup = 3056DAA42C4AA789002B9378;
 			packageReferences = (
 				1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */,
+				1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				1F35DF552C71B53D00D1EF30 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */,
 			);
 			productRefGroup = 3056DAAE2C4AA789002B9378 /* Products */;
 			projectDirPath = "";
@@ -611,8 +639,10 @@
 				3056DAB32C4AA789002B9378 /* ContentView.swift in Sources */,
 				1AC7DBCD2C4CCE86007896A4 /* InfoView.swift in Sources */,
 				1AAE4D472C6DE9B600D29666 /* TokenManager.swift in Sources */,
+				1F35DF542C71B51200D1EF30 /* naverButton.swift in Sources */,
 				1A03C6BA2C64AB6600CAEC41 /* SpotViewModel.swift in Sources */,
 				3056DAED2C4AAAD8002B9378 /* MyPlaceView.swift in Sources */,
+				1F35DF522C71B4EC00D1EF30 /* kakaoButton.swift in Sources */,
 				1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */,
 				3056DAE72C4AAA7A002B9378 /* SurroundView.swift in Sources */,
 				1A850DCC2C57E07500D02E0A /* SpotRestaurant.swift in Sources */,
@@ -975,6 +1005,22 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1F35DF552C71B53D00D1EF30 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/naver/naveridlogin-sdk-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -997,6 +1043,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1AB3E3982C6881ED009F7817 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		1F35DF4A2C71B3C800D1EF30 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		1F35DF4C2C71B3C800D1EF30 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		1F35DF4E2C71B3C800D1EF30 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F35DF492C71B3C800D1EF30 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		1F35DF562C71B53D00D1EF30 /* NaverThirdPartyLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F35DF552C71B53D00D1EF30 /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */;
+			productName = NaverThirdPartyLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
