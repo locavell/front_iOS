@@ -30,7 +30,7 @@ struct naverButton: View {
         }
         .frame(width: 281, height: 51)
         .navigationDestination(isPresented: $naverAuth.isLoggedIn) {
-            ContentView()
+            SignUpView()
         }
     }
 }

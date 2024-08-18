@@ -1,10 +1,14 @@
 import Foundation
 import NaverThirdPartyLogin
+import Moya
 
 class NaverAuth: NSObject, UIApplicationDelegate, NaverThirdPartyLoginConnectionDelegate, ObservableObject {
     
     // 로그인 상태를 관리하는 속성
     @Published var isLoggedIn: Bool = false
+    
+    // Moya Provider 설정
+    let provider = MoyaProvider<LoginAPI>()
     
     func handleNaverLogin() {
         print(#fileID, #function, #line, "- naver 앱 체크")
@@ -23,13 +27,17 @@ class NaverAuth: NSObject, UIApplicationDelegate, NaverThirdPartyLoginConnection
 
     //MARK: - 토큰 발급 성공
     func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
-        guard let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance() else { return }
-        print(#fileID, #function, #line, "- naver token : \(String(describing: loginInstance.accessToken))")
+        guard let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance(),
+              let accessToken = loginInstance.accessToken else {
+            return
+        }
+        print(#fileID, #function, #line, "- naver token : \(accessToken)")
         
         // 로그인 성공 시, isLoggedIn을 true로 설정
         self.isLoggedIn = true
         
-        // 여기에서 서버에 accessToken을 날려줄 예정이므로 naver token의 accessToken을 가지고와야 한다.
+        // 서버로 토큰 전송
+        sendSocialLoginToken(token: accessToken)
     }
     
     //MARK: - 토큰 갱신시
@@ -54,5 +62,23 @@ class NaverAuth: NSObject, UIApplicationDelegate, NaverThirdPartyLoginConnection
         
         // 에러 발생 시 로그인 상태를 false로 설정
         self.isLoggedIn = false
+    }
+    
+    // 서버로 토큰을 보내는 함수
+    func sendSocialLoginToken(token: String) {
+        provider.request(.sociallogin) { result in
+            switch result {
+            case .success(let response):
+                do {
+                    // 서버로부터의 응답 처리
+                    let responseData = try response.mapJSON()
+                    print("Server response: \(responseData)")
+                } catch {
+                    print("Failed to parse response: \(error)")
+                }
+            case .failure(let error):
+                print("Failed to send token: \(error)")
+            }
+        }
     }
 }
