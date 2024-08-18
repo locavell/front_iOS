@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var selectedLocation: String = ""
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Selected Location: \(selectedLocation)")
+                .padding()
+            NavigationLink(destination: EnrollLocationView()) {
+                Text("Enroll Location")
+            }
+        }
+        .onAppear {
+            // Perform any actions needed with the selected location
+        }
     }
 }
 
