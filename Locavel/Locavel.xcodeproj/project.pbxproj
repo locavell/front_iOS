@@ -243,16 +243,6 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		304EAE062C63834E00A2600A /* NaverMap */ = {
-			isa = PBXGroup;
-			children = (
-				304EAE072C6383C900A2600A /* Coordinator.swift */,
-				304EAE092C6383ED00A2600A /* GeocodingService.swift */,
-				304EAE0B2C63840A00A2600A /* NaverMap.swift */,
-			);
-			path = NaverMap;
-			sourceTree = "<group>";
-		};
 		3056DAA42C4AA789002B9378 = {
 			isa = PBXGroup;
 			children = (
@@ -713,7 +703,6 @@
 				3056DAEF2C4AAAF0002B9378 /* InterestPlaceView.swift in Sources */,
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
 				3056DAE52C4AAA5C002B9378 /* SearchView.swift in Sources */,
-				304EAE0A2C6383ED00A2600A /* GeocodingService.swift in Sources */,
 				1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */,
 				3056DADF2C4AA993002B9378 /* ColorManager.swift in Sources */,
 				1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */,
@@ -741,10 +730,9 @@
 				3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */,
 				1FF7F8C72C724B5100868D06 /* LogInAPI.swift in Sources */,
 				1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */,
-				1A03C6B82C64A7E200CAEC41 /* RestaurantViewModel.swift in Sources */,
+				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
 				1AAE4D452C6DE8A900D29666 /* WishListAPI.swift in Sources */,
 				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
-				304EAE0C2C63840A00A2600A /* NaverMap.swift in Sources */,
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
 				3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */,
 				1A03C6B62C64A7B300CAEC41 /* FoodRestaurant.swift in Sources */,
