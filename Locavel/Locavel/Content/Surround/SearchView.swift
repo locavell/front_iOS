@@ -7,15 +7,9 @@
 
 import SwiftUI
 
-extension UIApplication {
-    func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
-
 struct SearchBarView: View {
     @Binding var searchText: String
-    private let geocodingService = GeocodingService()
+    var onSearch: (String) -> Void
     
     var body: some View {
         HStack {
@@ -39,34 +33,34 @@ struct SearchBarView: View {
                     , alignment: .trailing
                 )
                 .onSubmit {
-                    searchAddress()
+                    onSearch(searchText)
                 }
+            Button(action: {
+                onSearch(searchText)
+            }) {
+                Text("검색")
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 7)
+                    .background(Color("AccentColor"))
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
+            
         }
         .font(.headline)
         .padding()
     }
-    
-    func searchAddress() {
-        geocodingService.geocode(address: searchText) { result in
-            switch result {
-            case .success(let coordinates):
-                print("Coordinates: \(coordinates)")
-                DispatchQueue.main.async {
-                    Coordinator.shared.setMarker(lat: coordinates.0, lng: coordinates.1, name: searchText)
-                    Coordinator.shared.moveCamera(lat: coordinates.0, lng: coordinates.1)
-                }
-            case .failure(let error):
-                print("Failed to geocode address: \(error.localizedDescription)")
-            }
-        }
+}
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
-
-struct SearchBarView_Previews: PreviewProvider {
-    @State static var searchText = ""
-
-    static var previews: some View {
-        SearchBarView(searchText: $searchText)
-    }
-}
+//struct SearchBarView_Previews: PreviewProvider {
+//    @State static var searchText = ""
+//
+//    static var previews: some View {
+//        SearchBarView(searchText: $searchText, onSearch: <#(String) -> Void#>)
+//    }
+//}
