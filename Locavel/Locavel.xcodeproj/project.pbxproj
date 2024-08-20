@@ -12,6 +12,10 @@
 		1A03C6BA2C64AB6600CAEC41 /* SpotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */; };
 		1A03C6BC2C64ADEF00CAEC41 /* FoodMyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */; };
 		1A03C6BE2C64B08D00CAEC41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A03C6BD2C64B08D00CAEC41 /* HomeView.swift */; };
+		1A4996562C748A3D00D491CB /* ActivityMyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4996552C748A3D00D491CB /* ActivityMyRegionView.swift */; };
+		1A4996582C748A5400D491CB /* ActivityInterestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4996572C748A5400D491CB /* ActivityInterestingView.swift */; };
+		1A49965A2C748AE900D491CB /* ActivityRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4996592C748AE900D491CB /* ActivityRestaurant.swift */; };
+		1A49965C2C748BD600D491CB /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A49965B2C748BD600D491CB /* ActivityViewModel.swift */; };
 		1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */; };
 		1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */; };
 		1A850DCC2C57E07500D02E0A /* SpotRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */; };
@@ -26,6 +30,7 @@
 		1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */; };
 		1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */; };
 		1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */; };
+		1AF6CDDA2C727BAD00E46AC5 /* FoodInterestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6CDD92C727BAD00E46AC5 /* FoodInterestingView.swift */; };
 		1F2BEA332C5A13F7004D9974 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BEA322C5A13F7004D9974 /* StartView.swift */; };
 		1F2CC7B52C71BD29009E836D /* NaverAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CC7B42C71BD29009E836D /* NaverAuth.swift */; };
 		1F35DF4B2C71B3C800D1EF30 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF4A2C71B3C800D1EF30 /* KakaoSDKAuth */; };
@@ -45,8 +50,6 @@
 		3056DAE52C4AAA5C002B9378 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAE42C4AAA5C002B9378 /* SearchBarView.swift */; };
 		3056DAE72C4AAA7A002B9378 /* SurroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAE62C4AAA7A002B9378 /* SurroundView.swift */; };
 		3056DAEB2C4AAAC7002B9378 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAEA2C4AAAC7002B9378 /* WishListView.swift */; };
-		3056DAED2C4AAAD8002B9378 /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAEC2C4AAAD8002B9378 /* MyPlaceView.swift */; };
-		3056DAEF2C4AAAF0002B9378 /* InterestPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAEE2C4AAAF0002B9378 /* InterestPlaceView.swift */; };
 		3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF02C4AAB25002B9378 /* WishListFood.swift */; };
 		3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF22C4AAB40002B9378 /* MyPageView.swift */; };
 		3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF42C4AAB5C002B9378 /* LogInView.swift */; };
@@ -92,6 +95,10 @@
 		1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewModel.swift; sourceTree = "<group>"; };
 		1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMyRegionView.swift; sourceTree = "<group>"; };
 		1A03C6BD2C64B08D00CAEC41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1A4996552C748A3D00D491CB /* ActivityMyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMyRegionView.swift; sourceTree = "<group>"; };
+		1A4996572C748A5400D491CB /* ActivityInterestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityInterestingView.swift; sourceTree = "<group>"; };
+		1A4996592C748AE900D491CB /* ActivityRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRestaurant.swift; sourceTree = "<group>"; };
+		1A49965B2C748BD600D491CB /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMyRegionView.swift; sourceTree = "<group>"; };
 		1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotInterestingView.swift; sourceTree = "<group>"; };
 		1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotRestaurant.swift; sourceTree = "<group>"; };
@@ -102,6 +109,7 @@
 		1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
 		1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		1AF6CDD92C727BAD00E46AC5 /* FoodInterestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodInterestingView.swift; sourceTree = "<group>"; };
 		1F2BEA322C5A13F7004D9974 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		1F2CC7B42C71BD29009E836D /* NaverAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NaverAuth.swift; path = Locavel/Content/LogIn/Components/NaverAuth.swift; sourceTree = SOURCE_ROOT; };
 		1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoButton.swift; sourceTree = "<group>"; };
@@ -120,8 +128,6 @@
 		3056DAE42C4AAA5C002B9378 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		3056DAE62C4AAA7A002B9378 /* SurroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurroundView.swift; sourceTree = "<group>"; };
 		3056DAEA2C4AAAC7002B9378 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
-		3056DAEC2C4AAAD8002B9378 /* MyPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceView.swift; sourceTree = "<group>"; };
-		3056DAEE2C4AAAF0002B9378 /* InterestPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPlaceView.swift; sourceTree = "<group>"; };
 		3056DAF02C4AAB25002B9378 /* WishListFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListFood.swift; sourceTree = "<group>"; };
 		3056DAF22C4AAB40002B9378 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		3056DAF42C4AAB5C002B9378 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 			children = (
 				1A03C6B72C64A7E200CAEC41 /* FoodViewModel.swift */,
 				1A03C6B92C64AB6600CAEC41 /* SpotViewModel.swift */,
+				1A49965B2C748BD600D491CB /* ActivityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -211,6 +218,36 @@
 				1FF7F8C62C724B5100868D06 /* LogInAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		1AF6CDD62C727B6E00E46AC5 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */,
+				1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */,
+				1AF6CDD92C727BAD00E46AC5 /* FoodInterestingView.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		1AF6CDD72C727B7D00E46AC5 /* Spot */ = {
+			isa = PBXGroup;
+			children = (
+				1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */,
+				1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */,
+				1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */,
+			);
+			path = Spot;
+			sourceTree = "<group>";
+		};
+		1AF6CDD82C727B8500E46AC5 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */,
+				1A4996552C748A3D00D491CB /* ActivityMyRegionView.swift */,
+				1A4996572C748A5400D491CB /* ActivityInterestingView.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		1F2BEA342C5A1406004D9974 /* View */ = {
@@ -353,17 +390,12 @@
 		3056DAE82C4AAAA7002B9378 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1AF6CDD62C727B6E00E46AC5 /* Food */,
+				1AF6CDD72C727B7D00E46AC5 /* Spot */,
+				1AF6CDD82C727B8500E46AC5 /* Activity */,
 				1AB3E3972C687A56009F7817 /* ViewModel */,
 				3056DAEA2C4AAAC7002B9378 /* WishListView.swift */,
 				1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */,
-				1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */,
-				1A03C6BB2C64ADEF00CAEC41 /* FoodMyRegionView.swift */,
-				1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */,
-				1A5ACC192C53C52200E6BFD6 /* SpotInterestingView.swift */,
-				1A5ACC172C53C27A00E6BFD6 /* SpotMyRegionView.swift */,
-				1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */,
-				3056DAEC2C4AAAD8002B9378 /* MyPlaceView.swift */,
-				3056DAEE2C4AAAF0002B9378 /* InterestPlaceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				1A850DCB2C57E07500D02E0A /* SpotRestaurant.swift */,
+				1A4996592C748AE900D491CB /* ActivityRestaurant.swift */,
 				1A03C6B52C64A7B300CAEC41 /* FoodRestaurant.swift */,
 				3056DAF02C4AAB25002B9378 /* WishListFood.swift */,
 			);
@@ -705,11 +738,12 @@
 				1F2BEA332C5A13F7004D9974 /* StartView.swift in Sources */,
 				30BCE9C92C724BAF006782B8 /* NMLocationManager.swift in Sources */,
 				1A03C6BE2C64B08D00CAEC41 /* HomeView.swift in Sources */,
+				1A4996562C748A3D00D491CB /* ActivityMyRegionView.swift in Sources */,
 				1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */,
 				3056DAEF2C4AAAF0002B9378 /* InterestPlaceView.swift in Sources */,
 				30573F8F2C7387A000BF49C4 /* HomeViewModel.swift in Sources */,
-				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
 				3056DAE52C4AAA5C002B9378 /* SearchBarView.swift in Sources */,
+				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
 				1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */,
 				3056DADF2C4AA993002B9378 /* ColorManager.swift in Sources */,
 				1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */,
@@ -722,7 +756,6 @@
 				1F35DF542C71B51200D1EF30 /* naverButton.swift in Sources */,
 				1F2CC7B52C71BD29009E836D /* NaverAuth.swift in Sources */,
 				1A03C6BA2C64AB6600CAEC41 /* SpotViewModel.swift in Sources */,
-				3056DAED2C4AAAD8002B9378 /* MyPlaceView.swift in Sources */,
 				1F35DF522C71B4EC00D1EF30 /* kakaoButton.swift in Sources */,
 				1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */,
 				3056DAE72C4AAA7A002B9378 /* SurroundView.swift in Sources */,
@@ -736,9 +769,12 @@
 				30BCE9BE2C6F254E006782B8 /* CategorySelectionView.swift in Sources */,
 				30BCE9B22C6A4663006782B8 /* MapView.swift in Sources */,
 				3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */,
+				1A49965A2C748AE900D491CB /* ActivityRestaurant.swift in Sources */,
 				1FF7F8C72C724B5100868D06 /* LogInAPI.swift in Sources */,
 				1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */,
+				1A49965C2C748BD600D491CB /* ActivityViewModel.swift in Sources */,
 				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
+				1AF6CDDA2C727BAD00E46AC5 /* FoodInterestingView.swift in Sources */,
 				1AAE4D452C6DE8A900D29666 /* WishListAPI.swift in Sources */,
 				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
@@ -747,6 +783,7 @@
 				1FF7F8C52C7247CC00868D06 /* SignUpView.swift in Sources */,
 				3056DAEB2C4AAAC7002B9378 /* WishListView.swift in Sources */,
 				3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */,
+				1A4996582C748A5400D491CB /* ActivityInterestingView.swift in Sources */,
 				30BCE9B42C6A4675006782B8 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,7 +1009,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D3A2C9509B85048BAD0BE948 /* Pods-LocavelTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -992,7 +1029,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 042E9A9D05A62E40909CB5E4 /* Pods-LocavelTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1012,7 +1049,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C86F39A4FCE84B365DD5E03 /* Pods-Locavel-LocavelUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1030,7 +1067,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A798270E9AEDF14BD5D308B /* Pods-Locavel-LocavelUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

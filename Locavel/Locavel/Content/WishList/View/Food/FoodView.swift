@@ -90,7 +90,7 @@ struct FoodView: View {
                         .padding(.leading, 15)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                    NavigationLink(destination: SpotInterestingView()) {
+                    NavigationLink(destination: FoodInterestingView()) {
                         Text("전체보기")
                             .font(.footnote)
                             .underline()

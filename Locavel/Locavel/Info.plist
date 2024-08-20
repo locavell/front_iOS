@@ -28,9 +28,20 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>43.203.42.179</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
 	</dict>
 	<key>NSLocationDefaultAccuracyReduced</key>
 	<true/>
+<<<<<<< HEAD
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSExceptionDomains</key>
@@ -44,5 +55,7 @@
             </dict>
         </dict>
     </dict>
+=======
+>>>>>>> 9df0496b0e322a6bb2e2960a210aee2e7af33ac9
 </dict>
 </plist>
