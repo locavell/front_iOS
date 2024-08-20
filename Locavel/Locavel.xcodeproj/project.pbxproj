@@ -42,7 +42,7 @@
 		3056DAB52C4AA78A002B9378 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3056DAB42C4AA78A002B9378 /* Assets.xcassets */; };
 		3056DAB82C4AA78A002B9378 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3056DAB72C4AA78A002B9378 /* Preview Assets.xcassets */; };
 		3056DADF2C4AA993002B9378 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DADE2C4AA993002B9378 /* ColorManager.swift */; };
-		3056DAE52C4AAA5C002B9378 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAE42C4AAA5C002B9378 /* SearchView.swift */; };
+		3056DAE52C4AAA5C002B9378 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAE42C4AAA5C002B9378 /* SearchBarView.swift */; };
 		3056DAE72C4AAA7A002B9378 /* SurroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAE62C4AAA7A002B9378 /* SurroundView.swift */; };
 		3056DAEB2C4AAAC7002B9378 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAEA2C4AAAC7002B9378 /* WishListView.swift */; };
 		3056DAED2C4AAAD8002B9378 /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAEC2C4AAAD8002B9378 /* MyPlaceView.swift */; };
@@ -50,6 +50,8 @@
 		3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF02C4AAB25002B9378 /* WishListFood.swift */; };
 		3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF22C4AAB40002B9378 /* MyPageView.swift */; };
 		3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF42C4AAB5C002B9378 /* LogInView.swift */; };
+		30573F8D2C73544C00BF49C4 /* LoadingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30573F8C2C73544C00BF49C4 /* LoadingPageView.swift */; };
+		30573F8F2C7387A000BF49C4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30573F8E2C7387A000BF49C4 /* HomeViewModel.swift */; };
 		30BCE9B22C6A4663006782B8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCE9B12C6A4663006782B8 /* MapView.swift */; };
 		30BCE9B42C6A4675006782B8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCE9B32C6A4675006782B8 /* LocationManager.swift */; };
 		30BCE9B62C6B8C15006782B8 /* IdentifiableMapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCE9B52C6B8C15006782B8 /* IdentifiableMapItem.swift */; };
@@ -115,7 +117,7 @@
 		3056DABD2C4AA78A002B9378 /* LocavelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocavelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3056DAC72C4AA78A002B9378 /* LocavelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocavelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3056DADE2C4AA993002B9378 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
-		3056DAE42C4AAA5C002B9378 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		3056DAE42C4AAA5C002B9378 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		3056DAE62C4AAA7A002B9378 /* SurroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurroundView.swift; sourceTree = "<group>"; };
 		3056DAEA2C4AAAC7002B9378 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		3056DAEC2C4AAAD8002B9378 /* MyPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,8 @@
 		3056DAF02C4AAB25002B9378 /* WishListFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListFood.swift; sourceTree = "<group>"; };
 		3056DAF22C4AAB40002B9378 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		3056DAF42C4AAB5C002B9378 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		30573F8C2C73544C00BF49C4 /* LoadingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPageView.swift; sourceTree = "<group>"; };
+		30573F8E2C7387A000BF49C4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		30A1C2A92C4D43D300EB10EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		30BCE9B12C6A4663006782B8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		30BCE9B32C6A4675006782B8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			children = (
 				30BCE9C72C724B88006782B8 /* EnrollLocation */,
 				1A03C6BD2C64B08D00CAEC41 /* HomeView.swift */,
+				30573F8E2C7387A000BF49C4 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -241,16 +246,6 @@
 				1FF7F8C42C7247CC00868D06 /* SignUpView.swift */,
 			);
 			path = SignUp;
-			sourceTree = "<group>";
-		};
-		304EAE062C63834E00A2600A /* NaverMap */ = {
-			isa = PBXGroup;
-			children = (
-				304EAE072C6383C900A2600A /* Coordinator.swift */,
-				304EAE092C6383ED00A2600A /* GeocodingService.swift */,
-				304EAE0B2C63840A00A2600A /* NaverMap.swift */,
-			);
-			path = NaverMap;
 			sourceTree = "<group>";
 		};
 		3056DAA42C4AA789002B9378 = {
@@ -323,7 +318,7 @@
 				30BCE9C22C72018C006782B8 /* BottomSheet */,
 				30BCE9C12C720154006782B8 /* MapKit */,
 				3056DAE62C4AAA7A002B9378 /* SurroundView.swift */,
-				3056DAE42C4AAA5C002B9378 /* SearchView.swift */,
+				3056DAE42C4AAA5C002B9378 /* SearchBarView.swift */,
 			);
 			path = Surround;
 			sourceTree = "<group>";
@@ -426,6 +421,7 @@
 			children = (
 				30BCE9C52C722C45006782B8 /* EnrollLocationView.swift */,
 				30BCE9C82C724BAF006782B8 /* NMLocationManager.swift */,
+				30573F8C2C73544C00BF49C4 /* LoadingPageView.swift */,
 			);
 			path = EnrollLocation;
 			sourceTree = "<group>";
@@ -711,9 +707,9 @@
 				1A03C6BE2C64B08D00CAEC41 /* HomeView.swift in Sources */,
 				1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */,
 				3056DAEF2C4AAAF0002B9378 /* InterestPlaceView.swift in Sources */,
+				30573F8F2C7387A000BF49C4 /* HomeViewModel.swift in Sources */,
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
-				3056DAE52C4AAA5C002B9378 /* SearchView.swift in Sources */,
-				304EAE0A2C6383ED00A2600A /* GeocodingService.swift in Sources */,
+				3056DAE52C4AAA5C002B9378 /* SearchBarView.swift in Sources */,
 				1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */,
 				3056DADF2C4AA993002B9378 /* ColorManager.swift in Sources */,
 				1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */,
@@ -731,6 +727,7 @@
 				1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */,
 				3056DAE72C4AAA7A002B9378 /* SurroundView.swift in Sources */,
 				30BCE9C02C71F8D7006782B8 /* RegisterReviewView.swift in Sources */,
+				30573F8D2C73544C00BF49C4 /* LoadingPageView.swift in Sources */,
 				1A850DCC2C57E07500D02E0A /* SpotRestaurant.swift in Sources */,
 				3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */,
 				30BCE9B82C6DEFDD006782B8 /* BottomSheetView.swift in Sources */,
@@ -741,10 +738,9 @@
 				3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */,
 				1FF7F8C72C724B5100868D06 /* LogInAPI.swift in Sources */,
 				1A5ACC1A2C53C52200E6BFD6 /* SpotInterestingView.swift in Sources */,
-				1A03C6B82C64A7E200CAEC41 /* RestaurantViewModel.swift in Sources */,
+				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
 				1AAE4D452C6DE8A900D29666 /* WishListAPI.swift in Sources */,
 				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
-				304EAE0C2C63840A00A2600A /* NaverMap.swift in Sources */,
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
 				3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */,
 				1A03C6B62C64A7B300CAEC41 /* FoodRestaurant.swift in Sources */,

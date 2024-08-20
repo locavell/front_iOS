@@ -35,7 +35,7 @@
     <dict>
         <key>NSExceptionDomains</key>
         <dict>
-            <key>43.203.42.179</key>
+            <key>api.locavel.site</key>
             <dict>
                 <key>NSExceptionAllowsInsecureHTTPLoads</key>
                 <true/>

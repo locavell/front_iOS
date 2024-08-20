@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RegisterReviewView: View {
+    @Environment(\.presentationMode) var presentationMode
     
     struct Place: Identifiable {
         let id = UUID()
@@ -64,8 +65,15 @@ struct RegisterReviewView: View {
                 }
                 .padding(.vertical, 10)
             }
-            .navigationTitle("내 주변 추천 장소")
             .searchable(text: .constant(""))
+            .navigationTitle("내 주변 추천 장소")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading: Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "arrow.backward")
+                    .foregroundColor(.black)
+            })
         }
     }
 }
