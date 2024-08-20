@@ -12,6 +12,7 @@ import NMapsMap
 class NMLocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     @Published var currentAddress: String?
+    @Published var currentLocation: CLLocation?
     private let naverClientId = "m2oss2y2nd"
     private let naverClientSecret = "Fk31QrTACSOb8nvxNrMvGNPy6Wck2o5pU1uTniLs"
     
@@ -31,6 +32,7 @@ class NMLocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
+            currentLocation = location
             reverseGeocode(location: location)
             locationManager.stopUpdatingLocation()
         }
@@ -63,13 +65,11 @@ class NMLocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                    let region = firstResult["region"] as? [String: Any],
                    let area1 = region["area1"] as? [String: Any],
                    let area2 = region["area2"] as? [String: Any],
-                   let area3 = region["area3"] as? [String: Any],
                    let name1 = area1["name"] as? String,
-                   let name2 = area2["name"] as? String,
-                   let name3 = area3["name"] as? String {
+                   let name2 = area2["name"] as? String {
                     
                     DispatchQueue.main.async {
-                        self.currentAddress = "\(name1) \(name2) \(name3)"
+                        self.currentAddress = "\(name1) \(name2)"
                     }
                 }
             } catch {
