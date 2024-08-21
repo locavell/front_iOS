@@ -33,14 +33,13 @@ struct LocavelApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            StartView()
-//                .accentColor(ColorManager.AccentColor)
-//                .onOpenURL { url in
-//                    if (AuthApi.isKakaoTalkLoginUrl(url)) {
-//                        _ = AuthController.handleOpenUrl(url: url)
-//                }
-//            }
-            EnrollLocationView()
+            StartView()
+                .accentColor(ColorManager.AccentColor)
+                .onOpenURL { url in
+                    if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                        _ = AuthController.handleOpenUrl(url: url)
+                }
+            }
         }
     }
 }

@@ -55,6 +55,9 @@
 		3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAF42C4AAB5C002B9378 /* LogInView.swift */; };
 		30573F8D2C73544C00BF49C4 /* LoadingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30573F8C2C73544C00BF49C4 /* LoadingPageView.swift */; };
 		30573F8F2C7387A000BF49C4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30573F8E2C7387A000BF49C4 /* HomeViewModel.swift */; };
+		30824C0A2C75D6F1003635C3 /* InterestRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30824C092C75D6F1003635C3 /* InterestRegionView.swift */; };
+		30824C0C2C75D756003635C3 /* MyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30824C0B2C75D756003635C3 /* MyRegionView.swift */; };
+		30824C0E2C75ED9C003635C3 /* AddRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30824C0D2C75ED9C003635C3 /* AddRegionView.swift */; };
 		30BCE9B22C6A4663006782B8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCE9B12C6A4663006782B8 /* MapView.swift */; };
 		30BCE9B42C6A4675006782B8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCE9B32C6A4675006782B8 /* LocationManager.swift */; };
 		30BCE9B62C6B8C15006782B8 /* IdentifiableMapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCE9B52C6B8C15006782B8 /* IdentifiableMapItem.swift */; };
@@ -133,6 +136,9 @@
 		3056DAF42C4AAB5C002B9378 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		30573F8C2C73544C00BF49C4 /* LoadingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPageView.swift; sourceTree = "<group>"; };
 		30573F8E2C7387A000BF49C4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		30824C092C75D6F1003635C3 /* InterestRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestRegionView.swift; sourceTree = "<group>"; };
+		30824C0B2C75D756003635C3 /* MyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRegionView.swift; sourceTree = "<group>"; };
+		30824C0D2C75ED9C003635C3 /* AddRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegionView.swift; sourceTree = "<group>"; };
 		30A1C2A92C4D43D300EB10EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		30BCE9B12C6A4663006782B8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		30BCE9B32C6A4675006782B8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -195,6 +201,9 @@
 				30BCE9C72C724B88006782B8 /* EnrollLocation */,
 				1A03C6BD2C64B08D00CAEC41 /* HomeView.swift */,
 				30573F8E2C7387A000BF49C4 /* HomeViewModel.swift */,
+				30824C0B2C75D756003635C3 /* MyRegionView.swift */,
+				30824C092C75D6F1003635C3 /* InterestRegionView.swift */,
+				30824C0D2C75ED9C003635C3 /* AddRegionView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -740,7 +749,6 @@
 				1A03C6BE2C64B08D00CAEC41 /* HomeView.swift in Sources */,
 				1A4996562C748A3D00D491CB /* ActivityMyRegionView.swift in Sources */,
 				1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */,
-				3056DAEF2C4AAAF0002B9378 /* InterestPlaceView.swift in Sources */,
 				30573F8F2C7387A000BF49C4 /* HomeViewModel.swift in Sources */,
 				3056DAE52C4AAA5C002B9378 /* SearchBarView.swift in Sources */,
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
@@ -760,14 +768,17 @@
 				1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */,
 				3056DAE72C4AAA7A002B9378 /* SurroundView.swift in Sources */,
 				30BCE9C02C71F8D7006782B8 /* RegisterReviewView.swift in Sources */,
+				30824C0A2C75D6F1003635C3 /* InterestRegionView.swift in Sources */,
 				30573F8D2C73544C00BF49C4 /* LoadingPageView.swift in Sources */,
 				1A850DCC2C57E07500D02E0A /* SpotRestaurant.swift in Sources */,
 				3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */,
 				30BCE9B82C6DEFDD006782B8 /* BottomSheetView.swift in Sources */,
 				30BCE9C62C722C45006782B8 /* EnrollLocationView.swift in Sources */,
+				30824C0C2C75D756003635C3 /* MyRegionView.swift in Sources */,
 				1A03C6BC2C64ADEF00CAEC41 /* FoodMyRegionView.swift in Sources */,
 				30BCE9BE2C6F254E006782B8 /* CategorySelectionView.swift in Sources */,
 				30BCE9B22C6A4663006782B8 /* MapView.swift in Sources */,
+				30824C0E2C75ED9C003635C3 /* AddRegionView.swift in Sources */,
 				3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */,
 				1A49965A2C748AE900D491CB /* ActivityRestaurant.swift in Sources */,
 				1FF7F8C72C724B5100868D06 /* LogInAPI.swift in Sources */,
