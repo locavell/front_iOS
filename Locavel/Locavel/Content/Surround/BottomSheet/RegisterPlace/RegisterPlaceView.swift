@@ -153,9 +153,10 @@ struct RegisterPlaceView: View {
             "rating": rating
         ] as [String : Any]
 
-        guard let url = URL(string: "http://43.203.42.179:8080/api/places") else { return }
+        guard let url = URL(string: "https://api.locavel.site/api/places") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.setValue("Bearer \(TokenManager.shared.accessToken)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         do {

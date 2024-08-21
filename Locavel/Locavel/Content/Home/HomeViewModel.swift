@@ -46,3 +46,4 @@ struct MyAreaResult: Codable {
     let regionId: Int
     let regionName: String
 }
+

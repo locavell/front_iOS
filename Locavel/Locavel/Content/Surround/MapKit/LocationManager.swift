@@ -91,6 +91,7 @@ import CoreLocation
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
+    @Published var currentLocation: CLLocationCoordinate2D?
     
     override init() {
         super.init()
@@ -100,13 +101,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
-    // Handle location updates if needed
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let _ = locations.first else { return }
-        // You can update the map region here if needed
+        guard let location = locations.first else { return }
+        currentLocation = location.coordinate
     }
     
-    // Handle authorization changes
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
         case .authorizedWhenInUse, .authorizedAlways:
