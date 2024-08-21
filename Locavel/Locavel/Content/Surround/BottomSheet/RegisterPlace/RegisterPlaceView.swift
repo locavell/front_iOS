@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+import PhotosUI
+
 struct RegisterPlaceView: View {
     @Environment(\.presentationMode) var presentationMode
     
@@ -18,6 +20,9 @@ struct RegisterPlaceView: View {
     @State private var selectedCategory: String = ""
     @State private var rating: Int = 0
     @State private var isSubmitting: Bool = false // 등록 중 상태 관리
+    
+    @State private var selectedImage: UIImage? = nil
+    @State private var isShowingPhotoPicker = false
 
     var body: some View {
         NavigationView {
@@ -27,27 +32,30 @@ struct RegisterPlaceView: View {
                         
                         // 상단의 사진 등록 버튼과 이미지
                         ZStack(alignment: .bottom) {
-                            Image(systemName: "photo")
-                                .resizable()
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 200)
 
                             Button(action: {
-                                // 사진 등록 로직
-                            }) {
-                                Text("사진 등록")
-                                    .font(.system(size: 15))
-                                    .fontWeight(.bold)
-                                    .frame(width: 130, height: 37)
-                                    .background(.white)
-                                    .foregroundColor(Color("AccentColor"))
-                                    .cornerRadius(50)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 50)
-                                            .stroke(Color("AccentColor"), lineWidth: 1)
-                                    )
-                            }
-                            .padding(.bottom, 20)
+                                                isShowingPhotoPicker = true
+                                            }) {
+                                                if let image = selectedImage {
+                                                    Image(uiImage: image)
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .frame(height: 150)
+                                                        .cornerRadius(10)
+                                                } else {
+                                                    Image(systemName: "photo")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .frame(height: 150)
+                                                        .background(Color.gray.opacity(0.2))
+                                                        .cornerRadius(10)
+                                                        .overlay(Text("사진 등록").foregroundColor(.white).padding(8), alignment: .bottom)
+                                                }
+                                            }
+                                            .padding(.top, 20)
+                                            .sheet(isPresented: $isShowingPhotoPicker) {
+                                                PhotoPicker(selectedImage: $selectedImage)
+                                            }
                             
                         }
                         .padding()
@@ -178,5 +186,45 @@ struct RegisterPlaceView: View {
                 presentationMode.wrappedValue.dismiss()
             }
         }.resume()
+    }
+}
+
+struct PhotoPicker: UIViewControllerRepresentable {
+    @Binding var selectedImage: UIImage?
+    
+    func makeUIViewController(context: Context) -> PHPickerViewController {
+        var config = PHPickerConfiguration()
+        config.filter = .images
+        config.selectionLimit = 1
+        
+        let picker = PHPickerViewController(configuration: config)
+        picker.delegate = context.coordinator
+        return picker
+    }
+    
+    func updateUIViewController(_ uiViewController: PHPickerViewController, context: Context) {}
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject, PHPickerViewControllerDelegate {
+        let parent: PhotoPicker
+        
+        init(_ parent: PhotoPicker) {
+            self.parent = parent
+        }
+        
+        func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+            picker.dismiss(animated: true)
+            
+            guard let provider = results.first?.itemProvider, provider.canLoadObject(ofClass: UIImage.self) else { return }
+            
+            provider.loadObject(ofClass: UIImage.self) { [weak self] image, _ in
+                DispatchQueue.main.async {
+                    self?.parent.selectedImage = image as? UIImage
+                }
+            }
+        }
     }
 }
