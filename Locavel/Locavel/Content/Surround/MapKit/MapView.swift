@@ -108,6 +108,7 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     @Binding var places: [Place]
+    @Binding var centerCoordinate: CLLocationCoordinate2D
     
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
@@ -118,7 +119,8 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
-        // 초기 데이터 로딩
+        // Set the map's center to the current centerCoordinate
+        view.setCenter(centerCoordinate, animated: true)
         context.coordinator.fetchPlaces(mapView: view)
     }
     
@@ -134,6 +136,7 @@ struct MapView: UIViewRepresentable {
         }
         
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+            parent.centerCoordinate = mapView.centerCoordinate
             fetchPlaces(mapView: mapView)
         }
         
@@ -142,6 +145,7 @@ struct MapView: UIViewRepresentable {
             let northEast = mapView.convert(CGPoint(x: mapView.frame.width, y: 0), toCoordinateFrom: mapView)
 
             let urlString = "https://api.locavel.site/api/places/map?swLat=\(southWest.latitude)&swLng=\(southWest.longitude)&neLat=\(northEast.latitude)&neLng=\(northEast.longitude)"
+            print(urlString)
 
             guard let url = URL(string: urlString) else { return }
             

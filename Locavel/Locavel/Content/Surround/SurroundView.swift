@@ -91,12 +91,13 @@ struct SurroundView: View {
     @State private var showSheet = false
     @State private var places: [Place] = []
     @State private var searchText: String = ""
+    @State private var centerCoordinate = CLLocationCoordinate2D(latitude: 37.4963538, longitude: 126.9572222) // 숭실대학교
 
     var body: some View {
         VStack(alignment: .trailing, spacing: 0) {
             SearchBarView(searchText: $searchText)
             ZStack {
-                MapView(places: $places)
+                MapView(places: $places, centerCoordinate: $centerCoordinate)
                     .edgesIgnoringSafeArea(.all)
                     .environmentObject(locationManager)
                 
@@ -126,7 +127,9 @@ struct SurroundView: View {
                         }
                         Spacer()
                         Button(action: {
-                            // 현재 위치로 지도 이동
+                            if let userLocation = locationManager.currentLocation {
+                                centerCoordinate = userLocation
+                            }
                         }) {
                             Image(systemName: "location.fill")
                                 .padding()
