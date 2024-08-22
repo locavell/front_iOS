@@ -29,9 +29,6 @@ struct naverButton: View {
             .background(RoundedRectangle(cornerRadius: 10).fill(Color.green))
         }
         .frame(width: 281, height: 51)
-        .navigationDestination(isPresented: $naverAuth.isLoggedIn) {
-            SignUpView()
-        }
     }
 }
 
