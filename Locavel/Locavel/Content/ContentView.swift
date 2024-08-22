@@ -26,7 +26,7 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            WishListView()
+            WishListView(selectedTab: $selectedTab)
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("위시리스트")

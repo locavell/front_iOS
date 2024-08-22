@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct InfoView: View {
-    
+    @Binding var selectedTab: Int
     var tests: tapInfo
     
     var body: some View {
         
             switch tests {
             case .food:
-                FoodView()
+                FoodView(selectedTab: $selectedTab)
             case .spot:
                 SpotView()
             case .activity:
@@ -24,9 +24,9 @@ struct InfoView: View {
         
     }
 }
-
-struct InfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        InfoView(tests: .food)
-    }
-}
+//
+//struct InfoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        InfoView(tests: .food)
+//    }
+//}

@@ -15,6 +15,7 @@ enum tapInfo: String, CaseIterable {
 
 struct WishListView: View {
     
+    @Binding var selectedTab: Int
     @State private var selectedPicker: tapInfo = .food
     @Namespace private var animation
     
@@ -22,7 +23,7 @@ struct WishListView: View {
         NavigationView {
             VStack {
                 animate()
-                InfoView(tests: selectedPicker)
+                InfoView(selectedTab: $selectedTab, tests: selectedPicker)
             }
             .navigationBarTitle(Text("위시리스트"), displayMode: .large)
         }
@@ -56,8 +57,8 @@ struct WishListView: View {
     }
 }
 
-struct WishListView_Previews: PreviewProvider {
-    static var previews: some View {
-        WishListView()
-    }
-}
+//struct WishListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WishListView()
+//    }
+//}
