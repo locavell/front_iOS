@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomTextField: TextFieldStyle {
+struct CustomTextFieldStyle: TextFieldStyle {
     
     func _body(configuration: TextField<Self._Label>) -> some View {
         
