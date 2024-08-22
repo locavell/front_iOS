@@ -1,6 +1,7 @@
 import SwiftUI
 struct FoodView: View {
     @StateObject private var viewModel = FoodViewModel()
+    @Binding var selectedTab: Int
 
     var body: some View {
         ScrollView {
@@ -12,7 +13,7 @@ struct FoodView: View {
                         .padding(.leading, 15)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    NavigationLink(destination: FoodMyRegionView(restaurants: viewModel.localRestaurants)) {
+                    NavigationLink(destination: FoodMyRegionView(restaurants: viewModel.localRestaurants,selectedTab: $selectedTab)) {
                         Text("전체보기")
                             .font(.footnote)
                             .underline()
@@ -154,6 +155,6 @@ struct FoodView: View {
     }
 }
 
-#Preview {
-    FoodView()
-}
+//#Preview {
+//    FoodView()
+//}

@@ -57,8 +57,8 @@ extension MyAPI: TargetType {
 
         // 인증 토큰을 헤더에 추가
        
-        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBY2Nlc3NUb2tlbiIsImV4cCI6MTcyNDI1NDExNiwiZW1haWwiOiJlZDNAZXhhbXBsZS5jb20ifQ.kPpyBjKtL0rEcFprusJBBUpGLgVQhy8cgvX_JanI_BGCjIvdRNhafdB63v7MvAFq401S4_JGaQ70cIBXWDlEQg"
-        let refreshToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJSZWZyZXNoVG9rZW4iLCJleHAiOjE3MjU0NjAxMTZ9.DlcKY8lFdiCAqQeiYiDmqkdM0N6rs3z6TzuMHy4A4kCE388LpBtzT2Fc0OP_-V3RfuOB4JnmQB3Vprc4VS3Hkg"
+        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBY2Nlc3NUb2tlbiIsImV4cCI6MTcyNDMzMDc0OSwiZW1haWwiOiJlZDNAZXhhbXBsZS5jb20ifQ.mSnO6pInswY3O-fZNX9bsDH-zgFbmoQWZMBvetNnHT3DMiZfQqqB0FmVJf8DDXinwEdJen8XqJtsJeyvWSUgZw"
+        let refreshToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJSZWZyZXNoVG9rZW4iLCJleHAiOjE3MjU1MzY3NDl9.qRmsAR6FZ_CXpkW2mAPS4W_UzZVvm8adDf-47hkqmSQar7RXoXQABw8A89zfpJwHcn0g35iZOm4QJetfVvqfYA"
 
         // TokenManager에 토큰 설정
         TokenManager.shared.accessToken = accessToken
