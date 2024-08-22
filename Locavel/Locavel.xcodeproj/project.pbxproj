@@ -310,18 +310,10 @@
 		1F8C06E32C77573600EA90DC /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				1FF357D12C7763CC0033FDAE /* ViewModel */,
 				1F8C06E02C77573600EA90DC /* Components */,
 				1F8C06E22C77573600EA90DC /* View */,
 			);
 			path = SignUp;
-			sourceTree = "<group>";
-		};
-		1FF357D12C7763CC0033FDAE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3056DAA42C4AA789002B9378 = {
