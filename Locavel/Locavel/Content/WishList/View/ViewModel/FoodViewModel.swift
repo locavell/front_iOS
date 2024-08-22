@@ -4,16 +4,16 @@
 //
 //  Created by 박희민 on 8/8/24.
 //
-import Moya
 import SwiftUI
+import Moya
 
 class FoodViewModel: ObservableObject {
     let provider = MoyaProvider<MyAPI>()
     
     @Published var localRestaurants: [FoodRestaurant] = [
-        FoodRestaurant(image: "1", name: "상무초밥 송도직영점", hours: "영업 시간: 11:00 - 21:30", rating: 4.5),
-        FoodRestaurant(image: "2", name: "건강밥상마니 송도점", hours: "영업 시간: 11:00 - 22:00", rating: 4.2),
-        FoodRestaurant(image: "3", name: "송도 슈블라", hours: "영업 시간: 11:00 - 21:00", rating: 4.4)
+        FoodRestaurant(id: 1, image: "1", name: "상무초밥 송도직영점", hours: "영업 시간: 11:00 - 21:30", rating: 4.5, isFavorite: false),
+        FoodRestaurant(id: 2, image: "2", name: "건강밥상마니 송도점", hours: "영업 시간: 11:00 - 22:00", rating: 4.2, isFavorite: false),
+        FoodRestaurant(id: 3, image: "3", name: "송도 슈블라", hours: "영업 시간: 11:00 - 21:00", rating: 4.4, isFavorite: false)
     ]
     
     @Published var favoriteRestaurants: [FoodRestaurant] = []
@@ -23,7 +23,7 @@ class FoodViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch result {
                 case let .success(response):
-                    self.handleSuccess(response: response, completion: completion)
+                    self.handleSuccess(response: response, placeId: placeId, completion: completion)
                     
                 case .failure(let error):
                     print("API 요청 실패: \(error.localizedDescription)")
@@ -33,16 +33,29 @@ class FoodViewModel: ObservableObject {
         }
     }
 
-    private func handleSuccess(response: Response, completion: @escaping (Bool) -> Void) {
+    private func handleSuccess(response: Response, placeId: String, completion: @escaping (Bool) -> Void) {
         do {
             let decoder = JSONDecoder()
             let jsonResponse = try decoder.decode(WishlistResponse.self, from: response.data)
-            
+
             print("응답 코드: \(jsonResponse.code)")
             print("응답 메시지: \(jsonResponse.message)")
-            
+
+            if jsonResponse.isSuccess {
+                // 레스토랑을 favoriteRestaurants에 추가
+                if let restaurant = self.localRestaurants.first(where: { "\($0.id)" == placeId }) {
+                    if !self.favoriteRestaurants.contains(where: { $0.id == restaurant.id }) {
+                        self.favoriteRestaurants.append(restaurant)
+                    }
+                    
+                    // 레스토랑의 isFavorite 상태를 업데이트
+                    if let index = self.localRestaurants.firstIndex(where: { $0.id == restaurant.id }) {
+                        self.localRestaurants[index].isFavorite = true
+                    }
+                }
+            }
+
             completion(jsonResponse.isSuccess)
-            
         } catch {
             print("JSON 디코딩 에러: \(error.localizedDescription)")
             if let responseString = String(data: response.data, encoding: .utf8) {
@@ -53,8 +66,8 @@ class FoodViewModel: ObservableObject {
             completion(false)
         }
     }
-
 }
+
 
 // JSON 응답에 맞는 Codable 모델
 struct WishlistResponse: Codable {
@@ -62,3 +75,4 @@ struct WishlistResponse: Codable {
     let code: String
     let message: String?
 }
+

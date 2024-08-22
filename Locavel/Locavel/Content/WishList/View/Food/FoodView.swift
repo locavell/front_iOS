@@ -6,6 +6,7 @@ struct FoodView: View {
     var body: some View {
         ScrollView {
             VStack {
+                // 내 지역 섹션
                 HStack {
                     Text("내 지역")
                         .font(.title2)
@@ -38,7 +39,7 @@ struct FoodView: View {
                                             Spacer()
                                             VStack {
                                                 Button(action: {
-                                                    viewModel.addWishlist(placeId: restaurant.id.uuidString) { success in
+                                                    viewModel.addWishlist(placeId: String(restaurant.id)) { success in
                                                         if success {
                                                             print("위시리스트에 추가되었습니다.")
                                                         } else {
@@ -83,6 +84,7 @@ struct FoodView: View {
 
                 Spacer()
 
+                // 관심 지역 섹션
                 HStack {
                     Text("관심 지역")
                         .font(.title2)
@@ -90,7 +92,7 @@ struct FoodView: View {
                         .padding(.leading, 15)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                    NavigationLink(destination: FoodInterestingView()) {
+                    NavigationLink(destination: FoodInterestingView(restaurants: viewModel.favoriteRestaurants)) {
                         Text("전체보기")
                             .font(.footnote)
                             .underline()
@@ -100,7 +102,7 @@ struct FoodView: View {
                             .padding(.leading)
                     }
                 }
-                
+
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(viewModel.favoriteRestaurants) { restaurant in

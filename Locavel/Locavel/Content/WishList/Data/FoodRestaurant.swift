@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct FoodRestaurant: Identifiable, Codable {
-    let id = UUID()
+struct FoodRestaurant: Identifiable {
+    let id : Int
     let image: String
     let name: String
     let hours: String
