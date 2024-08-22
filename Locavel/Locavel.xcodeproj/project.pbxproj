@@ -39,7 +39,8 @@
 		1F35DF522C71B4EC00D1EF30 /* kakaoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */; };
 		1F35DF542C71B51200D1EF30 /* naverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DF532C71B51200D1EF30 /* naverButton.swift */; };
 		1F35DF572C71B53D00D1EF30 /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF562C71B53D00D1EF30 /* NaverThirdPartyLogin */; };
-		1FF7F8C52C7247CC00868D06 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7F8C42C7247CC00868D06 /* SignUpView.swift */; };
+		1F8C06E42C77573600EA90DC /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C06DF2C77573600EA90DC /* CustomTextFieldStyle.swift */; };
+		1F8C06E52C77573600EA90DC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C06E12C77573600EA90DC /* SignUpView.swift */; };
 		1FF7F8C72C724B5100868D06 /* LogInAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF7F8C62C724B5100868D06 /* LogInAPI.swift */; };
 		1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD66C92C5A114D002EC096 /* SplashView.swift */; };
 		3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056DAB02C4AA789002B9378 /* LocavelApp.swift */; };
@@ -118,7 +119,8 @@
 		1F2CC7B42C71BD29009E836D /* NaverAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NaverAuth.swift; path = Locavel/Content/LogIn/Components/NaverAuth.swift; sourceTree = SOURCE_ROOT; };
 		1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoButton.swift; sourceTree = "<group>"; };
 		1F35DF532C71B51200D1EF30 /* naverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverButton.swift; sourceTree = "<group>"; };
-		1FF7F8C42C7247CC00868D06 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1F8C06DF2C77573600EA90DC /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
+		1F8C06E12C77573600EA90DC /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		1FF7F8C62C724B5100868D06 /* LogInAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAPI.swift; sourceTree = "<group>"; };
 		1FFD66C92C5A114D002EC096 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3056DAAD2C4AA789002B9378 /* Locavel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locavel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,10 +290,27 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		1FF7F8C32C7247A500868D06 /* SignUp */ = {
+		1F8C06E02C77573600EA90DC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				1FF7F8C42C7247CC00868D06 /* SignUpView.swift */,
+				1F8C06DF2C77573600EA90DC /* CustomTextFieldStyle.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1F8C06E22C77573600EA90DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F8C06E12C77573600EA90DC /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F8C06E32C77573600EA90DC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1F8C06E02C77573600EA90DC /* Components */,
+				1F8C06E22C77573600EA90DC /* View */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -345,7 +364,7 @@
 				3056DAE02C4AA9D6002B9378 /* Surround */,
 				3056DAE12C4AA9DF002B9378 /* WishList */,
 				3056DAE22C4AA9E7002B9378 /* MyPage */,
-				1FF7F8C32C7247A500868D06 /* SignUp */,
+				1F8C06E32C77573600EA90DC /* SignUp */,
 				3056DAE32C4AA9F0002B9378 /* LogIn */,
 			);
 			path = Content;
@@ -753,6 +772,7 @@
 				1A4996562C748A3D00D491CB /* ActivityMyRegionView.swift in Sources */,
 				1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */,
 				30573F8F2C7387A000BF49C4 /* HomeViewModel.swift in Sources */,
+				1F8C06E42C77573600EA90DC /* CustomTextFieldStyle.swift in Sources */,
 				3056DAE52C4AAA5C002B9378 /* SearchBarView.swift in Sources */,
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
 				1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */,
@@ -781,6 +801,7 @@
 				30824C0C2C75D756003635C3 /* MyRegionView.swift in Sources */,
 				1A03C6BC2C64ADEF00CAEC41 /* FoodMyRegionView.swift in Sources */,
 				30BCE9BE2C6F254E006782B8 /* CategorySelectionView.swift in Sources */,
+				1F8C06E52C77573600EA90DC /* SignUpView.swift in Sources */,
 				30BCE9B22C6A4663006782B8 /* MapView.swift in Sources */,
 				30824C0E2C75ED9C003635C3 /* AddRegionView.swift in Sources */,
 				3056DAF32C4AAB40002B9378 /* MyPageView.swift in Sources */,
@@ -795,7 +816,6 @@
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
 				3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */,
 				1A03C6B62C64A7B300CAEC41 /* FoodRestaurant.swift in Sources */,
-				1FF7F8C52C7247CC00868D06 /* SignUpView.swift in Sources */,
 				3056DAEB2C4AAAC7002B9378 /* WishListView.swift in Sources */,
 				3056DAF12C4AAB25002B9378 /* WishListFood.swift in Sources */,
 				1A4996582C748A5400D491CB /* ActivityInterestingView.swift in Sources */,

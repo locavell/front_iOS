@@ -5,13 +5,13 @@
 //  Created by 박희민 on 8/8/24.
 //
 
-import SwiftUI
+import Foundation
 
 struct FoodRestaurant: Identifiable, Codable {
-    let id = UUID()
-    let image: String
-    let name: String
-    let hours: String
-    let rating: Double
-    var isFavorite: Bool = false
+    var id: Int
+    var image: String
+    var name: String
+    var hours: String
+    var rating: Double
+    var isFavorite: Bool
 }

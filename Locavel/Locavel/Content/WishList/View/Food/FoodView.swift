@@ -1,7 +1,7 @@
 import SwiftUI
-
 struct FoodView: View {
     @StateObject private var viewModel = FoodViewModel()
+    @Binding var selectedTab: Int
 
     var body: some View {
         ScrollView {
@@ -12,8 +12,8 @@ struct FoodView: View {
                         .fontWeight(.bold)
                         .padding(.leading, 15)
                         .frame(maxWidth: .infinity, alignment: .leading)
-
-                    NavigationLink(destination: FoodMyRegionView(restaurants: viewModel.localRestaurants)) {
+                    
+                    NavigationLink(destination: FoodMyRegionView(restaurants: viewModel.localRestaurants,selectedTab: $selectedTab)) {
                         Text("전체보기")
                             .font(.footnote)
                             .underline()
@@ -23,7 +23,7 @@ struct FoodView: View {
                             .padding(.leading)
                     }
                 }
-
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(viewModel.localRestaurants) { restaurant in
@@ -38,11 +38,21 @@ struct FoodView: View {
                                             Spacer()
                                             VStack {
                                                 Button(action: {
-                                                    viewModel.addWishlist(placeId: restaurant.id.uuidString) { success in
-                                                        if success {
-                                                            print("위시리스트에 추가되었습니다.")
-                                                        } else {
-                                                            print("추가 실패.")
+                                                    if restaurant.isFavorite {
+                                                        viewModel.removeWishlist(placeId: String(restaurant.id)) { success in
+                                                            if success {
+                                                                print("위시리스트에서 제거되었습니다.")
+                                                            } else {
+                                                                print("제거 실패.")
+                                                            }
+                                                        }
+                                                    } else {
+                                                        viewModel.addWishlist(placeId: String(restaurant.id)) { success in
+                                                            if success {
+                                                                print("위시리스트에 추가되었습니다.")
+                                                            } else {
+                                                                print("추가 실패.")
+                                                            }
                                                         }
                                                     }
                                                 }) {
@@ -54,22 +64,22 @@ struct FoodView: View {
                                             }
                                         }
                                     )
-
+                                
                                 Text(restaurant.name)
                                     .font(.headline)
                                     .multilineTextAlignment(.center)
                                     .padding(.top, 5)
-
+                                
                                 Text(restaurant.hours)
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
-
+                                
                                 HStack(spacing: 2) {
                                     ForEach(0..<5) { index in
                                         Image(systemName: index < Int(restaurant.rating) ? "star.fill" : "star")
                                             .foregroundColor(index < Int(restaurant.rating) ? .yellow : .gray)
                                     }
-
+                                    
                                     Text(String(format: "%.1f", restaurant.rating))
                                         .font(.subheadline)
                                         .foregroundColor(.gray)
@@ -80,17 +90,17 @@ struct FoodView: View {
                         }
                     }
                 }
-
+                
                 Spacer()
-
+                
                 HStack {
                     Text("관심 지역")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.leading, 15)
                         .frame(maxWidth: .infinity, alignment: .leading)
-
-                    NavigationLink(destination: FoodInterestingView()) {
+                    
+                    NavigationLink(destination: FoodInterestingView(restaurants: viewModel.favoriteRestaurants)) {
                         Text("전체보기")
                             .font(.footnote)
                             .underline()
@@ -110,22 +120,22 @@ struct FoodView: View {
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 150, height: 150)
                                     .clipped()
-
+                                
                                 Text(restaurant.name)
                                     .font(.headline)
                                     .multilineTextAlignment(.center)
                                     .padding(.top, 5)
-
+                                
                                 Text(restaurant.hours)
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
-
+                                
                                 HStack(spacing: 2) {
                                     ForEach(0..<5) { index in
                                         Image(systemName: index < Int(restaurant.rating) ? "star.fill" : "star")
                                             .foregroundColor(index < Int(restaurant.rating) ? .yellow : .gray)
                                     }
-
+                                    
                                     Text(String(format: "%.1f", restaurant.rating))
                                         .font(.subheadline)
                                         .foregroundColor(.gray)
@@ -138,9 +148,13 @@ struct FoodView: View {
                 }
             }
         }
+            .onAppear {
+                        // 임시로 좌표 설정 (실제 앱에서는 사용자의 현재 위치를 사용해야 합니다.)
+                        viewModel.getRecommendedRestaurants(latitude: 37.5665, longitude: 126.9780) // 예: 서울의 위도와 경도
+                    }
     }
 }
 
-#Preview {
-    FoodView()
-}
+//#Preview {
+//    FoodView()
+//}

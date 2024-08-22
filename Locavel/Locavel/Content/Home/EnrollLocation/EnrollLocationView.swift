@@ -151,3 +151,6 @@ struct EnrollLocationView: View {
         }.resume()
     }
 }
+#Preview {
+    EnrollLocationView()
+}
