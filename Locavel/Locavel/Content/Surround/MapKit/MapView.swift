@@ -109,7 +109,8 @@ import MapKit
 struct MapView: UIViewRepresentable {
     @Binding var places: [Place]
     @Binding var centerCoordinate: CLLocationCoordinate2D
-    
+    @Binding var selectedCategories: [String]
+
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
@@ -117,29 +118,28 @@ struct MapView: UIViewRepresentable {
         mapView.userTrackingMode = .follow
         return mapView
     }
-    
+
     func updateUIView(_ view: MKMapView, context: Context) {
-        // Set the map's center to the current centerCoordinate
         view.setCenter(centerCoordinate, animated: true)
         context.coordinator.fetchPlaces(mapView: view)
     }
-    
+
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-    
+
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
-        
+
         init(_ parent: MapView) {
             self.parent = parent
         }
-        
+
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
             parent.centerCoordinate = mapView.centerCoordinate
             fetchPlaces(mapView: mapView)
         }
-        
+
         func fetchPlaces(mapView: MKMapView) {
             let southWest = mapView.convert(CGPoint(x: 0, y: mapView.frame.height), toCoordinateFrom: mapView)
             let northEast = mapView.convert(CGPoint(x: mapView.frame.width, y: 0), toCoordinateFrom: mapView)
@@ -167,11 +167,46 @@ struct MapView: UIViewRepresentable {
                 }
             }.resume()
         }
+
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            guard !(annotation is MKUserLocation) else { return nil }
+
+            let identifier = "PlaceAnnotation"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+            if annotationView == nil {
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView?.canShowCallout = false
+            } else {
+                annotationView?.annotation = annotation
+            }
+
+            if let title = annotation.title, let category = title {
+                var imageName: String?
+                switch category {
+                case "spot":
+                    imageName = "camera.circle.fill.accent"
+                case "activity":
+                    imageName = "figure.run.circle.fill.accent"
+                case "food":
+                    imageName = "fork.knife.circle.fill.accent"
+                default:
+                    break
+                }
+                
+                if let imageName = imageName {
+                    annotationView?.image = UIImage(named: imageName)?.withRenderingMode(.alwaysOriginal)
+                }
+            }
+
+            return annotationView
+        }
     }
-    
+
     func updateMapAnnotations(mapView: MKMapView) {
         mapView.removeAnnotations(mapView.annotations)
-        let annotations = places.map { place -> MKPointAnnotation in
+        let filteredPlaces = places.filter { selectedCategories.contains($0.category) }
+        let annotations = filteredPlaces.map { place -> MKPointAnnotation in
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: place.latitude, longitude: place.longitude)
             annotation.title = place.category
@@ -195,3 +230,4 @@ struct Place: Codable {
     let category: String
     let categoryImgUrl: String
 }
+
