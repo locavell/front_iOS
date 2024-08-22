@@ -10,6 +10,8 @@ import Moya
 
 enum MyAPI {
     case addWishlist(placeId: String?)
+    case removeWishlist(placeId: String?)
+    case getRecommendedRestaurants(latitude: Double, longitude: Double)
 }
 
 extension MyAPI: TargetType {
@@ -18,25 +20,37 @@ extension MyAPI: TargetType {
     }
 
     var path: String {
-            switch self {
-            case .addWishlist(let placeId):
-                return "/api/places/\(placeId ?? "")/wish-list"
-            }
+        switch self {
+        case .addWishlist(let placeId):
+            return "/api/places/\(placeId ?? "")/wish-list"
+        case .removeWishlist(let placeId):
+            return "/api/places/\(placeId ?? "")/wish-list"
+        case .getRecommendedRestaurants:
+            return "/api/places/recommend-results"
         }
+    }
 
     var method: Moya.Method {
         switch self {
         case .addWishlist:
             return .post
+        case .removeWishlist:
+            return .delete
+        case .getRecommendedRestaurants:
+            return .get
         }
     }
 
     var task: Task {
         switch self {
-        case .addWishlist(let placeId):
+        case .addWishlist(let placeId), .removeWishlist(let placeId):
             return .requestParameters(parameters: ["placeId": placeId ?? ""], encoding: JSONEncoding.default)
+        case .getRecommendedRestaurants(let latitude, let longitude):
+            return .requestParameters(parameters: ["latitude": latitude, "longitude": longitude], encoding: URLEncoding.queryString)
         }
     }
+
+
 
     var headers: [String: String]? {
         var headers = ["Content-Type": "application/json"]
@@ -59,28 +73,3 @@ extension MyAPI: TargetType {
 
 let provider = MoyaProvider<MyAPI>(plugins: [NetworkLoggerPlugin()])
 
-//
-//let provider = MoyaProvider<MyAPI>()
-//
-//func addToWishlist(placeId: String, completion: @escaping (Result<Void, Error>) -> Void) {
-//    provider.request(.addWishlist(placeId: placeId)) { result in
-//        switch result {
-//        case .success(let response):
-//            // Check the HTTP status code
-//            switch response.statusCode {
-//            case 200:
-//                print("Added to wishlist successfully.")
-//                completion(.success(()))
-//            case 401:
-//                print("Unauthorized. Please log in.")
-//                completion(.failure(NSError(domain: "APIError", code: 401, userInfo: [NSLocalizedDescriptionKey: "Unauthorized. Please log in."])))
-//            default:
-//                print("Failed with status code: \(response.statusCode)")
-//                completion(.failure(NSError(domain: "APIError", code: response.statusCode, userInfo: [NSLocalizedDescriptionKey: "Failed with status code \(response.statusCode)"])))
-//            }
-//        case .failure(let error):
-//            print("Request failed with error: \(error)")
-//            completion(.failure(error))
-//        }
-//    }
-//}
