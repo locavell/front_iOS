@@ -116,6 +116,7 @@ struct EnrollLocationView: View {
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
         let urlString = "https://api.locavel.site/api/users/my-area?latitude=\(latitude)&longitude=\(longitude)"
+        print(urlString)
         
         guard let url = URL(string: urlString) else {
             print("Invalid URL")
