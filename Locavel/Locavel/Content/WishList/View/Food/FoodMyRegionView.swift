@@ -58,9 +58,10 @@ struct FoodMyRegionView: View {
 struct FoodMyRegionView_Previews: PreviewProvider {
     static var previews: some View {
         FoodMyRegionView(restaurants: [
-            FoodRestaurant(image: "1", name: "상무초밥 송도직영점", hours: "영업 시간: 11:00 - 21:30", rating: 4.5),
-            FoodRestaurant(image: "2", name: "건강밥상마니 송도점", hours: "영업 시간: 11:00 - 22:00", rating: 4.2),
-            FoodRestaurant(image: "3", name: "송도 슈블라", hours: "영업 시간: 11:00 - 21:00", rating: 4.4)
+                FoodRestaurant(id: 1, image: "1", name: "상무초밥 송도직영점", hours: "영업 시간: 11:00 - 21:30", rating: 4.5),
+                FoodRestaurant(id: 2, image: "2", name: "건강밥상마니 송도점", hours: "영업 시간: 11:00 - 22:00", rating: 4.2),
+                FoodRestaurant(id: 3, image: "3", name: "송도 슈블라", hours: "영업 시간: 11:00 - 21:00", rating: 4.4)
+            
         ])
     }
 }

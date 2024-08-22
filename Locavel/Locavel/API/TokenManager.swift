@@ -33,7 +33,7 @@ class TokenManager {
     }
 
     private init() {}
-    
+
     func clearTokens() {
         userDefaults.removeObject(forKey: accessTokenKey)
         userDefaults.removeObject(forKey: refreshTokenKey)
