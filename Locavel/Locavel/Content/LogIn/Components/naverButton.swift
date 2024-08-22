@@ -9,12 +9,14 @@ import SwiftUI
 import NaverThirdPartyLogin
 
 struct naverButton: View {
-    @StateObject var naverAuth = NaverAuth()
+    @Binding var isLoggedIn: Bool // 로그인 상태를 바인딩으로 받음
+    @ObservedObject var naverAuth = NaverAuth() // 네이버 로그인 객체
 
     var body: some View {
-        Button(action: {
+        Button {
             naverAuth.handleNaverLogin()
-        }) {
+            isLoggedIn = naverAuth.isLoggedIn // 로그인 성공 시 상태를 true로 설정
+        } label:{
             HStack(spacing: 10) {
                 Image("naver")
                     .resizable()
@@ -31,4 +33,5 @@ struct naverButton: View {
         .frame(width: 281, height: 51)
     }
 }
+
 

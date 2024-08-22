@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct LogInView: View {
-    
-    @State private var isLoggedIn: Bool = false
-    
+    @ObservedObject var naverAuth = NaverAuth() // 네이버 로그인 상태를 관찰
+    @State private var isKakaoLoggedIn = false // 카카오 로그인 상태
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -27,17 +27,22 @@ struct LogInView: View {
                 }
                 .frame(width: 281, height: 51) // 버튼의 크기 설정
                 
-                naverButton()
+                naverButton(isLoggedIn: $naverAuth.isLoggedIn) // 네이버 로그인 상태 연동
+                    .padding(.bottom, 10)
                 
-                kakaoButton()
+                kakaoButton(isLoggedIn: $isKakaoLoggedIn) // 카카오 로그인 상태 연동
             }
             .padding()
-            .navigationDestination(isPresented: $isLoggedIn) {
-                SignUpView()
+            .navigationDestination(isPresented: $naverAuth.isLoggedIn) {
+                FirstSignUpView()
+            }
+            .navigationDestination(isPresented: $isKakaoLoggedIn) {
+                FirstSignUpView()
             }
         }
     }
 }
+
 
 #Preview {
     LogInView()

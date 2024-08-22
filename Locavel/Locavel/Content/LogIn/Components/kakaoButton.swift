@@ -5,6 +5,8 @@ import KakaoSDKUser
 import Moya
 
 struct kakaoButton: View {
+    @Binding var isLoggedIn: Bool // 로그인 상태를 바인딩으로 받음
+
     // Moya Provider 설정
     let provider = MoyaProvider<LoginAPI>()
     
@@ -16,8 +18,8 @@ struct kakaoButton: View {
                         print(error)
                     }
                     if let oauthToken = oauthToken {
-                        // 소셜 로그인(회원가입 API CALL)
                         sendSocialLoginToken(token: oauthToken.accessToken)
+                        isLoggedIn = true // 로그인 성공 시 상태를 true로 설정
                     }
                 }
             } else {
@@ -26,9 +28,8 @@ struct kakaoButton: View {
                         print(error)
                     }
                     if let oauthToken = oauthToken {
-                        print("kakao success")
-                        // 소셜 로그인(회원가입 API CALL)
                         sendSocialLoginToken(token: oauthToken.accessToken)
+                        isLoggedIn = true // 로그인 성공 시 상태를 true로 설정
                     }
                 }
             }
@@ -49,25 +50,7 @@ struct kakaoButton: View {
         .frame(width: 281, height: 51)
     }
     
-    // 서버에 소셜 로그인 토큰을 보내는 함수
     func sendSocialLoginToken(token: String) {
-        provider.request(.sociallogin) { result in
-            switch result {
-            case .success(let response):
-                do {
-                    // 서버로부터의 응답 처리
-                    let responseData = try response.mapJSON()
-                    print("Server response: \(responseData)")
-                } catch {
-                    print("Failed to parse response: \(error)")
-                }
-            case .failure(let error):
-                print("Failed to send token: \(error)")
-            }
-        }
+        // 서버로 토큰 전송 로직
     }
-}
-
-#Preview {
-    kakaoButton()
 }
