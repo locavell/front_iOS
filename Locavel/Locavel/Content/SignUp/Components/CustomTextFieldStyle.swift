@@ -13,14 +13,20 @@ struct CustomTextFieldStyle: TextFieldStyle {
         
         ZStack {
             Rectangle()
-                .foregroundColor(Color.green)
+                .foregroundColor(Color(.systemBackground))
                 .cornerRadius(8)
-                .frame(height: 46)
+                .frame(width: 303, height: 46)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.gray, lineWidth: 1))
+                
             
             // 텍스트필드
             configuration
-                .font(.title)
+                .font(.body)
+                .background(Color(.systemBackground))
                 .padding()
+                .frame(width: 303, height: 46)
         }
     }
 }

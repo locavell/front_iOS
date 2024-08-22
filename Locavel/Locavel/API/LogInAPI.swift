@@ -3,7 +3,7 @@ import Foundation
 
 enum LoginAPI {
     case sociallogin
-    case signup(email: String, password: String)
+    case signup(email: String, password: String, username: String, nickname: String)
 }
 
 extension LoginAPI: TargetType {
@@ -28,10 +28,12 @@ extension LoginAPI: TargetType {
         switch self {
         case .sociallogin:
             return .requestPlain
-        case .signup(email: let email, password: let password):
+        case .signup(email: let email, password: let password, username: let username, nickname: let nickname):
             let parameters: [String: Any] = [
                 "email": email,
-                "password": password
+                "password": password,
+                "username": username,
+                "nickname": nickname
             ]
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         }
