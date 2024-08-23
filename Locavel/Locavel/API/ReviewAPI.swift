@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum ReviewAPI {
-    case addReview(placeId: String?, comment: String, rating: Double)
+    case addReview(placeId: String, comment: String, rating: Double)
 }
 
 extension ReviewAPI: TargetType {
@@ -20,7 +20,7 @@ extension ReviewAPI: TargetType {
     var path: String {
         switch self {
         case .addReview(let placeId, _, _):
-            return "/api/reviews/\(placeId ?? "")"
+            return "/api/reviews/\(placeId)"
         }
     }
     
@@ -34,13 +34,19 @@ extension ReviewAPI: TargetType {
     var task: Task {
         switch self {
         case .addReview(_, let comment, let rating):
-            let parameters: [String: Any] = ["comment": comment, "rating": rating]
-            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+            let jsonObject: [String: Any] = ["comment": comment, "rating": rating]
+            let jsonData = try! JSONSerialization.data(withJSONObject: jsonObject, options: [])
+            let jsonString = String(data: jsonData, encoding: .utf8)!
+            let formData: [MultipartFormData] = [
+                MultipartFormData(provider: .data(jsonString.data(using: .utf8)!), name: "request")
+            ]
+            return .uploadMultipart(formData)
         }
     }
+
     
     var headers: [String: String]? {
-        var headers = ["Content-Type": "application/json"]
+        var headers = ["Content-Type": "multipart/form-data"]
         let accessToken = TokenManager.shared.accessToken
         headers["Authorization"] = "Bearer \(accessToken)"
         return headers
