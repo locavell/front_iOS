@@ -1,12 +1,13 @@
 import SwiftUI
 
 struct LogInView: View {
-    @StateObject private var naverAuth = NaverAuth() // 네이버 로그인 상태를 관찰
-    @State private var isKakaoLoggedIn = false // 카카오 로그인 상태
+    @StateObject private var naverAuth = NaverAuth()
+    @State private var isKakaoLoggedIn = false
+    @State private var showFirstSignUpView = false
 
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/){
                 Image("Logo")
                     .resizable()
                     .frame(width: 183, height: 37)
@@ -22,26 +23,32 @@ struct LogInView: View {
                         .font(.headline)
                         .padding()
                         .foregroundColor(.white)
-                        .frame(width: 281, height: 51) // 버튼의 크기 설정
-                        .background(RoundedRectangle(cornerRadius: 10)) // 버튼의 배경 설정
+                        .frame(width: 281, height: 51)
+                        .background(RoundedRectangle(cornerRadius: 10))
                 }
-                .frame(width: 281, height: 51) // 버튼의 크기 설정
+                .frame(width: 281, height: 51)
                 
-                naverButton(isLoggedIn: $naverAuth.isLoggedIn) // 네이버 로그인 상태 연동
-                
-                kakaoButton(isLoggedIn: $isKakaoLoggedIn) // 카카오 로그인 상태 연동
+                naverButton(isLoggedIn: $naverAuth.isLoggedIn)
+                                
+                kakaoButton(isLoggedIn: $isKakaoLoggedIn)
             }
             .padding()
-            .navigationDestination(isPresented: $naverAuth.isLoggedIn) {
-                FirstSignUpView()
+        }
+        .onChange(of: naverAuth.isLoggedIn) {
+            if naverAuth.isLoggedIn {
+                showFirstSignUpView = true
             }
-            .navigationDestination(isPresented: $isKakaoLoggedIn) {
-                FirstSignUpView()
+        }
+        .onChange(of: isKakaoLoggedIn) {
+            if isKakaoLoggedIn {
+                showFirstSignUpView = true
             }
+        }
+        .fullScreenCover(isPresented: $showFirstSignUpView) {
+            FirstSignUpView()
         }
     }
 }
-
 
 #Preview {
     LogInView()

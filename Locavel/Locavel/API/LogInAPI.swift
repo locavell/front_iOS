@@ -17,6 +17,7 @@ extension LoginAPI: TargetType {
             return "/api/auth/social-login"
         case .signup:
             return "/api/auth/sign-up"
+        
         }
     }
     
