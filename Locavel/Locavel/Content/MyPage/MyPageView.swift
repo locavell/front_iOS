@@ -1,13 +1,8 @@
-//
-//  MyPageView.swift
-//  Locavel
-//
-//  Created by 김의정 on 7/19/24.
-//
-
 import SwiftUI
 
 struct MyPageView: View {
+    @State private var showSettingView = false
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -34,7 +29,7 @@ struct MyPageView: View {
                             }
                             
                             Button(action: {
-                                // Settings button action
+                                showSettingView = true
                             }) {
                                 Image(systemName: "gearshape")
                                     .font(.system(size: 24))
@@ -194,6 +189,10 @@ struct MyPageView: View {
             .padding(.bottom, 50)
         }
         .navigationBarTitle("마이페이지", displayMode: .inline)
+        .fullScreenCover(isPresented: $showSettingView) {
+            SettingView()
+                .transition(.opacity)  // Add opacity transition
+        }
     }
 }
 

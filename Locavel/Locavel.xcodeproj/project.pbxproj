@@ -40,6 +40,7 @@
 		1F35DF542C71B51200D1EF30 /* naverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DF532C71B51200D1EF30 /* naverButton.swift */; };
 		1F35DF572C71B53D00D1EF30 /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF562C71B53D00D1EF30 /* NaverThirdPartyLogin */; };
 		1F4E5A5E2C78B25E00A3F048 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E5A5D2C78B25E00A3F048 /* UserView.swift */; };
+		1F8612AE2C78C21900ADBA67 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8612AD2C78C21900ADBA67 /* SettingView.swift */; };
 		1F8C06E42C77573600EA90DC /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C06DF2C77573600EA90DC /* CustomTextFieldStyle.swift */; };
 		1F8C06E52C77573600EA90DC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C06E12C77573600EA90DC /* SignUpView.swift */; };
 		1FF357D32C77640A0033FDAE /* FirstSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF357D22C77640A0033FDAE /* FirstSignUpView.swift */; };
@@ -122,6 +123,7 @@
 		1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoButton.swift; sourceTree = "<group>"; };
 		1F35DF532C71B51200D1EF30 /* naverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverButton.swift; sourceTree = "<group>"; };
 		1F4E5A5D2C78B25E00A3F048 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		1F8612AD2C78C21900ADBA67 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		1F8C06DF2C77573600EA90DC /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 		1F8C06E12C77573600EA90DC /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		1FF357D22C77640A0033FDAE /* FirstSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpView.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				3056DAF22C4AAB40002B9378 /* MyPageView.swift */,
+				1F8612AD2C78C21900ADBA67 /* SettingView.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
 				1AF6CDDA2C727BAD00E46AC5 /* FoodInterestingView.swift in Sources */,
 				1AAE4D452C6DE8A900D29666 /* WishListAPI.swift in Sources */,
+				1F8612AE2C78C21900ADBA67 /* SettingView.swift in Sources */,
 				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
 				3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */,

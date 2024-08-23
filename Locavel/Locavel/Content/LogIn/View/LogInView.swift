@@ -28,7 +28,6 @@ struct LogInView: View {
                 .frame(width: 281, height: 51) // 버튼의 크기 설정
                 
                 naverButton(isLoggedIn: $naverAuth.isLoggedIn) // 네이버 로그인 상태 연동
-                    .padding(.bottom, 10)
                 
                 kakaoButton(isLoggedIn: $isKakaoLoggedIn) // 카카오 로그인 상태 연동
             }
