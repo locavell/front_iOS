@@ -37,7 +37,7 @@ class NaverAuth: NSObject, UIApplicationDelegate, NaverThirdPartyLoginConnection
         self.isLoggedIn = true
         
         // 서버로 토큰 전송
-        sendSocialLoginToken(token: accessToken)
+        //sendSocialLoginToken(token: accessToken)
     }
     
     //MARK: - 토큰 갱신시
@@ -65,20 +65,20 @@ class NaverAuth: NSObject, UIApplicationDelegate, NaverThirdPartyLoginConnection
     }
     
     // 서버로 토큰을 보내는 함수
-    func sendSocialLoginToken(token: String) {
-        provider.request(.sociallogin) { result in
-            switch result {
-            case .success(let response):
-                do {
-                    // 서버로부터의 응답 처리
-                    let responseData = try response.mapJSON()
-                    print("Server response: \(responseData)")
-                } catch {
-                    print("Failed to parse response: \(error)")
-                }
-            case .failure(let error):
-                print("Failed to send token: \(error)")
-            }
-        }
-    }
+//    func sendSocialLoginToken(token: String) {
+//        provider.request(.sociallogin) { result in
+//            switch result {
+//            case .success(let response):
+//                do {
+//                    // 서버로부터의 응답 처리
+//                    let responseData = try response.mapJSON()
+//                    print("Server response: \(responseData)")
+//                } catch {
+//                    print("Failed to parse response: \(error)")
+//                }
+//            case .failure(let error):
+//                print("Failed to send token: \(error)")
+//            }
+//        }
+//    }
 }
