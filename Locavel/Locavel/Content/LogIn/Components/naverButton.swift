@@ -15,7 +15,6 @@ struct naverButton: View {
     var body: some View {
         Button {
             naverAuth.handleNaverLogin()
-            isLoggedIn = naverAuth.isLoggedIn // 로그인 성공 시 상태를 true로 설정
         } label:{
             HStack(spacing: 10) {
                 Image("naver")
