@@ -34,6 +34,7 @@ class NaverAuth: NSObject, UIApplicationDelegate, NaverThirdPartyLoginConnection
         print(#fileID, #function, #line, "- naver token : \(accessToken)")
         
         // 로그인 성공 시, isLoggedIn을 true로 설정
+        print("NaverAuth: 로그인 성공, isLoggedIn set to true")
         self.isLoggedIn = true
         
         // 서버로 토큰 전송
@@ -45,6 +46,7 @@ class NaverAuth: NSObject, UIApplicationDelegate, NaverThirdPartyLoginConnection
         print(#fileID, #function, #line, "- 토큰 갱신 완료")
         
         // 갱신된 토큰이 유효하다면, 여전히 로그인 상태로 간주
+        print("NaverAuth: 로그인 성공, isLoggedIn set to true")
         self.isLoggedIn = true
     }
     
