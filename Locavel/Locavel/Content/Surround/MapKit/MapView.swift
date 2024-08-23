@@ -110,6 +110,7 @@ struct MapView: UIViewRepresentable {
     @Binding var places: [Place]
     @Binding var centerCoordinate: CLLocationCoordinate2D
     @Binding var selectedCategories: [String]
+    @Binding var selectedPlaceId: IdentifiablePlaceId?  // Identifiable로 변경된 값
 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
@@ -145,7 +146,6 @@ struct MapView: UIViewRepresentable {
             let northEast = mapView.convert(CGPoint(x: mapView.frame.width, y: 0), toCoordinateFrom: mapView)
 
             let urlString = "https://api.locavel.site/api/places/map?swLat=\(southWest.latitude)&swLng=\(southWest.longitude)&neLat=\(northEast.latitude)&neLng=\(northEast.longitude)"
-            print(urlString)
 
             guard let url = URL(string: urlString) else { return }
             
@@ -176,7 +176,8 @@ struct MapView: UIViewRepresentable {
 
             if annotationView == nil {
                 annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                annotationView?.canShowCallout = false
+                annotationView?.canShowCallout = false // Callout을 비활성화
+                annotationView?.isUserInteractionEnabled = true // 제스처 인식을 위해 활성화
             } else {
                 annotationView?.annotation = annotation
             }
@@ -199,7 +200,20 @@ struct MapView: UIViewRepresentable {
                 }
             }
 
+            // 이미지 클릭 시 동작을 위한 탭 제스처 추가
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(annotationTapped(_:)))
+            annotationView?.addGestureRecognizer(tapGesture)
+
             return annotationView
+        }
+
+        @objc func annotationTapped(_ sender: UITapGestureRecognizer) {
+            if let annotationView = sender.view as? MKAnnotationView,
+               let annotation = annotationView.annotation {
+                if let place = parent.places.first(where: { $0.latitude == annotation.coordinate.latitude && $0.longitude == annotation.coordinate.longitude }) {
+                    parent.selectedPlaceId = IdentifiablePlaceId(id: place.placeId) // 클릭한 장소의 placeId 설정
+                }
+            }
         }
     }
 
@@ -215,6 +229,7 @@ struct MapView: UIViewRepresentable {
         mapView.addAnnotations(annotations)
     }
 }
+
 
 struct PlaceResponse: Codable {
     let isSuccess: Bool

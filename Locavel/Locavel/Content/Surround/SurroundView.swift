@@ -88,29 +88,22 @@ import MapKit
 
 struct SurroundView: View {
     @StateObject private var locationManager = LocationManager()
-    @State private var activeSheet: ActiveSheet? = nil // Use an enum to differentiate sheets
+    @State private var showRegisterSheet = false
+    @State private var showListSheet = false
     @State private var places: [Place] = []
     @State private var searchText: String = ""
     @State private var centerCoordinate = CLLocationCoordinate2D(latitude: 37.4963538, longitude: 126.9572222) // 숭실대학교
     @State private var selectedCategories: [String] = ["spot", "activity", "food"]
-    @State private var recommendedPlaces: [RecommendedPlace] = []
-
-    enum ActiveSheet: Identifiable { // Define an enum for active sheets
-        case placesList
-        case bottomSheet
-
-        var id: Int {
-            hashValue
-        }
-    }
+    @State private var selectedPlaceId: IdentifiablePlaceId?  // Identifiable로 감싸줌
 
     var body: some View {
         VStack(alignment: .trailing, spacing: 0) {
             SearchBarView(searchText: $searchText)
             ZStack {
-                MapView(places: $places, centerCoordinate: $centerCoordinate, selectedCategories: $selectedCategories)
+                MapView(places: $places, centerCoordinate: $centerCoordinate, selectedCategories: $selectedCategories, selectedPlaceId: $selectedPlaceId)
                     .edgesIgnoringSafeArea(.all)
                     .environmentObject(locationManager)
+                
                 VStack {
                     HStack {
                         FilterButton(category: "spot", isSelected: selectedCategories.contains("spot")) {
@@ -128,7 +121,7 @@ struct SurroundView: View {
 
                     HStack {
                         Button(action: {
-                            activeSheet = .bottomSheet // Set to show BottomSheetView
+                            showRegisterSheet.toggle()
                         }) {
                             Image(systemName: "plus")
                                 .padding()
@@ -138,10 +131,7 @@ struct SurroundView: View {
                         }
                         Spacer()
                         Button(action: {
-                            fetchRecommendedPlaces { places in
-                                self.recommendedPlaces = places
-                                activeSheet = .placesList // Set to show PlacesListView
-                            }
+                            showListSheet.toggle()  // 목록 버튼 클릭 시 sheet 띄우기
                         }) {
                             Text("목록")
                                 .padding()
@@ -170,15 +160,23 @@ struct SurroundView: View {
             }
             Spacer()
         }
-        .sheet(item: $activeSheet) { sheet in
-            switch sheet {
-                case .placesList:
-                    PlacesListView(places: recommendedPlaces)
-                        .presentationDetents([.height(300)])
-                case .bottomSheet:
-                    BottomSheetView()
-                        .presentationDetents([.height(180)])
-            }
+        .sheet(item: $selectedPlaceId) { placeId in  // selectedPlaceId가 변경될 때마다 시트 표시
+            PlaceDetailView(placeId: placeId.id)  // 실제 ID 값은 placeId.id로 접근
+                .presentationDetents([.height(120), .large])
+                .presentationDragIndicator(.visible)
+                .onDisappear {
+                    selectedPlaceId = nil
+                }
+        }
+        .sheet(isPresented: $showRegisterSheet) {
+            BottomSheetView()
+                .presentationDetents([.height(180)])
+        }
+        .sheet(isPresented: $showListSheet) {
+            PlacesListView(latitude: locationManager.currentLocation?.latitude ?? 0.0,
+                           longitude: locationManager.currentLocation?.longitude ?? 0.0)
+                .presentationDetents([.height(200), .large])
+                .presentationDragIndicator(.visible)
         }
     }
 
@@ -189,31 +187,8 @@ struct SurroundView: View {
             selectedCategories.append(category)
         }
     }
-    
-    private func fetchRecommendedPlaces(completion: @escaping ([RecommendedPlace]) -> Void) {
-        guard let userLocation = locationManager.currentLocation else { return }
-        let urlString = "https://api.locavel.site/api/places/recommend-results?latitude=\(userLocation.latitude)&longitude=\(userLocation.longitude)"
-        
-        guard let url = URL(string: urlString) else { return }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("Bearer \(TokenManager.shared.accessToken)", forHTTPHeaderField: "Authorization")
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                do {
-                    let apiResponse = try JSONDecoder().decode(RecommendedPlaceResponse.self, from: data)
-                    DispatchQueue.main.async {
-                        completion(apiResponse.result)
-                    }
-                } catch {
-                    print("Error decoding JSON: \(error)")
-                }
-            }
-        }.resume()
-    }
 }
+
 
 struct FilterButton: View {
     let category: String
@@ -265,18 +240,6 @@ struct FilterButton: View {
     }
 }
 
-struct RecommendedPlaceResponse: Codable {
-    let isSuccess: Bool
-    let code: String
-    let message: String
-    let result: [RecommendedPlace]
-}
-
-struct RecommendedPlace: Codable {
-    let placeId: Int
-    let name: String
-    let address: String
-    let rating: Double
-    let reviewCount: Int
-    let reviewImgList: [String]
+struct IdentifiablePlaceId: Identifiable {
+    let id: Int
 }

@@ -92,7 +92,7 @@ struct MyRegionView: View {
                                         .font(.system(size: 14, weight: .bold))
                                     HStack {
                                         Image(systemName: "star.fill")
-                                            .foregroundColor(.red)
+                                            .foregroundColor(Color("AccentColor"))
                                             .font(.system(size: 14))
                                         Text("4.61 (217)")
                                             .font(.system(size: 14))
@@ -105,7 +105,7 @@ struct MyRegionView: View {
                                         .font(.system(size: 14, weight: .bold))
                                     HStack {
                                         Image(systemName: "star.fill")
-                                            .foregroundColor(.red)
+                                            .foregroundColor(Color("AccentColor"))
                                             .font(.system(size: 14))
                                         Text("4.61 (217)")
                                             .font(.system(size: 14))
