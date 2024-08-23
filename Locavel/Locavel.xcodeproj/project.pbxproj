@@ -62,6 +62,8 @@
 		30824C0C2C75D756003635C3 /* MyRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30824C0B2C75D756003635C3 /* MyRegionView.swift */; };
 		30824C0E2C75ED9C003635C3 /* AddRegionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30824C0D2C75ED9C003635C3 /* AddRegionView.swift */; };
 		30824C102C7759BB003635C3 /* PlacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30824C0F2C7759BB003635C3 /* PlacesListView.swift */; };
+		30824C142C787A8B003635C3 /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30824C132C787A8B003635C3 /* PlaceDetailView.swift */; };
+		30824C162C78A63E003635C3 /* AroundPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30824C152C78A63E003635C3 /* AroundPlacesView.swift */; };
 		30BCE9B22C6A4663006782B8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCE9B12C6A4663006782B8 /* MapView.swift */; };
 		30BCE9B42C6A4675006782B8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCE9B32C6A4675006782B8 /* LocationManager.swift */; };
 		30BCE9B62C6B8C15006782B8 /* IdentifiableMapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCE9B52C6B8C15006782B8 /* IdentifiableMapItem.swift */; };
@@ -147,6 +149,8 @@
 		30824C0B2C75D756003635C3 /* MyRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRegionView.swift; sourceTree = "<group>"; };
 		30824C0D2C75ED9C003635C3 /* AddRegionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegionView.swift; sourceTree = "<group>"; };
 		30824C0F2C7759BB003635C3 /* PlacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListView.swift; sourceTree = "<group>"; };
+		30824C132C787A8B003635C3 /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
+		30824C152C78A63E003635C3 /* AroundPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundPlacesView.swift; sourceTree = "<group>"; };
 		30A1C2A92C4D43D300EB10EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		30BCE9B12C6A4663006782B8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		30BCE9B32C6A4675006782B8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -448,9 +452,19 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		30824C172C78A7B4003635C3 /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				30824C132C787A8B003635C3 /* PlaceDetailView.swift */,
+				30824C152C78A63E003635C3 /* AroundPlacesView.swift */,
+			);
+			path = PlaceDetail;
+			sourceTree = "<group>";
+		};
 		30BCE9C12C720154006782B8 /* MapKit */ = {
 			isa = PBXGroup;
 			children = (
+				30824C172C78A7B4003635C3 /* PlaceDetail */,
 				30BCE9B52C6B8C15006782B8 /* IdentifiableMapItem.swift */,
 				30BCE9B32C6A4675006782B8 /* LocationManager.swift */,
 				30BCE9B12C6A4663006782B8 /* MapView.swift */,
@@ -783,6 +797,7 @@
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
 				1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */,
 				3056DADF2C4AA993002B9378 /* ColorManager.swift in Sources */,
+				30824C142C787A8B003635C3 /* PlaceDetailView.swift in Sources */,
 				1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */,
 				3056DAB32C4AA789002B9378 /* ContentView.swift in Sources */,
 				30BCE9BA2C6EFBC0006782B8 /* RegisterPlaceView.swift in Sources */,
@@ -805,6 +820,7 @@
 				3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */,
 				30BCE9B82C6DEFDD006782B8 /* BottomSheetView.swift in Sources */,
 				30BCE9C62C722C45006782B8 /* EnrollLocationView.swift in Sources */,
+				30824C162C78A63E003635C3 /* AroundPlacesView.swift in Sources */,
 				30824C0C2C75D756003635C3 /* MyRegionView.swift in Sources */,
 				1A03C6BC2C64ADEF00CAEC41 /* FoodMyRegionView.swift in Sources */,
 				30BCE9BE2C6F254E006782B8 /* CategorySelectionView.swift in Sources */,
