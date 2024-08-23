@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct SpotRestaurant: Identifiable {
-    let id = UUID()
-    let image: String
-    let name: String
-    let hours: String
-    let rating: Double
-    var isFavorite: Bool = false
+struct SpotRestaurant: Identifiable, Codable {
+    var id: Int
+    var image: String
+    var name: String
+    var hours: String
+    var rating: Double
+    var isFavorite: Bool
 }
