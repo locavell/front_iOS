@@ -40,6 +40,7 @@
 		1F35DF542C71B51200D1EF30 /* naverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35DF532C71B51200D1EF30 /* naverButton.swift */; };
 		1F35DF572C71B53D00D1EF30 /* NaverThirdPartyLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF562C71B53D00D1EF30 /* NaverThirdPartyLogin */; };
 		1F4E5A5E2C78B25E00A3F048 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E5A5D2C78B25E00A3F048 /* UserView.swift */; };
+		1F7F3F642C78FF4D001E67A6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F3F632C78FF4D001E67A6 /* SignUpViewModel.swift */; };
 		1F85E4C22C78EE2A00017FE1 /* ReviewSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85E4C12C78EE2A00017FE1 /* ReviewSettingView.swift */; };
 		1F85E4C42C78EE4200017FE1 /* WishListSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85E4C32C78EE4200017FE1 /* WishListSettingView.swift */; };
 		1F8612AE2C78C21900ADBA67 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8612AD2C78C21900ADBA67 /* SettingView.swift */; };
@@ -125,6 +126,7 @@
 		1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoButton.swift; sourceTree = "<group>"; };
 		1F35DF532C71B51200D1EF30 /* naverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverButton.swift; sourceTree = "<group>"; };
 		1F4E5A5D2C78B25E00A3F048 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		1F7F3F632C78FF4D001E67A6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		1F85E4C12C78EE2A00017FE1 /* ReviewSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSettingView.swift; sourceTree = "<group>"; };
 		1F85E4C32C78EE4200017FE1 /* WishListSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListSettingView.swift; sourceTree = "<group>"; };
 		1F8612AD2C78C21900ADBA67 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			children = (
 				1FF357D22C77640A0033FDAE /* FirstSignUpView.swift */,
 				1F8C06E12C77573600EA90DC /* SignUpView.swift */,
+				1F7F3F632C78FF4D001E67A6 /* SignUpViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -803,6 +806,7 @@
 				1F2CC7B52C71BD29009E836D /* NaverAuth.swift in Sources */,
 				1A03C6BA2C64AB6600CAEC41 /* SpotViewModel.swift in Sources */,
 				1F35DF522C71B4EC00D1EF30 /* kakaoButton.swift in Sources */,
+				1F7F3F642C78FF4D001E67A6 /* SignUpViewModel.swift in Sources */,
 				1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */,
 				3056DAE72C4AAA7A002B9378 /* SurroundView.swift in Sources */,
 				30BCE9C02C71F8D7006782B8 /* RegisterReviewView.swift in Sources */,
