@@ -40,7 +40,7 @@ struct LocavelApp: App {
 //                        _ = AuthController.handleOpenUrl(url: url)
 //                }
 //            }
-            EnrollLocationView()
+            StartView()
         }
     }
 }
