@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LogInView: View {
-    @ObservedObject var naverAuth = NaverAuth() // 네이버 로그인 상태를 관찰
+    @StateObject private var naverAuth = NaverAuth() // 네이버 로그인 상태를 관찰
     @State private var isKakaoLoggedIn = false // 카카오 로그인 상태
 
     var body: some View {
