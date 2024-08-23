@@ -1,16 +1,9 @@
-//
-//  MyRegionView.swift
-//  Locavel
-//
-//  Created by 김의정 on 8/21/24.
-//
-
 import SwiftUI
 
-// Existing view code for '내 지역'
 struct MyRegionView: View {
     @ObservedObject var viewModel: HomeViewModel
-    
+    @State private var isUserViewActive = false
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 15) {
@@ -137,6 +130,10 @@ struct MyRegionView: View {
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 40, height: 40)
                                     .clipShape(Circle())
+                                    .onTapGesture { // 2. 이미지를 클릭했을 때 액션을 추가
+                                        isUserViewActive = true
+                                    }
+                                
                                 VStack(alignment: .leading) {
                                     Text("dsknjlvc")
                                         .font(.system(size: 14, weight: .bold))
@@ -146,11 +143,15 @@ struct MyRegionView: View {
                                 }
                                 Spacer()
                             }
+                            .padding()
                         }
                     }
                 }
                 .padding()
             }
+        }
+        .fullScreenCover(isPresented: $isUserViewActive) { // 3. fullScreenCover 사용
+            UserView(isPresented: $isUserViewActive) // 4. UserView로 넘어갈 때 바인딩된 상태 변수 전달
         }
     }
 }
