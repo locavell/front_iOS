@@ -1,10 +1,8 @@
 import SwiftUI
 
 struct SignUpView: View {
-    
-    @State private var nickname: String = ""
+    @ObservedObject var viewModel: SignUpViewModel
     @State private var showEnrollLocationView = false
-    private let maxLength: Int = 20
     
     var body: some View {
         VStack {
@@ -14,7 +12,7 @@ struct SignUpView: View {
             
             Spacer().frame(height: 40)
             
-            HStack (spacing: 0) {
+            HStack(spacing: 0) {
                 Text("닉네임")
                     .font(.title2)
                     .bold()
@@ -24,13 +22,13 @@ struct SignUpView: View {
             
             Spacer().frame(height: 20)
             
-            TextField("닉네임 입력", text: $nickname)
+            TextField("닉네임 입력", text: $viewModel.nickname)
                 .textFieldStyle(CustomTextFieldStyle())
             
             Spacer().frame(height: 20)
             
             Button(action: {
-                showEnrollLocationView = true
+                viewModel.signUp()
             }) {
                 Text("확인")
                     .font(.headline)
@@ -40,14 +38,24 @@ struct SignUpView: View {
                     .background(ColorManager.AccentColor)
                     .cornerRadius(10)
             }
-            .fullScreenCover(isPresented: $showEnrollLocationView) {
-                EnrollLocationView()
+            .disabled(viewModel.isLoading)
+            
+            if viewModel.isLoading {
+                ProgressView()
             }
-            .frame(width: 281, height: 51)
+            
+            if let errorMessage = viewModel.errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+            }
+        }
+        .alert("회원가입 성공", isPresented: $viewModel.isSignUpSuccessful) {
+            Button("확인") {
+                showEnrollLocationView = true
+            }
+        }
+        .fullScreenCover(isPresented: $showEnrollLocationView) {
+            EnrollLocationView()
         }
     }
-}
-
-#Preview {
-    SignUpView()
 }

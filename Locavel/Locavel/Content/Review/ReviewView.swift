@@ -13,8 +13,9 @@ struct ReviewView: View {
     @State private var reviewText: String = ""
     @State private var selectedImage: UIImage? = nil
     @State private var showImagePicker: Bool = false
-    @State private var placeId: String? // 실제 placeId 값을 설정하세요
-
+    //@State private var placeId: String? // 실제 placeId 값을 설정하세요
+    var placeId: String
+    
     var body: some View {
         VStack {
             Text("해당 장소를 리뷰해주세요")
@@ -173,6 +174,6 @@ struct ImagePicker: UIViewControllerRepresentable {
 
 struct ReviewView_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewView()
+        ReviewView(placeId: "12345")
     }
 }

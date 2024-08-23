@@ -13,7 +13,7 @@ class ReviewViewModel: ObservableObject {
     @Published var isSuccess: Bool = false
     @Published var message: String = ""
     
-    func addReview(placeId: String?, comment: String, rating: Double, completion: @escaping (Bool) -> Void) {
+    func addReview(placeId: String, comment: String, rating: Double, completion: @escaping (Bool) -> Void) {
         provider.request(.addReview(placeId: placeId, comment: comment, rating: rating)) { result in
             DispatchQueue.main.async {
                 switch result {

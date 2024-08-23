@@ -4,39 +4,48 @@ struct SettingView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack(spacing: 0) {
-            // Top Bar with Back Button
-            HStack {
-                Button(action: {
-                    dismiss()
-                }) {
-                    Image(systemName: "chevron.left")
-                        .font(.system(size: 20))
-                        .foregroundColor(ColorManager.AccentColor)
+        NavigationStack {
+            VStack(spacing: 0) {
+                // Top Bar with Back Button
+                HStack(spacing: -15) {
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 20))
+                            .foregroundColor(ColorManager.AccentColor)
+                    }
+                    .padding(.leading, 2)  // 왼쪽 여백 추가
+                    
+                    Spacer()
+                    
+                    Text("계정 설정")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    Spacer()
                 }
-                Spacer()
+                .padding(.horizontal)
+                .padding(.bottom,50)
                 
-                Text("계정 설정")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .padding(.bottom, 30)
+                // Menu Items
+                VStack(spacing: 1) {
+                    NavigationLink(destination: WishListSettingView()) {
+                        MenuItem(title: "위시리스트", icon: "bookmark")
+                    }
+                    Divider()
+                    NavigationLink(destination: ReviewSettingView()) {
+                        MenuItem(title: "리뷰 관리", icon: "bubble.left")
+                    }
+                }
+                .background(Color.white)
+                .cornerRadius(10)
+                .padding(.horizontal)
+                
                 Spacer()
             }
-            .padding(.bottom,50)
-            
-            // Menu Items
-            VStack(spacing: 1) {
-                MenuItem(title: "위시리스트", icon: "bookmark")
-                Divider()
-                MenuItem(title: "리뷰 관리", icon: "bubble.left")
-            }
-            .background(Color.white)
-            .cornerRadius(10)
-            .padding(.horizontal)
-            
-            Spacer()
+            .background(Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all))
+            .navigationBarHidden(true)
         }
-        .background(Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all))
     }
 }
 

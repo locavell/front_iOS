@@ -12,7 +12,11 @@ struct PlaceDetailView: View {
     @State private var placeDetail: PlaceDetail?
     @State private var isLoading = true
     @State private var errorMessage: String?
+<<<<<<< HEAD
     @Environment(\.presentationMode) var presentationMode
+=======
+    @State private var showReviewView = false
+>>>>>>> 50ae358ee7b34751eab9b9fec273012f1a041acd
 
     var body: some View {
         NavigationView {
@@ -31,8 +35,108 @@ struct PlaceDetailView: View {
                                 .font(.title)
                                 .fontWeight(.bold)
                             
+<<<<<<< HEAD
                             Text(placeDetail.address)
                                 .font(.subheadline)
+=======
+                            if let travelerRating = placeDetail.travelerRating {
+                                Text("여행자 평점: \(travelerRating, specifier: "%.1f")")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                    .padding(.leading, 10)
+                            }
+                        }
+                        .padding(.bottom, 20)
+                        
+                        HStack(alignment: .center) {
+                            // 리뷰 등록하기 버튼
+                            Button(action: {
+                                                // 리뷰 등록하기 버튼 클릭 시 ReviewView를 보여줌
+                                                showReviewView.toggle()
+                                            }) {
+                                                Text("리뷰 등록하기")
+                                                    .font(.system(size: 15, weight: .bold))
+                                                    .foregroundColor(.white)
+                                                    .padding(.horizontal)
+                                                    .padding(.vertical, 10)
+                                            }
+                                            .background(Color("AccentColor"))
+                                            .cornerRadius(25)
+                                            .sheet(isPresented: $showReviewView) {
+                                                // ReviewView를 호출하면서 placeId를 전달
+                                                ReviewView(placeId: "\(placeId)")
+                                            }
+                            
+                            // 공유하기 버튼
+                            Button(action: {
+                                // 공유하기 버튼 클릭 시 동작
+                            }) {
+                                Text("공유하기")
+                                    .font(.system(size: 15, weight: .bold))
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal)
+                                    .padding(.vertical, 10)
+                            }
+                            .background(Color.black)
+                            .cornerRadius(25)
+                            
+                            // 길찾기 버튼
+                            Button(action: {
+                                // 길찾기 버튼 클릭 시 동작
+                            }) {
+                                Text("길찾기")
+                                    .font(.system(size: 15, weight: .bold))
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal)
+                                    .padding(.vertical, 10)
+                            }
+                            .background(Color.black)
+                            .cornerRadius(25)
+                            
+                            // 북마크 아이콘 버튼
+                            Button(action: {
+                                // 북마크 버튼 클릭 시 동작
+                            }) {
+                                Image(systemName: "bookmark.circle.fill")
+                                    .font(.system(size: 35, weight: .bold))
+                                    .foregroundColor(.black)
+                                    .background(Color.clear)
+                            }
+                        }
+                        .padding(.bottom, 20)
+
+                        Text("상세 사진")
+                            .font(.headline)
+                            .padding(.top, 5)
+                        
+                        if !placeDetail.reviewImgList.isEmpty {
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHStack(spacing: 10) {
+                                    ForEach(placeDetail.reviewImgList, id: \.self) { imageUrl in
+                                        AsyncImage(url: URL(string: imageUrl)) { phase in
+                                            switch phase {
+                                            case .empty:
+                                                ProgressView()
+                                            case .success(let image):
+                                                image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                                    .frame(width: 150, height: 150)
+                                                    .clipped()
+                                            case .failure:
+                                                Image(systemName: "photo")
+                                                    .frame(width: 150, height: 150)
+                                            @unknown default:
+                                                EmptyView()
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .frame(height: 150)
+                        } else {
+                            Text("리뷰 이미지가 없습니다")
+>>>>>>> 50ae358ee7b34751eab9b9fec273012f1a041acd
                                 .foregroundColor(.gray)
                                 .padding(.bottom, 10)
                             
