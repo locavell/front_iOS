@@ -26,6 +26,9 @@
 		1AB3E39E2C6881ED009F7817 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E39D2C6881ED009F7817 /* ReactiveMoya */; };
 		1AB3E3A02C6881ED009F7817 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB3E39F2C6881ED009F7817 /* RxMoya */; };
 		1AB3E3A32C688674009F7817 /* LocavelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3E3A22C688674009F7817 /* LocavelAPI.swift */; };
+		1AB854F82C78CD4F00471F24 /* ReviewAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB854F72C78CD4F00471F24 /* ReviewAPI.swift */; };
+		1AB854FC2C78CD5500471F24 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB854F92C78CD5500471F24 /* ReviewView.swift */; };
+		1AB854FD2C78CD5500471F24 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB854FA2C78CD5500471F24 /* ReviewViewModel.swift */; };
 		1AC7DBCD2C4CCE86007896A4 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */; };
 		1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */; };
 		1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */; };
@@ -109,6 +112,9 @@
 		1AAE4D442C6DE8A900D29666 /* WishListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListAPI.swift; sourceTree = "<group>"; };
 		1AAE4D462C6DE9B600D29666 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		1AB3E3A22C688674009F7817 /* LocavelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocavelAPI.swift; path = Locavel/Content/LocavelAPI.swift; sourceTree = SOURCE_ROOT; };
+		1AB854F72C78CD4F00471F24 /* ReviewAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewAPI.swift; sourceTree = "<group>"; };
+		1AB854F92C78CD5500471F24 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		1AB854FA2C78CD5500471F24 /* ReviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		1AC7DBCC2C4CCE86007896A4 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		1AC7DBCE2C4CCEB7007896A4 /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
@@ -225,10 +231,20 @@
 			children = (
 				1AB3E3A22C688674009F7817 /* LocavelAPI.swift */,
 				1AAE4D442C6DE8A900D29666 /* WishListAPI.swift */,
+				1AB854F72C78CD4F00471F24 /* ReviewAPI.swift */,
 				1AAE4D462C6DE9B600D29666 /* TokenManager.swift */,
 				1FF7F8C62C724B5100868D06 /* LogInAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		1AB854FB2C78CD5500471F24 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				1AB854F92C78CD5500471F24 /* ReviewView.swift */,
+				1AB854FA2C78CD5500471F24 /* ReviewViewModel.swift */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		1AF6CDD62C727B6E00E46AC5 /* Food */ = {
@@ -358,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				3056DAB22C4AA789002B9378 /* ContentView.swift */,
+				1AB854FB2C78CD5500471F24 /* Review */,
 				1A03C6BF2C64B24200CAEC41 /* Home */,
 				3056DAE02C4AA9D6002B9378 /* Surround */,
 				3056DAE12C4AA9DF002B9378 /* WishList */,
@@ -793,6 +810,8 @@
 				1A850DCC2C57E07500D02E0A /* SpotRestaurant.swift in Sources */,
 				3056DAB12C4AA789002B9378 /* LocavelApp.swift in Sources */,
 				30BCE9B82C6DEFDD006782B8 /* BottomSheetView.swift in Sources */,
+				1AB854FD2C78CD5500471F24 /* ReviewViewModel.swift in Sources */,
+				1AB854FC2C78CD5500471F24 /* ReviewView.swift in Sources */,
 				30BCE9C62C722C45006782B8 /* EnrollLocationView.swift in Sources */,
 				30824C0C2C75D756003635C3 /* MyRegionView.swift in Sources */,
 				1A03C6BC2C64ADEF00CAEC41 /* FoodMyRegionView.swift in Sources */,
@@ -809,6 +828,7 @@
 				1AF6CDDA2C727BAD00E46AC5 /* FoodInterestingView.swift in Sources */,
 				1AAE4D452C6DE8A900D29666 /* WishListAPI.swift in Sources */,
 				1A03C6B82C64A7E200CAEC41 /* FoodViewModel.swift in Sources */,
+				1AB854F82C78CD4F00471F24 /* ReviewAPI.swift in Sources */,
 				1A5ACC182C53C27A00E6BFD6 /* SpotMyRegionView.swift in Sources */,
 				3056DAF52C4AAB5C002B9378 /* LogInView.swift in Sources */,
 				1A03C6B62C64A7B300CAEC41 /* FoodRestaurant.swift in Sources */,

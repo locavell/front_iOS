@@ -19,7 +19,7 @@ struct SpotView: View {
                         .padding(.leading, 15)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
-                    NavigationLink(destination: SpotMyRegionView(restaurants: viewModel.spotLocalRestaurants)) {
+                    NavigationLink(destination: SpotMyRegionView(restaurants: viewModel.SpotlocalRestaurants)) {
                         Text("전체보기")
                             .font(.footnote)
                             .underline()
@@ -32,7 +32,7 @@ struct SpotView: View {
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(viewModel.spotLocalRestaurants) { restaurant in
+                        ForEach(viewModel.SpotlocalRestaurants) { restaurant in
                             VStack {
                                 Image(restaurant.image)
                                     .resizable()
@@ -44,7 +44,23 @@ struct SpotView: View {
                                             Spacer()
                                             VStack {
                                                 Button(action: {
-                                                    viewModel.toggleFavorite(for: restaurant)
+                                                    if restaurant.isFavorite {
+                                                        viewModel.removeWishlist(placeId: String(restaurant.id)) { success in
+                                                            if success {
+                                                                print("위시리스트에서 제거되었습니다.")
+                                                            } else {
+                                                                print("제거 실패.")
+                                                            }
+                                                        }
+                                                    } else {
+                                                        viewModel.addWishlist(placeId: String(restaurant.id)) { success in
+                                                            if success {
+                                                                print("위시리스트에 추가되었습니다.")
+                                                            } else {
+                                                                print("추가 실패.")
+                                                            }
+                                                        }
+                                                    }
                                                 }) {
                                                     Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
                                                         .foregroundColor(.red)
@@ -103,7 +119,7 @@ struct SpotView: View {
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(viewModel.spotFavoriteRestaurants) { restaurant in
+                        ForEach(viewModel.favoriteRestaurants) { restaurant in
                             VStack {
                                 Image(restaurant.image)
                                     .resizable()
@@ -137,6 +153,9 @@ struct SpotView: View {
                     }
                 }
             }
+        }.onAppear {
+            // 임시로 좌표 설정 (실제 앱에서는 사용자의 현재 위치를 사용해야 합니다.)
+            viewModel.getRecommendedRestaurants(latitude: 37.5665, longitude: 126.9780) // 예: 서울의 위도와 경도
         }
     }
 }
