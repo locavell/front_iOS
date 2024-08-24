@@ -18,8 +18,8 @@ struct LogInView: View {
                     .foregroundColor(.gray)
                     .padding(.bottom)
                 
-                Button(action: {}) {
-                    Text("전화번호로 시작하기")
+                NavigationLink(destination: FirstSignUpView()) {
+                    Text("이메일로 시작하기")
                         .font(.headline)
                         .padding()
                         .foregroundColor(.white)
