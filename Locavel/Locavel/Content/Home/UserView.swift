@@ -1,4 +1,5 @@
 import SwiftUI
+import Moya
 
 struct UserView: View {
     @Binding var isPresented: Bool
@@ -168,4 +169,139 @@ struct UserView: View {
             .navigationBarTitle("dsknjlvc님의 정보", displayMode: .inline)
         }
     }
+    
+    struct CalendarView: View {
+        @State private var visitDays: [String] = []
+        @State private var year = Calendar.current.component(.year, from: Date())
+        @State private var month = Calendar.current.component(.month, from: Date())
+        
+        var body: some View {
+            VStack {
+                HStack {
+                    Text("\(String(format: "%d", year)).\(String(format: "%02d", month))")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    
+                    Spacer()
+                    
+                    HStack(spacing: 20) {
+                        Button(action: {
+                            changeMonth(by: -1)
+                        }) {
+                            Image(systemName: "chevron.left")
+                                .font(.system(size: 20))
+                                .foregroundColor(.gray)
+                        }
+                        
+                        Button(action: {
+                            // Next month action
+                            changeMonth(by: 1)
+                        }) {
+                            Image(systemName: "chevron.right")
+                                .font(.system(size: 20))
+                                .foregroundColor(.gray)
+                        }
+                    }
+                }
+                .padding(.horizontal)
+                
+                LazyVGrid(columns: Array(repeating: GridItem(), count: 7), spacing: 10) {
+                    ForEach(1..<daysInMonth() + 1, id: \.self) { day in
+                        let dayString = "\(year)-\(String(format: "%02d", month))-\(String(format: "%02d", day))"
+                        Text("\(day)")
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .frame(width: 40, height: 40)
+                            .background(visitDays.contains(dayString) ? Color.blue.opacity(0.7) : Color.white)
+                            .cornerRadius(8)
+                            .overlay(
+                                Circle()
+                                    .fill(Color.red)
+                                    .frame(width: 8, height: 8)
+                                    .offset(x: 12, y: -12)
+                                    .opacity(visitDays.contains(dayString) ? 1 : 0)
+                            )
+                    }
+                }
+                .padding(.top)
+            }
+            .onAppear {
+                fetchVisitDays()
+            }
+        }
+        
+        private func fetchVisitDays() {
+            let provider = MoyaProvider<MyPageAPI>()
+            provider.request(.getVisitDays(year: year, month: month)) { result in
+                switch result {
+                case .success(let response):
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any]
+                        if let result = json?["result"] as? [String: Any],
+                           let visitDayList = result["visitDayList"] as? [String] {
+                            self.visitDays = visitDayList
+                        }
+                    } catch {
+                        print("Error parsing JSON: \(error)")
+                    }
+                case .failure(let error):
+                    print("Failed to fetch visit days: \(error.localizedDescription)")
+                }
+            }
+        }
+        
+        private func changeMonth(by value: Int) {
+            var newDate = Calendar.current.date(byAdding: .month, value: value, to: Calendar.current.date(from: DateComponents(year: year, month: month))!)!
+            year = Calendar.current.component(.year, from: newDate)
+            month = Calendar.current.component(.month, from: newDate)
+            fetchVisitDays()
+        }
+        
+        private func daysInMonth() -> Int {
+            let dateComponents = DateComponents(year: year, month: month)
+            let calendar = Calendar.current
+            let date = calendar.date(from: dateComponents)!
+            let range = calendar.range(of: .day, in: .month, for: date)!
+            return range.count
+        }
+    }
+
+    enum MyPageAPI: TargetType {
+        case getVisitDays(year: Int, month: Int)
+        
+        var baseURL: URL {
+            return URL(string: "https://api.locavel.site")!
+        }
+        
+        var path: String {
+            switch self {
+            case .getVisitDays:
+                return "/api/users/mypage/calendar"
+            }
+        }
+        
+        var method: Moya.Method {
+            return .get
+        }
+        
+        var task: Task {
+            switch self {
+            case let .getVisitDays(year, month):
+                return .requestParameters(parameters: ["year": year, "month": month], encoding: URLEncoding.queryString)
+            }
+        }
+        
+        var headers: [String : String]? {
+            var headers = ["Content-Type": "application/json"]
+            let accessToken = TokenManager.shared.accessToken
+            headers["Authorization"] = "Bearer \(accessToken)"
+            return headers
+        }
+        
+        var sampleData: Data {
+            return Data()
+        }
+    }
 }
+
+

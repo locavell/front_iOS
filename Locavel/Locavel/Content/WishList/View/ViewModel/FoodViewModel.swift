@@ -1,9 +1,3 @@
-//
-//  RestaurantViewModel.swift
-//  Locavel
-//
-//  Created by 박희민 on 8/8/24.
-//
 import SwiftUI
 import Moya
 
@@ -36,7 +30,7 @@ class FoodViewModel: ObservableObject {
                 self.localRestaurants = jsonResponse.result.map { place in
                     FoodRestaurant(
                         id: place.placeId,
-                        image: "", // 여기에 실제 이미지를 넣을 수 있습니다
+                        image: place.reviewImgList.first ?? "", // 첫 번째 이미지를 사용하거나 기본 이미지 사용
                         name: place.name,
                         hours: "", // 여기에 실제 운영 시간을 넣을 수 있습니다
                         rating: place.rating,
