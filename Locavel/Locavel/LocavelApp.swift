@@ -13,6 +13,7 @@ import NaverThirdPartyLogin
 
 @main
 struct LocavelApp: App {
+    
     init() {
             KakaoSDK.initSDK(appKey:"9365f79d050ca0b60559280e2179d7fc")
         

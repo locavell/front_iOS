@@ -31,6 +31,14 @@ struct LogInView: View {
                 naverButton(isLoggedIn: $naverAuth.isLoggedIn)
                                 
                 kakaoButton(isLoggedIn: $isKakaoLoggedIn)
+                
+                NavigationLink(destination: SecondLogInView()) {
+                    Text("이미 계정이 있으신가요?")
+                        .font(.headline)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .underline()
+                }
             }
             .padding()
         }

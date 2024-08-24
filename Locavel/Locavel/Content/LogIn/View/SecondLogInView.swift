@@ -1,7 +1,9 @@
 import SwiftUI
 
-struct FirstSignUpView: View {
-    @StateObject private var viewModel = SignUpViewModel()
+struct SecondLogInView: View {
+    @StateObject private var viewModel = LoginViewModel()
+    @Environment(\.dismiss) var dismiss
+    @State private var showContentView = false
     
     var body: some View {
         NavigationStack {
@@ -13,15 +15,6 @@ struct FirstSignUpView: View {
                 Spacer().frame(height: 100)
                 
                 VStack(spacing: 20) {
-                    VStack(alignment: .leading, spacing: 10) {
-                        HStack(spacing: 0) {
-                            Text("이름").font(.title2).bold()
-                            Text("을 입력해주세요.").font(.title3)
-                        }
-                        TextField("ex) 홍길동", text: $viewModel.name)
-                            .textFieldStyle(CustomTextFieldStyle())
-                    }
-                    
                     VStack(alignment: .leading, spacing: 10) {
                         HStack(spacing: 0) {
                             Text("이메일").font(.title2).bold()
@@ -43,7 +36,9 @@ struct FirstSignUpView: View {
                 
                 Spacer().frame(height: 50)
                 
-                NavigationLink(destination: SignUpView(viewModel: viewModel)) {
+                Button(action: {
+                    viewModel.login()
+                }) {
                     Text("확인")
                         .font(.headline)
                         .padding()
@@ -53,7 +48,29 @@ struct FirstSignUpView: View {
                         .cornerRadius(10)
                 }
                 .frame(width: 281, height: 51)
+                
+                if viewModel.isLoading {
+                    ProgressView()
+                }
+                
+                if let errorMessage = viewModel.errorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding()
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $showContentView) {
+            ContentView()
+        }
+        .onReceive(viewModel.$isLoggedIn) { isLoggedIn in
+            if isLoggedIn {
+                showContentView = true
             }
         }
     }
+}
+
+#Preview {
+    SecondLogInView()
 }
