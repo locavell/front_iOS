@@ -26,7 +26,11 @@ class LoginViewModel: ObservableObject {
         errorMessage = nil
         
         provider.requestPublisher(.login(email: email, password: password))
-            .map(LoginResponse.self)
+            .tryMap { response -> LoginResponse in
+                let json = try? JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any]
+                print("Raw JSON response: \(json ?? [:])")
+                return try JSONDecoder().decode(LoginResponse.self, from: response.data)
+            }
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 self?.isLoading = false
@@ -34,7 +38,8 @@ class LoginViewModel: ObservableObject {
                 case .finished:
                     break
                 case .failure(let error):
-                    self?.errorMessage = error.localizedDescription
+                    self?.errorMessage = "Error: \(error.localizedDescription)"
+                    print("Error details: \(error)")
                 }
             } receiveValue: { [weak self] response in
                 self?.handleLoginResponse(response)
@@ -42,23 +47,16 @@ class LoginViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    private func handleLoginResponse(_ response: LoginResponse) {
-        
-        print("Login response: \(response)")
-        // 로그인 응답 처리
-        if response.success {
-            // 토큰 저장
-            UserDefaults.standard.set(response.token, forKey: "authToken")
-            isLoggedIn = true
-        } else {
-            errorMessage = response.message
-        }
+    struct LoginResponse: Codable {
+        let refreshToken: String
+        let accessToken: String
     }
-}
-
-// 서버 응답을 파싱하기 위한 구조체
-struct LoginResponse: Codable {
-    let success: Bool
-    let message: String
-    let token: String?
+    
+    private func handleLoginResponse(_ response: LoginResponse) {
+        print("Login successful")
+        // 토큰 저장
+        UserDefaults.standard.set(response.accessToken, forKey: "accessToken")
+        UserDefaults.standard.set(response.refreshToken, forKey: "refreshToken")
+        isLoggedIn = true
+    }
 }
