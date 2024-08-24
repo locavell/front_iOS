@@ -23,16 +23,16 @@ struct AroundPlacesView: View {
         AroundPlace(
             name: "어나더레벨",
             description: "힘지로에 어울리는 분위기 술집",
-            imageName: "place_image",
+            imageName: "place_image1",
             overallRating: 4.0,
             localsRating: 3.0,
             travelersRating: 5.0
         ),
         AroundPlace(
-            name: "어나더레벨",
-            description: "힘지로에 어울리는 분위기 술집",
-            imageName: "place_image",
-            overallRating: 4.0,
+            name: "을지맥옥",
+            description: "을지로 최고 힙한 술집",
+            imageName: "place_image2",
+            overallRating: 4.2,
             localsRating: 3.0,
             travelersRating: 5.0
         ),

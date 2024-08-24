@@ -209,7 +209,7 @@ struct PlaceDetailView: View {
                                     }
                                     .padding(.bottom, 10)
                                     
-                                    Text("동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.")
+                                    Text("너무 맛있는데 맛이 없고 맛이 있음. 친구랑 가도 좋고 가족이랑 가도 좋음. 근데 혼자갈거임")
                                         .font(.body)
                                 }
                                 Divider()
@@ -256,11 +256,11 @@ struct PlaceDetailView: View {
                                     .padding(.bottom, 10)
                                     
                                     HStack(spacing: 2) {
-                                        Image("리뷰사진1")
+                                        Image("리뷰사진3")
                                             .resizable()
                                             .scaledToFill()
                                             .frame(width: 100, height: 100)
-                                        Image("리뷰사진2")
+                                        Image("리뷰사진4")
                                             .resizable()
                                             .scaledToFill()
                                             .frame(width: 100, height: 100)
