@@ -87,9 +87,16 @@ struct InterestRegionView: View {
     
     func loadRegions() {
         regions = [
-            Region(name: "속초/강릉", imageName: "강릉", wishListCount: 17),
-            Region(name: "속초/강릉", imageName: "강릉2", wishListCount: 17),
-            Region(name: "속초/강릉", imageName: "강릉3", wishListCount: 17)
+            Region(name: "강릉", imageName: "강릉", wishListCount: 17),
+            Region(name: "속초", imageName: "강릉2", wishListCount: 17),
+            Region(name: "천안", imageName: "강릉3", wishListCount: 17),
+            Region(name: "수원", imageName: "지역4", wishListCount: 17),
+            Region(name: "인천", imageName: "지역5", wishListCount: 17),
+            Region(name: "부산", imageName: "지역6", wishListCount: 17),
+            Region(name: "울산", imageName: "지역7", wishListCount: 17),
+            Region(name: "광주", imageName: "지역8", wishListCount: 17),
+            Region(name: "강남", imageName: "지역9", wishListCount: 17),
+            Region(name: "연천", imageName: "지역10", wishListCount: 17),
         ]
     }
     

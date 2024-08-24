@@ -13,7 +13,7 @@ struct AddRegionView: View {
     @State private var selectedRegions: Set<String> = []
     @Environment(\.presentationMode) var presentationMode
     
-    let regions = ["제주도", "제주도2", "제주도3", "제주도4"]
+    let regions = ["제주도", "강원도", "경기도", "서울"]
     var onAddRegions: (([String]) -> Void)? // Closure to pass selected regions back
     
     var body: some View {

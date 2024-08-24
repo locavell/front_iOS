@@ -12,6 +12,6 @@ class TokenManager {
     
     var accessToken: String {
         // Return the access token here
-        return "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBY2Nlc3NUb2tlbiIsImV4cCI6MTcyNDQzMzY4MSwiZW1haWwiOiJlZDFAZXhhbXBsZS5jb20ifQ.u3gNJ6Z6Wr0s7o9guTbs6ogmsOheIqc79WumDOjeSNtgQwSAs3ZRVBVbTMgXpgBoC0XqX6S-Y3rtpZR0Stw2mw"
+        return "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBY2Nlc3NUb2tlbiIsImV4cCI6MTcyNDQ3OTU3NiwiZW1haWwiOiJlZDFAZXhhbXBsZS5jb20ifQ.TjDRgklQoEOSIX7CL-VpZNxU2CpeFmFdQo-V3NM0LDBo2HEv5j1wpRNhkIcf-3ohBwV9TfIJu2yDSWvA1GciQA"
     }
 }
