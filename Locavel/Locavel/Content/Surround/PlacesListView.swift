@@ -12,6 +12,7 @@ struct PlacesListView: View {
     let longitude: Double
     @State private var places: [PlaceListItem] = []
     @State private var errorMessage: String?
+    @State private var selectedPlaceId: Int? // State to track selected place
 
     var body: some View {
         ScrollView {
@@ -22,6 +23,9 @@ struct PlacesListView: View {
                 } else {
                     ForEach(places, id: \.placeId) { place in
                         PlaceRowView(place: place)
+                            .onTapGesture {
+                                selectedPlaceId = place.placeId
+                            }
                         Divider()
                     }
                 }
@@ -32,7 +36,9 @@ struct PlacesListView: View {
         .onAppear {
             fetchPlaces()
         }
-        .padding(.top, 15)
+        .fullScreenCover(item: $selectedPlaceId) { placeId in
+            PlaceDetailView(placeId: placeId)
+        }
     }
 
     private func fetchPlaces() {
@@ -76,6 +82,7 @@ struct PlaceRowView: View {
         VStack(alignment: .leading, spacing: 5) { // spacing을 5로 줄임
             Text(place.name)
                 .font(.headline)
+                .foregroundColor(.black)
 
             HStack {
                 Text("영업중")  // Business status
@@ -141,4 +148,8 @@ struct PlaceListItem: Codable {
     let rating: Double
     let reviewCount: Int
     let reviewImgList: [String]
+}
+
+extension Int: Identifiable {
+    public var id: Int { self }
 }

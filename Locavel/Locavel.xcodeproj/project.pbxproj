@@ -1049,7 +1049,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Locavel/Preview Content\"";
-				DEVELOPMENT_TEAM = XG62U7A4U6;
+				DEVELOPMENT_TEAM = 6C92VJGW82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Locavel/Info.plist;
@@ -1067,7 +1067,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kks.Locavel.Locavel;
+				PRODUCT_BUNDLE_IDENTIFIER = Locavel.Locavel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1084,7 +1084,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Locavel/Preview Content\"";
-				DEVELOPMENT_TEAM = XG62U7A4U6;
+				DEVELOPMENT_TEAM = 6C92VJGW82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Locavel/Info.plist;
@@ -1102,7 +1102,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kks.Locavel.Locavel;
+				PRODUCT_BUNDLE_IDENTIFIER = Locavel.Locavel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
