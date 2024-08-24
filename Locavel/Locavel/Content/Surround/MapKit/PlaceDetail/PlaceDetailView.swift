@@ -13,6 +13,7 @@ struct PlaceDetailView: View {
     @State private var isLoading = true
     @State private var errorMessage: String?
     @Environment(\.presentationMode) var presentationMode
+    @State private var showReviewView = false
 
     var body: some View {
         NavigationView {
@@ -63,14 +64,21 @@ struct PlaceDetailView: View {
                             HStack(alignment: .center) {
                                 // 리뷰 등록하기 버튼
                                 Button(action: {
-                                    // 리뷰 등록하기 버튼 클릭 시 동작
-                                }) {
-                                    Text("리뷰 등록하기")
-                                        .font(.system(size: 15, weight: .bold))
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal)
-                                        .padding(.vertical, 10)
-                                }
+                                                                                // 리뷰 등록하기 버튼 클릭 시 ReviewView를 보여줌
+                                                                                showReviewView.toggle()
+                                                                            }) {
+                                                                                Text("리뷰 등록하기")
+                                                                                    .font(.system(size: 15, weight: .bold))
+                                                                                    .foregroundColor(.white)
+                                                                                    .padding(.horizontal)
+                                                                                    .padding(.vertical, 10)
+                                                                            }
+                                                                            .background(Color("AccentColor"))
+                                                                            .cornerRadius(25)
+                                                                            .sheet(isPresented: $showReviewView) {
+                                                                                // ReviewView를 호출하면서 placeId를 전달
+                                                                                ReviewView(placeId: "\(placeId)")
+                                                                            }
                                 .background(Color("AccentColor"))
                                 .cornerRadius(25)
                                 

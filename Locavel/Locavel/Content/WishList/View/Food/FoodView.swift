@@ -1,4 +1,5 @@
 import SwiftUI
+
 struct FoodView: View {
     @StateObject private var viewModel = FoodViewModel()
     @Binding var selectedTab: Int
@@ -13,7 +14,7 @@ struct FoodView: View {
                         .padding(.leading, 15)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    NavigationLink(destination: FoodMyRegionView(restaurants: viewModel.localRestaurants,selectedTab: $selectedTab)) {
+                    NavigationLink(destination: FoodMyRegionView(restaurants: viewModel.localRestaurants, selectedTab: $selectedTab)) {
                         Text("전체보기")
                             .font(.footnote)
                             .underline()
@@ -28,42 +29,56 @@ struct FoodView: View {
                     HStack {
                         ForEach(viewModel.localRestaurants) { restaurant in
                             VStack {
-                                Image(restaurant.image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 150, height: 150)
-                                    .clipped()
-                                    .overlay(
-                                        HStack {
-                                            Spacer()
-                                            VStack {
-                                                Button(action: {
-                                                    if restaurant.isFavorite {
-                                                        viewModel.removeWishlist(placeId: String(restaurant.id)) { success in
-                                                            if success {
-                                                                print("위시리스트에서 제거되었습니다.")
-                                                            } else {
-                                                                print("제거 실패.")
-                                                            }
-                                                        }
-                                                    } else {
-                                                        viewModel.addWishlist(placeId: String(restaurant.id)) { success in
-                                                            if success {
-                                                                print("위시리스트에 추가되었습니다.")
-                                                            } else {
-                                                                print("추가 실패.")
-                                                            }
+                                ZStack {
+                                    if let imageUrl = URL(string: restaurant.image) {
+                                        AsyncImage(url: imageUrl) { image in
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 150, height: 150)
+                                                .clipped()
+                                        } placeholder: {
+                                            ProgressView()
+                                                .frame(width: 150, height: 150)
+                                        }
+                                    } else {
+                                        Image(systemName: "photo")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 150, height: 150)
+                                            .clipped()
+                                    }
+                                    
+                                    HStack {
+                                        Spacer()
+                                        VStack {
+                                            Button(action: {
+                                                if restaurant.isFavorite {
+                                                    viewModel.removeWishlist(placeId: String(restaurant.id)) { success in
+                                                        if success {
+                                                            print("위시리스트에서 제거되었습니다.")
+                                                        } else {
+                                                            print("제거 실패.")
                                                         }
                                                     }
-                                                }) {
-                                                    Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
-                                                        .foregroundColor(.red)
-                                                        .padding()
+                                                } else {
+                                                    viewModel.addWishlist(placeId: String(restaurant.id)) { success in
+                                                        if success {
+                                                            print("위시리스트에 추가되었습니다.")
+                                                        } else {
+                                                            print("추가 실패.")
+                                                        }
+                                                    }
                                                 }
-                                                Spacer()
+                                            }) {
+                                                Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
+                                                    .foregroundColor(.red)
+                                                    .padding()
                                             }
+                                            Spacer()
                                         }
-                                    )
+                                    }
+                                }
                                 
                                 Text(restaurant.name)
                                     .font(.headline)
@@ -115,11 +130,56 @@ struct FoodView: View {
                     HStack {
                         ForEach(viewModel.favoriteRestaurants) { restaurant in
                             VStack {
-                                Image(restaurant.image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 150, height: 150)
-                                    .clipped()
+                                ZStack {
+                                    if let imageUrl = URL(string: restaurant.image) {
+                                        AsyncImage(url: imageUrl) { image in
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 150, height: 150)
+                                                .clipped()
+                                        } placeholder: {
+                                            ProgressView()
+                                                .frame(width: 150, height: 150)
+                                        }
+                                    } else {
+                                        Image(systemName: "photo")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 150, height: 150)
+                                            .clipped()
+                                    }
+                                    
+                                    HStack {
+                                        Spacer()
+                                        VStack {
+                                            Button(action: {
+                                                if restaurant.isFavorite {
+                                                    viewModel.removeWishlist(placeId: String(restaurant.id)) { success in
+                                                        if success {
+                                                            print("위시리스트에서 제거되었습니다.")
+                                                        } else {
+                                                            print("제거 실패.")
+                                                        }
+                                                    }
+                                                } else {
+                                                    viewModel.addWishlist(placeId: String(restaurant.id)) { success in
+                                                        if success {
+                                                            print("위시리스트에 추가되었습니다.")
+                                                        } else {
+                                                            print("추가 실패.")
+                                                        }
+                                                    }
+                                                }
+                                            }) {
+                                                Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
+                                                    .foregroundColor(.red)
+                                                    .padding()
+                                            }
+                                            Spacer()
+                                        }
+                                    }
+                                }
                                 
                                 Text(restaurant.name)
                                     .font(.headline)
@@ -148,13 +208,9 @@ struct FoodView: View {
                 }
             }
         }
-            .onAppear {
-                        // 임시로 좌표 설정 (실제 앱에서는 사용자의 현재 위치를 사용해야 합니다.)
-                        viewModel.getRecommendedRestaurants(latitude: 37.5665, longitude: 126.9780) // 예: 서울의 위도와 경도
-                    }
+        .onAppear {
+            // 임시로 좌표 설정 (실제 앱에서는 사용자의 현재 위치를 사용해야 합니다.)
+            viewModel.getRecommendedRestaurants(latitude: 37.5665, longitude: 126.9780) // 예: 서울의 위도와 경도
+        }
     }
 }
-
-//#Preview {
-//    FoodView()
-//}

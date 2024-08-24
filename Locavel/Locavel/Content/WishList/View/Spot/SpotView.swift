@@ -121,11 +121,56 @@ struct SpotView: View {
                     HStack {
                         ForEach(viewModel.favoriteRestaurants) { restaurant in
                             VStack {
-                                Image(restaurant.image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 150, height: 150)
-                                    .clipped()
+                                ZStack {
+                                    if let imageUrl = URL(string: restaurant.image) {
+                                        AsyncImage(url: imageUrl) { image in
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 150, height: 150)
+                                                .clipped()
+                                        } placeholder: {
+                                            ProgressView()
+                                                .frame(width: 150, height: 150)
+                                        }
+                                    } else {
+                                        Image(systemName: "photo")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 150, height: 150)
+                                            .clipped()
+                                    }
+                                    
+                                    HStack {
+                                        Spacer()
+                                        VStack {
+                                            Button(action: {
+                                                if restaurant.isFavorite {
+                                                    viewModel.removeWishlist(placeId: String(restaurant.id)) { success in
+                                                        if success {
+                                                            print("위시리스트에서 제거되었습니다.")
+                                                        } else {
+                                                            print("제거 실패.")
+                                                        }
+                                                    }
+                                                } else {
+                                                    viewModel.addWishlist(placeId: String(restaurant.id)) { success in
+                                                        if success {
+                                                            print("위시리스트에 추가되었습니다.")
+                                                        } else {
+                                                            print("추가 실패.")
+                                                        }
+                                                    }
+                                                }
+                                            }) {
+                                                Image(systemName: restaurant.isFavorite ? "heart.fill" : "heart")
+                                                    .foregroundColor(.red)
+                                                    .padding()
+                                            }
+                                            Spacer()
+                                        }
+                                    }
+                                }
 
                                 Text(restaurant.name)
                                     .font(.headline)
