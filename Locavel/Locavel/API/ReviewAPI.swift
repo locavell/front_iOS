@@ -10,7 +10,7 @@ import Moya
 
 enum ReviewAPI {
     case addReview(placeId: String, comment: String, rating: Double)
-    case MyReview
+    case MyReview(page: Int)
 }
 
 extension ReviewAPI: TargetType {
@@ -39,15 +39,25 @@ extension ReviewAPI: TargetType {
     var task: Task {
         switch self {
         case .addReview(_, let comment, let rating):
+            // Safely serialize JSON
             let jsonObject: [String: Any] = ["comment": comment, "rating": rating]
-            let jsonData = try! JSONSerialization.data(withJSONObject: jsonObject, options: [])
-            let jsonString = String(data: jsonData, encoding: .utf8)!
-            let formData: [MultipartFormData] = [
-                MultipartFormData(provider: .data(jsonString.data(using: .utf8)!), name: "request")
-            ]
-            return .uploadMultipart(formData)
-        case .MyReview:
-            return .requestPlain
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: [])
+                if let jsonString = String(data: jsonData, encoding: .utf8) {
+                    let formData: [MultipartFormData] = [
+                        MultipartFormData(provider: .data(jsonString.data(using: .utf8)!), name: "request")
+                    ]
+                    return .uploadMultipart(formData)
+                } else {
+                    return .requestPlain // Fallback if serialization fails
+                }
+            } catch {
+                print("JSON serialization failed: \(error)")
+                return .requestPlain
+            }
+            
+        case .MyReview(let page):
+            return .requestParameters(parameters: ["page": page], encoding: URLEncoding.queryString)
         }
     }
 
