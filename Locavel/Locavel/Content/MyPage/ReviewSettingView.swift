@@ -17,10 +17,10 @@ struct Review: Identifiable {
     let createdAt: String
     let rating: Int
 }
-
 struct ReviewSettingView: View {
     @State private var reviews: [Review] = []
     @State private var isLoading = false
+    @State private var currentPage = 1
 
     var body: some View {
         VStack {
@@ -39,7 +39,7 @@ struct ReviewSettingView: View {
             }
         }
         .onAppear {
-            fetchReviews()
+            fetchReviews(page: currentPage)
         }
         .navigationTitle("리뷰 관리")
         .navigationBarTitleDisplayMode(.inline)
@@ -50,10 +50,10 @@ struct ReviewSettingView: View {
         }
     }
 
-    private func fetchReviews() {
+    private func fetchReviews(page: Int) {
         isLoading = true
         let provider = MoyaProvider<ReviewAPI>()
-        provider.request(.MyReview) { result in
+        provider.request(.MyReview(page: page)) { result in
             isLoading = false
             switch result {
             case .success(let response):
