@@ -38,7 +38,7 @@ class SpotViewModel: ObservableObject {
                 self.SpotlocalRestaurants = jsonResponse.result.map { place in
                     SpotRestaurant(
                         id: place.placeId,
-                        image: "", // 여기에 실제 이미지를 넣을 수 있습니다
+                        image: place.reviewImgList.first ?? "", // 여기에 실제 이미지를 넣을 수 있습니다
                         name: place.name,
                         hours: "", // 여기에 실제 운영 시간을 넣을 수 있습니다
                         rating: place.rating,
