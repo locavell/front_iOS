@@ -31,6 +31,7 @@
 		1AC7DBD12C4CCEC1007896A4 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */; };
 		1AC7DBD32C4CCEC8007896A4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */; };
 		1AF6CDDA2C727BAD00E46AC5 /* FoodInterestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF6CDD92C727BAD00E46AC5 /* FoodInterestingView.swift */; };
+		1F1292EE2C79092300548DB3 /* OpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1292ED2C79092300548DB3 /* OpeningView.swift */; };
 		1F2BEA332C5A13F7004D9974 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BEA322C5A13F7004D9974 /* StartView.swift */; };
 		1F2CC7B52C71BD29009E836D /* NaverAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CC7B42C71BD29009E836D /* NaverAuth.swift */; };
 		1F35DF4B2C71B3C800D1EF30 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1F35DF4A2C71B3C800D1EF30 /* KakaoSDKAuth */; };
@@ -121,6 +122,7 @@
 		1AC7DBD02C4CCEC1007896A4 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; };
 		1AC7DBD22C4CCEC8007896A4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		1AF6CDD92C727BAD00E46AC5 /* FoodInterestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodInterestingView.swift; sourceTree = "<group>"; };
+		1F1292ED2C79092300548DB3 /* OpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningView.swift; sourceTree = "<group>"; };
 		1F2BEA322C5A13F7004D9974 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		1F2CC7B42C71BD29009E836D /* NaverAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NaverAuth.swift; path = Locavel/Content/LogIn/Components/NaverAuth.swift; sourceTree = SOURCE_ROOT; };
 		1F35DF512C71B4EC00D1EF30 /* kakaoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoButton.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				1FF357D22C77640A0033FDAE /* FirstSignUpView.swift */,
 				1F8C06E12C77573600EA90DC /* SignUpView.swift */,
 				1F7F3F632C78FF4D001E67A6 /* SignUpViewModel.swift */,
+				1F1292ED2C79092300548DB3 /* OpeningView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -790,6 +793,7 @@
 				1A4996562C748A3D00D491CB /* ActivityMyRegionView.swift in Sources */,
 				1AC7DBCF2C4CCEB7007896A4 /* FoodView.swift in Sources */,
 				30573F8F2C7387A000BF49C4 /* HomeViewModel.swift in Sources */,
+				1F1292EE2C79092300548DB3 /* OpeningView.swift in Sources */,
 				1F8C06E42C77573600EA90DC /* CustomTextFieldStyle.swift in Sources */,
 				3056DAE52C4AAA5C002B9378 /* SearchBarView.swift in Sources */,
 				1FFD66CA2C5A114D002EC096 /* SplashView.swift in Sources */,
