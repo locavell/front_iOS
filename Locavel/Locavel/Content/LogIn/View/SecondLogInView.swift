@@ -38,6 +38,12 @@ struct SecondLogInView: View {
                 
                 Button(action: {
                     viewModel.login()
+                    // 로그인 성공 여부를 즉시 확인
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        if viewModel.isLoggedIn {
+                            showContentView = true
+                        }
+                    }
                 }) {
                     Text("확인")
                         .font(.headline)

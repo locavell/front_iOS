@@ -15,6 +15,8 @@ class LoginViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     func login() {
+        print("Login attempt with email: \(email), password: \(password)")
+        
         guard !email.isEmpty, !password.isEmpty else {
             errorMessage = "이메일과 비밀번호를 입력해주세요."
             return
@@ -41,6 +43,8 @@ class LoginViewModel: ObservableObject {
     }
     
     private func handleLoginResponse(_ response: LoginResponse) {
+        
+        print("Login response: \(response)")
         // 로그인 응답 처리
         if response.success {
             // 토큰 저장
