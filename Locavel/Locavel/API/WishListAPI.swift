@@ -12,6 +12,7 @@ enum MyAPI {
     case addWishlist(placeId: String?)
     case removeWishlist(placeId: String?)
     case getRecommendedRestaurants(latitude: Double, longitude: Double)
+    //case MyWishlist
 }
 
 extension MyAPI: TargetType {
@@ -27,6 +28,8 @@ extension MyAPI: TargetType {
             return "/api/places/\(placeId ?? "")/wish-list"
         case .getRecommendedRestaurants:
             return "/api/places/recommend-results"
+        //case .MyWishlist:
+            //return "/api/places/wish-list"
         }
     }
 
@@ -38,6 +41,8 @@ extension MyAPI: TargetType {
             return .delete
         case .getRecommendedRestaurants:
             return .get
+        //case .MyWishlist:
+            //return .get
         }
     }
 
@@ -47,6 +52,8 @@ extension MyAPI: TargetType {
             return .requestParameters(parameters: ["placeId": placeId ?? ""], encoding: JSONEncoding.default)
         case .getRecommendedRestaurants(let latitude, let longitude):
             return .requestParameters(parameters: ["latitude": latitude, "longitude": longitude], encoding: URLEncoding.queryString)
+        //case .MyWishlist(let page, let category, let region):
+            //return .requestParameters(parameters: ["page": page, "category": category, "region": region], encoding: URLEncoding.queryString)
         }
     }
 
